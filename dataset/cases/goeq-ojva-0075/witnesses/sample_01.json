@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-ojva-0075",
+  "name": "sample_01",
+  "stdin": "5 2\n3 1\n3 1\n10 3\n1 10\n10 1\n8 3\n0 0\n",
+  "statement_stdout": "4\n4\n",
+  "source_prog_a": {
+    "stdout": "4\n4\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "[5, 4, 3, 2, 1]\n4\n[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]\n4\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

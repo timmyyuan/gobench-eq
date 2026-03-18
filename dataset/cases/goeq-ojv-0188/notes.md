@@ -1,0 +1,36 @@
+# goeq-ojv-0188
+
+- Source benchmark: EquiBench
+- Source category: OJ_V
+- Pair ID: 188
+- Problem ID: 94
+- Problem path: `dataset/organized/OJ/94`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/94/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/94/obfus_accepted_0.py`
+- Stored sample count: `4`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: '7\nbeat\nvet\nbeet\nbed\nvet\nbet\nbeet\n'
+- sample_01 statement stdout: 'beet\nvet\n'
+- sample_01 source stdout A: 'beet\nvet\n'
+- sample_01 source stdout B: 'beet\nvet\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: '8\nbuffalo\nbuffalo\nbuffalo\nbuffalo\nbuffalo\nbuffalo\nbuffalo\nbuffalo\n'
+- sample_02 statement stdout: 'buffalo\n'
+- sample_02 source stdout A: 'buffalo\n'
+- sample_02 source stdout B: 'buffalo\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: '7\nbass\nbass\nkick\nkick\nbass\nkick\nkick\n'
+- sample_03 statement stdout: 'kick\n'
+- sample_03 source stdout A: 'kick\n'
+- sample_03 source stdout B: 'kick\n'
+- sample_03 statement match A: `True`
+- sample_03 statement match B: `True`
+- sample_04 stdin: '4\nushi\ntapu\nnichia\nkun\n'
+- sample_04 statement stdout: 'kun\nnichia\ntapu\nushi\n'
+- sample_04 source stdout A: 'kun\nnichia\ntapu\nushi\n'
+- sample_04 source stdout B: 'kun\nnichia\ntapu\nushi\n'
+- sample_04 statement match A: `True`
+- sample_04 statement match B: `True`

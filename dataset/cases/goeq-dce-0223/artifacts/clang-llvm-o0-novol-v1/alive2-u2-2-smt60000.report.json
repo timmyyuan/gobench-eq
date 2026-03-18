@@ -1,0 +1,22 @@
+{
+  "case_id": "goeq-dce-0223",
+  "expected_label": "inequivalent",
+  "artifact_dir": "dataset/cases/goeq-dce-0223/artifacts/clang-llvm-o0-novol-v1",
+  "prog_a_ir_path": "dataset/cases/goeq-dce-0223/artifacts/clang-llvm-o0-novol-v1/prog_a/module.ll",
+  "prog_b_ir_path": "dataset/cases/goeq-dce-0223/artifacts/clang-llvm-o0-novol-v1/prog_b/module.ll",
+  "successful": false,
+  "correct": false,
+  "predicted_label": "",
+  "raw_output": "failed-to-prove",
+  "status": "failed_to_prove",
+  "exit_code": 0,
+  "timed_out": false,
+  "correct_count": 14,
+  "incorrect_count": 0,
+  "failed_to_prove_count": 2,
+  "error_count": 0,
+  "headline": "ERROR: The source program doesn't reach a return instruction.",
+  "error": "alive2 unresolved: 0 incorrect, 2 failed-to-prove, 0 errors",
+  "raw_output_path": "dataset/cases/goeq-dce-0223/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.output.txt",
+  "result_path": "dataset/cases/goeq-dce-0223/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.report.json"
+}

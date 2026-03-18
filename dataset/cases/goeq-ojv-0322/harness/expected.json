@@ -1,0 +1,102 @@
+{
+  "stdin": "4\n3 3 3 3\n",
+  "source_prog_a": {
+    "stdout": "0\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "0\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "4\n3 3 3 3\n",
+      "statement_stdout": "0\n",
+      "source_prog_a": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "3\n1 0 3\n",
+      "statement_stdout": "1\n",
+      "source_prog_a": {
+        "stdout": "1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "2\n2 2\n",
+      "statement_stdout": "2\n",
+      "source_prog_a": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_04",
+      "stdin": "7\n27 0 0 0 0 0 0\n",
+      "statement_stdout": "3\n",
+      "source_prog_a": {
+        "stdout": "3\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "3\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_05",
+      "stdin": "10\n1000 193 256 777 0 1 1192 1234567891011 48 425\n",
+      "statement_stdout": "1234567894848\n",
+      "source_prog_a": {
+        "stdout": "1234567894848\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "1234567894848\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

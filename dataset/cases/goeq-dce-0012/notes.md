@@ -1,0 +1,20 @@
+# goeq-dce-0012
+
+- Source benchmark: EquiBench
+- Category: DCE
+- Pair ID: 12
+- Problem ID: 6
+- Problem path: `dataset/organized/DCE/6`
+- Source label: `equivalent`
+- Filter profile: `c-to-go-intake`
+- Filter score: `1560`
+- Selection gate: both source programs completed within `30s`
+- Execution bound: `30s`
+- Source program A path: `dataset/organized/DCE/6/target.c`
+- Source program B path: `dataset/organized/DCE/6/eq.c`
+- Baseline stdout A: "checksum = 0\n"
+- Baseline stdout B: "checksum = 0\n"
+- Baseline exit code A: 0
+- Baseline exit code B: 0
+- Baseline timed out A: false
+- Baseline timed out B: false

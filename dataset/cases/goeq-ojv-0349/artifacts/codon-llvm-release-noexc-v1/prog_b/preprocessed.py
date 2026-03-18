@@ -1,0 +1,4 @@
+def atc_059a(input_value):
+    A = input_value.split(' ')
+    B = A[0][0].upper() + A[1][0].upper() + A[2][0].upper()
+    return B

@@ -1,0 +1,30 @@
+# goeq-oja-0320
+
+- Source benchmark: EquiBench
+- Source category: OJ_A
+- Pair ID: 320
+- Problem ID: 160
+- Problem path: `dataset/organized/OJ/160`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/160/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/160/accepted_1.py`
+- Stored sample count: `3`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: '2 2\n3\n2 1 1\n'
+- sample_01 statement stdout: '1 1\n2 3\n'
+- sample_01 source stdout A: '1 1\n3 2\n'
+- sample_01 source stdout B: '1 1\n3 2\n'
+- sample_01 statement match A: `False`
+- sample_01 statement match B: `False`
+- sample_02 stdin: '3 5\n5\n1 2 3 4 5\n'
+- sample_02 statement stdout: '1 2\n3 1\n'
+- sample_02 source stdout A: '1 2 2 3 3\n4 4 4 4 3\n5 5 5 5 5\n'
+- sample_02 source stdout B: '1 2 2 3 3\n4 4 4 4 3\n5 5 5 5 5\n'
+- sample_02 statement match A: `False`
+- sample_02 statement match B: `False`
+- sample_03 stdin: '1 1\n1\n1\n'
+- sample_03 statement stdout: '1 4 4 4 3\n2 5 4 5 3\n2 5 5 5 3\n'
+- sample_03 source stdout A: '1\n'
+- sample_03 source stdout B: '1\n'
+- sample_03 statement match A: `False`
+- sample_03 statement match B: `False`

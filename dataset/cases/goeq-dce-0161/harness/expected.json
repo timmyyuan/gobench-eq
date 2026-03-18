@@ -1,0 +1,14 @@
+{
+  "source_prog_a": {
+    "stdout": "checksum = 0\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "checksum = 0\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

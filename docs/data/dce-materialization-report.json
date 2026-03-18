@@ -1,0 +1,1626 @@
+{
+  "generated_at": "2026-03-17T03:03:10.349619Z",
+  "input_path": "/tmp/gobench-eq-dce-c-to-go-accepted.json",
+  "profile": "c-to-go-intake",
+  "output_root": "dataset/cases",
+  "exclude_timeouts": true,
+  "default_timeout": "30s",
+  "total_candidates": 177,
+  "materialized_cases": 165,
+  "skipped_timeout_cases": 12,
+  "materialized_labels": {
+    "equivalent": 83,
+    "inequivalent": 82
+  },
+  "skipped_timeout_labels": {
+    "equivalent": 5,
+    "inequivalent": 7
+  },
+  "decisions": [
+    {
+      "case_id": "goeq-dce-0002",
+      "pair_id": 2,
+      "label": "equivalent",
+      "score": 1281,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0003",
+      "pair_id": 3,
+      "label": "inequivalent",
+      "score": 1387,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0004",
+      "pair_id": 4,
+      "label": "equivalent",
+      "score": 1653,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0005",
+      "pair_id": 5,
+      "label": "inequivalent",
+      "score": 1533,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0006",
+      "pair_id": 6,
+      "label": "equivalent",
+      "score": 1754,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0007",
+      "pair_id": 7,
+      "label": "inequivalent",
+      "score": 1868,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0008",
+      "pair_id": 8,
+      "label": "equivalent",
+      "score": 1479,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0009",
+      "pair_id": 9,
+      "label": "inequivalent",
+      "score": 1771,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0010",
+      "pair_id": 10,
+      "label": "equivalent",
+      "score": 1386,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0011",
+      "pair_id": 11,
+      "label": "inequivalent",
+      "score": 1504,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0012",
+      "pair_id": 12,
+      "label": "equivalent",
+      "score": 1560,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0013",
+      "pair_id": 13,
+      "label": "inequivalent",
+      "score": 1464,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0014",
+      "pair_id": 14,
+      "label": "equivalent",
+      "score": 1572,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0015",
+      "pair_id": 15,
+      "label": "inequivalent",
+      "score": 1669,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0018",
+      "pair_id": 18,
+      "label": "equivalent",
+      "score": 624,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0019",
+      "pair_id": 19,
+      "label": "inequivalent",
+      "score": 645,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0026",
+      "pair_id": 26,
+      "label": "equivalent",
+      "score": 323,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0027",
+      "pair_id": 27,
+      "label": "inequivalent",
+      "score": 337,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0028",
+      "pair_id": 28,
+      "label": "equivalent",
+      "score": 1434,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0029",
+      "pair_id": 29,
+      "label": "inequivalent",
+      "score": 1315,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0036",
+      "pair_id": 36,
+      "label": "equivalent",
+      "score": 1293,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0037",
+      "pair_id": 37,
+      "label": "inequivalent",
+      "score": 1631,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0044",
+      "pair_id": 44,
+      "label": "equivalent",
+      "score": 1460,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0045",
+      "pair_id": 45,
+      "label": "inequivalent",
+      "score": 1339,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0046",
+      "pair_id": 46,
+      "label": "equivalent",
+      "score": 1298,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0047",
+      "pair_id": 47,
+      "label": "inequivalent",
+      "score": 1613,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0052",
+      "pair_id": 52,
+      "label": "equivalent",
+      "score": 326,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0053",
+      "pair_id": 53,
+      "label": "inequivalent",
+      "score": 334,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0054",
+      "pair_id": 54,
+      "label": "equivalent",
+      "score": 676,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0055",
+      "pair_id": 55,
+      "label": "inequivalent",
+      "score": 676,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0058",
+      "pair_id": 58,
+      "label": "equivalent",
+      "score": 1561,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0059",
+      "pair_id": 59,
+      "label": "inequivalent",
+      "score": 1536,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0060",
+      "pair_id": 60,
+      "label": "equivalent",
+      "score": 1975,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0061",
+      "pair_id": 61,
+      "label": "inequivalent",
+      "score": 1865,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0062",
+      "pair_id": 62,
+      "label": "equivalent",
+      "score": 400,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0063",
+      "pair_id": 63,
+      "label": "inequivalent",
+      "score": 410,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0064",
+      "pair_id": 64,
+      "label": "equivalent",
+      "score": 1352,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0065",
+      "pair_id": 65,
+      "label": "inequivalent",
+      "score": 1399,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0068",
+      "pair_id": 68,
+      "label": "equivalent",
+      "score": 2021,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0069",
+      "pair_id": 69,
+      "label": "inequivalent",
+      "score": 1995,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0070",
+      "pair_id": 70,
+      "label": "equivalent",
+      "score": 1243,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0071",
+      "pair_id": 71,
+      "label": "inequivalent",
+      "score": 1363,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0080",
+      "pair_id": 80,
+      "label": "equivalent",
+      "score": 1246,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0081",
+      "pair_id": 81,
+      "label": "inequivalent",
+      "score": 1268,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0084",
+      "pair_id": 84,
+      "label": "equivalent",
+      "score": 1966,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0085",
+      "pair_id": 85,
+      "label": "inequivalent",
+      "score": 2112,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0086",
+      "pair_id": 86,
+      "label": "equivalent",
+      "score": 1022,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0087",
+      "pair_id": 87,
+      "label": "inequivalent",
+      "score": 1138,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0088",
+      "pair_id": 88,
+      "label": "equivalent",
+      "score": 1174,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0089",
+      "pair_id": 89,
+      "label": "inequivalent",
+      "score": 1344,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0102",
+      "pair_id": 102,
+      "label": "equivalent",
+      "score": 1214,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0103",
+      "pair_id": 103,
+      "label": "inequivalent",
+      "score": 1195,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0110",
+      "pair_id": 110,
+      "label": "equivalent",
+      "score": 1730,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0111",
+      "pair_id": 111,
+      "label": "inequivalent",
+      "score": 1634,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0112",
+      "pair_id": 112,
+      "label": "equivalent",
+      "score": 1075,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0113",
+      "pair_id": 113,
+      "label": "inequivalent",
+      "score": 1057,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0114",
+      "pair_id": 114,
+      "label": "equivalent",
+      "score": 1152,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0115",
+      "pair_id": 115,
+      "label": "inequivalent",
+      "score": 1369,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0118",
+      "pair_id": 118,
+      "label": "equivalent",
+      "score": 1357,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0119",
+      "pair_id": 119,
+      "label": "inequivalent",
+      "score": 1537,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0120",
+      "pair_id": 120,
+      "label": "equivalent",
+      "score": 386,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0121",
+      "pair_id": 121,
+      "label": "inequivalent",
+      "score": 381,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0126",
+      "pair_id": 126,
+      "label": "equivalent",
+      "score": 1673,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0127",
+      "pair_id": 127,
+      "label": "inequivalent",
+      "score": 1862,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0133",
+      "pair_id": 133,
+      "label": "inequivalent",
+      "score": 2132,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0138",
+      "pair_id": 138,
+      "label": "equivalent",
+      "score": 2303,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0139",
+      "pair_id": 139,
+      "label": "inequivalent",
+      "score": 1974,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0140",
+      "pair_id": 140,
+      "label": "equivalent",
+      "score": 1452,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0141",
+      "pair_id": 141,
+      "label": "inequivalent",
+      "score": 1577,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0142",
+      "pair_id": 142,
+      "label": "equivalent",
+      "score": 1502,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0143",
+      "pair_id": 143,
+      "label": "inequivalent",
+      "score": 1591,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0150",
+      "pair_id": 150,
+      "label": "equivalent",
+      "score": 1857,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0151",
+      "pair_id": 151,
+      "label": "inequivalent",
+      "score": 2003,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0156",
+      "pair_id": 156,
+      "label": "equivalent",
+      "score": 1506,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0157",
+      "pair_id": 157,
+      "label": "inequivalent",
+      "score": 1594,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0160",
+      "pair_id": 160,
+      "label": "equivalent",
+      "score": 341,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0161",
+      "pair_id": 161,
+      "label": "inequivalent",
+      "score": 401,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0162",
+      "pair_id": 162,
+      "label": "equivalent",
+      "score": 499,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0163",
+      "pair_id": 163,
+      "label": "inequivalent",
+      "score": 519,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0164",
+      "pair_id": 164,
+      "label": "equivalent",
+      "score": 420,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0165",
+      "pair_id": 165,
+      "label": "inequivalent",
+      "score": 429,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0176",
+      "pair_id": 176,
+      "label": "equivalent",
+      "score": 1518,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0177",
+      "pair_id": 177,
+      "label": "inequivalent",
+      "score": 1665,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0180",
+      "pair_id": 180,
+      "label": "equivalent",
+      "score": 1445,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0181",
+      "pair_id": 181,
+      "label": "inequivalent",
+      "score": 1543,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0184",
+      "pair_id": 184,
+      "label": "equivalent",
+      "score": 519,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0185",
+      "pair_id": 185,
+      "label": "inequivalent",
+      "score": 572,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0186",
+      "pair_id": 186,
+      "label": "equivalent",
+      "score": 1253,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0187",
+      "pair_id": 187,
+      "label": "inequivalent",
+      "score": 1451,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0188",
+      "pair_id": 188,
+      "label": "equivalent",
+      "score": 375,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0189",
+      "pair_id": 189,
+      "label": "inequivalent",
+      "score": 400,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0192",
+      "pair_id": 192,
+      "label": "equivalent",
+      "score": 1150,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0193",
+      "pair_id": 193,
+      "label": "inequivalent",
+      "score": 1158,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0194",
+      "pair_id": 194,
+      "label": "equivalent",
+      "score": 2063,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0195",
+      "pair_id": 195,
+      "label": "inequivalent",
+      "score": 2164,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0198",
+      "pair_id": 198,
+      "label": "equivalent",
+      "score": 1429,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0199",
+      "pair_id": 199,
+      "label": "inequivalent",
+      "score": 1560,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0202",
+      "pair_id": 202,
+      "label": "equivalent",
+      "score": 1466,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0203",
+      "pair_id": 203,
+      "label": "inequivalent",
+      "score": 1829,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0204",
+      "pair_id": 204,
+      "label": "equivalent",
+      "score": 1244,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0205",
+      "pair_id": 205,
+      "label": "inequivalent",
+      "score": 1442,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0212",
+      "pair_id": 212,
+      "label": "equivalent",
+      "score": 1035,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0213",
+      "pair_id": 213,
+      "label": "inequivalent",
+      "score": 1132,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0218",
+      "pair_id": 218,
+      "label": "equivalent",
+      "score": 1171,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0219",
+      "pair_id": 219,
+      "label": "inequivalent",
+      "score": 1176,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0222",
+      "pair_id": 222,
+      "label": "equivalent",
+      "score": 1204,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0223",
+      "pair_id": 223,
+      "label": "inequivalent",
+      "score": 1122,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0226",
+      "pair_id": 226,
+      "label": "equivalent",
+      "score": 934,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0227",
+      "pair_id": 227,
+      "label": "inequivalent",
+      "score": 953,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0228",
+      "pair_id": 228,
+      "label": "equivalent",
+      "score": 1670,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0229",
+      "pair_id": 229,
+      "label": "inequivalent",
+      "score": 1780,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0232",
+      "pair_id": 232,
+      "label": "equivalent",
+      "score": 1713,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0233",
+      "pair_id": 233,
+      "label": "inequivalent",
+      "score": 1461,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0234",
+      "pair_id": 234,
+      "label": "equivalent",
+      "score": 1522,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0235",
+      "pair_id": 235,
+      "label": "inequivalent",
+      "score": 1643,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0240",
+      "pair_id": 240,
+      "label": "equivalent",
+      "score": 1506,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0241",
+      "pair_id": 241,
+      "label": "inequivalent",
+      "score": 1510,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0244",
+      "pair_id": 244,
+      "label": "equivalent",
+      "score": 322,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0245",
+      "pair_id": 245,
+      "label": "inequivalent",
+      "score": 292,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0252",
+      "pair_id": 252,
+      "label": "equivalent",
+      "score": 1809,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0253",
+      "pair_id": 253,
+      "label": "inequivalent",
+      "score": 1667,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0254",
+      "pair_id": 254,
+      "label": "equivalent",
+      "score": 1681,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0255",
+      "pair_id": 255,
+      "label": "inequivalent",
+      "score": 1760,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0256",
+      "pair_id": 256,
+      "label": "equivalent",
+      "score": 1202,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0257",
+      "pair_id": 257,
+      "label": "inequivalent",
+      "score": 1301,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0258",
+      "pair_id": 258,
+      "label": "equivalent",
+      "score": 1210,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0259",
+      "pair_id": 259,
+      "label": "inequivalent",
+      "score": 1298,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0266",
+      "pair_id": 266,
+      "label": "equivalent",
+      "score": 1375,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0267",
+      "pair_id": 267,
+      "label": "inequivalent",
+      "score": 1459,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0268",
+      "pair_id": 268,
+      "label": "equivalent",
+      "score": 454,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0269",
+      "pair_id": 269,
+      "label": "inequivalent",
+      "score": 456,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0274",
+      "pair_id": 274,
+      "label": "equivalent",
+      "score": 559,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0275",
+      "pair_id": 275,
+      "label": "inequivalent",
+      "score": 561,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0282",
+      "pair_id": 282,
+      "label": "equivalent",
+      "score": 1604,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0283",
+      "pair_id": 283,
+      "label": "inequivalent",
+      "score": 1488,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0300",
+      "pair_id": 300,
+      "label": "equivalent",
+      "score": 615,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0301",
+      "pair_id": 301,
+      "label": "inequivalent",
+      "score": 635,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0302",
+      "pair_id": 302,
+      "label": "equivalent",
+      "score": 1720,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0303",
+      "pair_id": 303,
+      "label": "inequivalent",
+      "score": 1641,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0304",
+      "pair_id": 304,
+      "label": "equivalent",
+      "score": 1411,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0305",
+      "pair_id": 305,
+      "label": "inequivalent",
+      "score": 1268,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0308",
+      "pair_id": 308,
+      "label": "equivalent",
+      "score": 1591,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0309",
+      "pair_id": 309,
+      "label": "inequivalent",
+      "score": 1679,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0320",
+      "pair_id": 320,
+      "label": "equivalent",
+      "score": 321,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0321",
+      "pair_id": 321,
+      "label": "inequivalent",
+      "score": 329,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": true,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0322",
+      "pair_id": 322,
+      "label": "equivalent",
+      "score": 1348,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0323",
+      "pair_id": 323,
+      "label": "inequivalent",
+      "score": 1917,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0326",
+      "pair_id": 326,
+      "label": "equivalent",
+      "score": 1148,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0327",
+      "pair_id": 327,
+      "label": "inequivalent",
+      "score": 1225,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0334",
+      "pair_id": 334,
+      "label": "equivalent",
+      "score": 1815,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0335",
+      "pair_id": 335,
+      "label": "inequivalent",
+      "score": 1806,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0337",
+      "pair_id": 337,
+      "label": "inequivalent",
+      "score": 1238,
+      "materialized": false,
+      "skip_reason": "source-timeout",
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": true
+    },
+    {
+      "case_id": "goeq-dce-0348",
+      "pair_id": 348,
+      "label": "equivalent",
+      "score": 1368,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0349",
+      "pair_id": 349,
+      "label": "inequivalent",
+      "score": 1735,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0352",
+      "pair_id": 352,
+      "label": "equivalent",
+      "score": 1985,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0353",
+      "pair_id": 353,
+      "label": "inequivalent",
+      "score": 2017,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0354",
+      "pair_id": 354,
+      "label": "equivalent",
+      "score": 1394,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0355",
+      "pair_id": 355,
+      "label": "inequivalent",
+      "score": 1350,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0356",
+      "pair_id": 356,
+      "label": "equivalent",
+      "score": 990,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0357",
+      "pair_id": 357,
+      "label": "inequivalent",
+      "score": 968,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0360",
+      "pair_id": 360,
+      "label": "equivalent",
+      "score": 1147,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0361",
+      "pair_id": 361,
+      "label": "inequivalent",
+      "score": 1206,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0364",
+      "pair_id": 364,
+      "label": "equivalent",
+      "score": 771,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0365",
+      "pair_id": 365,
+      "label": "inequivalent",
+      "score": 781,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0370",
+      "pair_id": 370,
+      "label": "equivalent",
+      "score": 1015,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0371",
+      "pair_id": 371,
+      "label": "inequivalent",
+      "score": 1041,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0372",
+      "pair_id": 372,
+      "label": "equivalent",
+      "score": 381,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0373",
+      "pair_id": 373,
+      "label": "inequivalent",
+      "score": 394,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0378",
+      "pair_id": 378,
+      "label": "equivalent",
+      "score": 1421,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0379",
+      "pair_id": 379,
+      "label": "inequivalent",
+      "score": 1558,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0380",
+      "pair_id": 380,
+      "label": "equivalent",
+      "score": 1376,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0384",
+      "pair_id": 384,
+      "label": "equivalent",
+      "score": 1319,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0385",
+      "pair_id": 385,
+      "label": "inequivalent",
+      "score": 1640,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0390",
+      "pair_id": 390,
+      "label": "equivalent",
+      "score": 1298,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0391",
+      "pair_id": 391,
+      "label": "inequivalent",
+      "score": 1304,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0392",
+      "pair_id": 392,
+      "label": "equivalent",
+      "score": 1167,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    },
+    {
+      "case_id": "goeq-dce-0393",
+      "pair_id": 393,
+      "label": "inequivalent",
+      "score": 1328,
+      "materialized": true,
+      "source_prog_a_timed_out": false,
+      "source_prog_b_timed_out": false
+    }
+  ]
+}

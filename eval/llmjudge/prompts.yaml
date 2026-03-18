@@ -1,0 +1,338 @@
+true_label: "YES"
+false_label: "NO"
+true_keywords:
+  - "YES"
+false_keywords:
+  - "NO"
+
+GO:
+  ZERO: |
+    You are here to judge if two Go programs are semantically equivalent for a GoBench-Eq case.
+    Here equivalence means that, under the same valid inputs and environment for this case, the two programs always have the same required observable behavior. Only the observables listed in the case contract matter.
+    [Case Contract]:
+    {case_contract}
+    [Program 1]:
+    {program_1_code}
+    [Program 2]:
+    {program_2_code}
+
+    Please only output the answer of whether the two Go programs are equivalent or not. You should only output {true_label} or {false_label}.
+  ZERO_COT: |
+    You are here to judge if two Go programs are semantically equivalent for a GoBench-Eq case.
+    Here equivalence means that, under the same valid inputs and environment for this case, the two programs always have the same required observable behavior. Only the observables listed in the case contract matter.
+    [Case Contract]:
+    {case_contract}
+    [Program 1]:
+    {program_1_code}
+    [Program 2]:
+    {program_2_code}
+
+    Please output the answer of whether the two Go programs are equivalent or not. You should output {true_label} or {false_label} in the end. Let's think step by step.
+  FEW: |
+    You are here to judge if two Go programs are semantically equivalent for a GoBench-Eq case.
+    Here equivalence means that, under the same valid inputs and environment for this case, the two programs always have the same required observable behavior. Only the observables listed in the case contract matter.
+
+    [Example 1]:
+      [Program 1]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          x := 0
+          if false {
+            x = 1
+          }
+          fmt.Println(x)
+        }
+      [Program 2]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          x := 0
+          if true {
+            x = 1
+          }
+          fmt.Println(x)
+        }
+      [Answer]: NO
+    [Example 2]:
+      [Program 1]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          x := 0
+          if false {
+            x = 1
+          }
+          fmt.Println(x)
+        }
+      [Program 2]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          fmt.Println(0)
+        }
+      [Answer]: YES
+    [Example 3]:
+      [Program 1]:
+        package main
+
+        func main() {
+          panic("boom")
+        }
+      [Program 2]:
+        package main
+
+        func main() {}
+      [Answer]: NO
+    [Example 4]:
+      [Program 1]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          for i := 0; i < 1; i++ {
+            fmt.Println("ok")
+          }
+        }
+      [Program 2]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          fmt.Println("ok")
+        }
+      [Answer]: YES
+    [Case Contract]:
+    {case_contract}
+    [Program 1]:
+    {program_1_code}
+    [Program 2]:
+    {program_2_code}
+
+    Please only output the answer of whether the two Go programs are equivalent or not. You should only output {true_label} or {false_label}.
+  FEW_COT: |
+    You are here to judge if two Go programs are semantically equivalent for a GoBench-Eq case.
+    Here equivalence means that, under the same valid inputs and environment for this case, the two programs always have the same required observable behavior. Only the observables listed in the case contract matter.
+
+    [Example 1]:
+      [Program 1]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          x := 0
+          if false {
+            x = 1
+          }
+          fmt.Println(x)
+        }
+      [Program 2]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          x := 0
+          if true {
+            x = 1
+          }
+          fmt.Println(x)
+        }
+      [Answer]: Program 1 prints 0, while program 2 prints 1. Their required observable behavior differs.
+                The answer is NO.
+    [Example 2]:
+      [Program 1]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          x := 0
+          if false {
+            x = 1
+          }
+          fmt.Println(x)
+        }
+      [Program 2]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          fmt.Println(0)
+        }
+      [Answer]: The dead branch in program 1 does not change the printed result, so both programs have the same required observable behavior.
+                The answer is YES.
+    [Example 3]:
+      [Program 1]:
+        package main
+
+        func main() {
+          panic("boom")
+        }
+      [Program 2]:
+        package main
+
+        func main() {}
+      [Answer]: Program 1 panics and program 2 does not. Panic behavior is an observable difference.
+                The answer is NO.
+    [Example 4]:
+      [Program 1]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          for i := 0; i < 1; i++ {
+            fmt.Println("ok")
+          }
+        }
+      [Program 2]:
+        package main
+
+        import "fmt"
+
+        func main() {
+          fmt.Println("ok")
+        }
+      [Answer]: Both programs print the same output exactly once and have the same required observable behavior.
+                The answer is YES.
+    [Case Contract]:
+    {case_contract}
+    [Program 1]:
+    {program_1_code}
+    [Program 2]:
+    {program_2_code}
+
+    Please output the answer of whether the two Go programs are equivalent or not. You should output {true_label} or {false_label} in the end. Let's think step by step.
+
+PYTHON:
+  ZERO: |
+    You are here to judge if two Python programs are semantically equivalent for a GoBench-Eq case.
+    Here equivalence means that, under the same valid inputs and environment for this case, the two programs always have the same required observable behavior. Only the observables listed in the case contract matter.
+    [Case Contract]:
+    {case_contract}
+    [Program 1]:
+    {program_1_code}
+    [Program 2]:
+    {program_2_code}
+
+    Please only output the answer of whether the two Python programs are equivalent or not. You should only output {true_label} or {false_label}.
+  ZERO_COT: |
+    You are here to judge if two Python programs are semantically equivalent for a GoBench-Eq case.
+    Here equivalence means that, under the same valid inputs and environment for this case, the two programs always have the same required observable behavior. Only the observables listed in the case contract matter.
+    [Case Contract]:
+    {case_contract}
+    [Program 1]:
+    {program_1_code}
+    [Program 2]:
+    {program_2_code}
+
+    Please output the answer of whether the two Python programs are equivalent or not. You should output {true_label} or {false_label} in the end. Let's think step by step.
+  FEW: |
+    You are here to judge if two Python programs are semantically equivalent for a GoBench-Eq case.
+    Here equivalence means that, under the same valid inputs and environment for this case, the two programs always have the same required observable behavior. Only the observables listed in the case contract matter.
+
+    [Example 1]:
+      [Program 1]:
+        x = 0
+        if False:
+            x = 1
+        print(x)
+      [Program 2]:
+        x = 0
+        if True:
+            x = 1
+        print(x)
+      [Answer]: NO
+    [Example 2]:
+      [Program 1]:
+        x = 0
+        if False:
+            x = 1
+        print(x)
+      [Program 2]:
+        print(0)
+      [Answer]: YES
+    [Example 3]:
+      [Program 1]:
+        raise RuntimeError("boom")
+      [Program 2]:
+        pass
+      [Answer]: NO
+    [Example 4]:
+      [Program 1]:
+        for _ in range(1):
+            print("ok")
+      [Program 2]:
+        print("ok")
+      [Answer]: YES
+    [Case Contract]:
+    {case_contract}
+    [Program 1]:
+    {program_1_code}
+    [Program 2]:
+    {program_2_code}
+
+    Please only output the answer of whether the two Python programs are equivalent or not. You should only output {true_label} or {false_label}.
+  FEW_COT: |
+    You are here to judge if two Python programs are semantically equivalent for a GoBench-Eq case.
+    Here equivalence means that, under the same valid inputs and environment for this case, the two programs always have the same required observable behavior. Only the observables listed in the case contract matter.
+
+    [Example 1]:
+      [Program 1]:
+        x = 0
+        if False:
+            x = 1
+        print(x)
+      [Program 2]:
+        x = 0
+        if True:
+            x = 1
+        print(x)
+      [Answer]: Program 1 prints 0, while program 2 prints 1. Their required observable behavior differs.
+                The answer is NO.
+    [Example 2]:
+      [Program 1]:
+        x = 0
+        if False:
+            x = 1
+        print(x)
+      [Program 2]:
+        print(0)
+      [Answer]: The dead branch in program 1 does not change the printed result, so both programs have the same required observable behavior.
+                The answer is YES.
+    [Example 3]:
+      [Program 1]:
+        raise RuntimeError("boom")
+      [Program 2]:
+        pass
+      [Answer]: Program 1 raises an exception and program 2 does not. This changes the required observable behavior.
+                The answer is NO.
+    [Example 4]:
+      [Program 1]:
+        for _ in range(1):
+            print("ok")
+      [Program 2]:
+        print("ok")
+      [Answer]: Both programs print the same output exactly once and have the same required observable behavior.
+                The answer is YES.
+    [Case Contract]:
+    {case_contract}
+    [Program 1]:
+    {program_1_code}
+    [Program 2]:
+    {program_2_code}
+
+    Please output the answer of whether the two Python programs are equivalent or not. You should output {true_label} or {false_label} in the end. Let's think step by step.

@@ -1,0 +1,15 @@
+Transformation doesn't verify!
+
+ERROR: Unsupported interprocedural transformation: non-constant global variable @g_52 is introduced in target
+
+Transformation seems to be correct! (syntactically equal)
+
+ERROR: Unsupported interprocedural transformation: global variable @g_52 has different size in source and target (1 vs 4 bytes)
+
+ERROR: Unsupported interprocedural transformation: global variable @g_52 has different size in source and target (1 vs 4 bytes)
+
+Summary:
+  1 correct transformations
+  1 incorrect transformations
+  3 failed-to-prove transformations
+  0 Alive2 errors

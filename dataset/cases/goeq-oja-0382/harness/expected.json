@@ -1,0 +1,51 @@
+{
+  "stdin": "C0DEFESTIVAL2O16\n",
+  "source_prog_a": {
+    "stdout": "2\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "2\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "C0DEFESTIVAL2O16\n",
+      "statement_stdout": "2\n",
+      "source_prog_a": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "FESTIVAL2016CODE\n",
+      "statement_stdout": "16\n",
+      "source_prog_a": {
+        "stdout": "16\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "16\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

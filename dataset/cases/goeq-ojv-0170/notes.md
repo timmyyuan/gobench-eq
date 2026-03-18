@@ -1,0 +1,30 @@
+# goeq-ojv-0170
+
+- Source benchmark: EquiBench
+- Source category: OJ_V
+- Pair ID: 170
+- Problem ID: 85
+- Problem path: `dataset/organized/OJ/85`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/85/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/85/obfus_accepted_0.py`
+- Stored sample count: `3`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: 'chokudai\nchokudaiz\n'
+- sample_01 statement stdout: 'Yes\n'
+- sample_01 source stdout A: 'Yes\n'
+- sample_01 source stdout B: 'Yes\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: 'snuke\nsnekee\n'
+- sample_02 statement stdout: 'No\n'
+- sample_02 source stdout A: 'No\n'
+- sample_02 source stdout B: 'No\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: 'a\naa\n'
+- sample_03 statement stdout: 'Yes\n'
+- sample_03 source stdout A: 'Yes\n'
+- sample_03 source stdout B: 'Yes\n'
+- sample_03 statement match A: `True`
+- sample_03 statement match B: `True`

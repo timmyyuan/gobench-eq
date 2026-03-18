@@ -1,0 +1,25 @@
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+ERROR: SMT Error: smt tactic failed to show goal to be sat/unsat (incomplete quantifiers)
+
+ERROR: Signature mismatch between src and tgt
+
+Transformation seems to be correct! (syntactically equal)
+
+ERROR: Signature mismatch between src and tgt
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+Summary:
+  4 correct transformations
+  3 incorrect transformations
+  3 failed-to-prove transformations
+  0 Alive2 errors

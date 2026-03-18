@@ -1,0 +1,6948 @@
+{
+  "batch_path": "docs/data/python-tier1-remaining.json",
+  "input_root": "testdata/EquiBench/data",
+  "output_root": "dataset/cases",
+  "include_translation_exclusions": true,
+  "jobs": 8,
+  "materialized_case_count": 510,
+  "excluded_case_count": 0,
+  "failed_case_count": 207,
+  "excluded_cases": [],
+  "failed_cases": [
+    {
+      "case_id": "goeq-oja-0019",
+      "problem_id": 9,
+      "source_category": "OJ_A",
+      "pair_id": 19,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0019: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0021",
+      "problem_id": 10,
+      "source_category": "OJ_A",
+      "pair_id": 21,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0021: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0035",
+      "problem_id": 17,
+      "source_category": "OJ_A",
+      "pair_id": 35,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0035: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0037",
+      "problem_id": 18,
+      "source_category": "OJ_A",
+      "pair_id": 37,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0037: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0041",
+      "problem_id": 20,
+      "source_category": "OJ_A",
+      "pair_id": 41,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0041: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0043",
+      "problem_id": 21,
+      "source_category": "OJ_A",
+      "pair_id": 43,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0043: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0047",
+      "problem_id": 23,
+      "source_category": "OJ_A",
+      "pair_id": 47,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0047: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0049",
+      "problem_id": 24,
+      "source_category": "OJ_A",
+      "pair_id": 49,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0049: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0051",
+      "problem_id": 25,
+      "source_category": "OJ_A",
+      "pair_id": 51,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0051: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0055",
+      "problem_id": 27,
+      "source_category": "OJ_A",
+      "pair_id": 55,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-oja-0055: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0057",
+      "problem_id": 28,
+      "source_category": "OJ_A",
+      "pair_id": 57,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0057: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0059",
+      "problem_id": 29,
+      "source_category": "OJ_A",
+      "pair_id": 59,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0059: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0087",
+      "problem_id": 43,
+      "source_category": "OJ_A",
+      "pair_id": 87,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0087: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0095",
+      "problem_id": 47,
+      "source_category": "OJ_A",
+      "pair_id": 95,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0095: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0096",
+      "problem_id": 48,
+      "source_category": "OJ_A",
+      "pair_id": 96,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0096: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-oja-0097",
+      "problem_id": 48,
+      "source_category": "OJ_A",
+      "pair_id": 97,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0097: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-oja-0101",
+      "problem_id": 50,
+      "source_category": "OJ_A",
+      "pair_id": 101,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0101: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0119",
+      "problem_id": 59,
+      "source_category": "OJ_A",
+      "pair_id": 119,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0119: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0129",
+      "problem_id": 64,
+      "source_category": "OJ_A",
+      "pair_id": 129,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0129: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0135",
+      "problem_id": 67,
+      "source_category": "OJ_A",
+      "pair_id": 135,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0135: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0137",
+      "problem_id": 68,
+      "source_category": "OJ_A",
+      "pair_id": 137,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0137: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0141",
+      "problem_id": 70,
+      "source_category": "OJ_A",
+      "pair_id": 141,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0141: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0157",
+      "problem_id": 78,
+      "source_category": "OJ_A",
+      "pair_id": 157,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0157: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0161",
+      "problem_id": 80,
+      "source_category": "OJ_A",
+      "pair_id": 161,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0161: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0169",
+      "problem_id": 84,
+      "source_category": "OJ_A",
+      "pair_id": 169,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0169: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0171",
+      "problem_id": 85,
+      "source_category": "OJ_A",
+      "pair_id": 171,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0171: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0173",
+      "problem_id": 86,
+      "source_category": "OJ_A",
+      "pair_id": 173,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0173: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0183",
+      "problem_id": 91,
+      "source_category": "OJ_A",
+      "pair_id": 183,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0183: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0187",
+      "problem_id": 93,
+      "source_category": "OJ_A",
+      "pair_id": 187,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0187: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0189",
+      "problem_id": 94,
+      "source_category": "OJ_A",
+      "pair_id": 189,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0189: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0191",
+      "problem_id": 95,
+      "source_category": "OJ_A",
+      "pair_id": 191,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0191: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0193",
+      "problem_id": 96,
+      "source_category": "OJ_A",
+      "pair_id": 193,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0193: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0197",
+      "problem_id": 98,
+      "source_category": "OJ_A",
+      "pair_id": 197,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-oja-0197: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0199",
+      "problem_id": 99,
+      "source_category": "OJ_A",
+      "pair_id": 199,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0199: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0213",
+      "problem_id": 106,
+      "source_category": "OJ_A",
+      "pair_id": 213,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0213: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0217",
+      "problem_id": 108,
+      "source_category": "OJ_A",
+      "pair_id": 217,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0217: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0223",
+      "problem_id": 111,
+      "source_category": "OJ_A",
+      "pair_id": 223,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0223: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0233",
+      "problem_id": 116,
+      "source_category": "OJ_A",
+      "pair_id": 233,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0233: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0245",
+      "problem_id": 122,
+      "source_category": "OJ_A",
+      "pair_id": 245,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0245: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0249",
+      "problem_id": 124,
+      "source_category": "OJ_A",
+      "pair_id": 249,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-oja-0249: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0261",
+      "problem_id": 130,
+      "source_category": "OJ_A",
+      "pair_id": 261,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0261: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0263",
+      "problem_id": 131,
+      "source_category": "OJ_A",
+      "pair_id": 263,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0263: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0267",
+      "problem_id": 133,
+      "source_category": "OJ_A",
+      "pair_id": 267,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0267: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0271",
+      "problem_id": 135,
+      "source_category": "OJ_A",
+      "pair_id": 271,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0271: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0277",
+      "problem_id": 138,
+      "source_category": "OJ_A",
+      "pair_id": 277,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0277: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0282",
+      "problem_id": 141,
+      "source_category": "OJ_A",
+      "pair_id": 282,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0282: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-oja-0283",
+      "problem_id": 141,
+      "source_category": "OJ_A",
+      "pair_id": 283,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0283: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-oja-0285",
+      "problem_id": 142,
+      "source_category": "OJ_A",
+      "pair_id": 285,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0285: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0293",
+      "problem_id": 146,
+      "source_category": "OJ_A",
+      "pair_id": 293,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "Command '['/opt/homebrew/opt/python@3.14/bin/python3.14', '/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-gxe0zs7l/program.py']' timed out after 5 seconds"
+    },
+    {
+      "case_id": "goeq-oja-0295",
+      "problem_id": 147,
+      "source_category": "OJ_A",
+      "pair_id": 295,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0295: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0296",
+      "problem_id": 148,
+      "source_category": "OJ_A",
+      "pair_id": 296,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0296: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-oja-0297",
+      "problem_id": 148,
+      "source_category": "OJ_A",
+      "pair_id": 297,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0297: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-oja-0305",
+      "problem_id": 152,
+      "source_category": "OJ_A",
+      "pair_id": 305,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0305: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0307",
+      "problem_id": 153,
+      "source_category": "OJ_A",
+      "pair_id": 307,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0307: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0313",
+      "problem_id": 156,
+      "source_category": "OJ_A",
+      "pair_id": 313,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0313: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0315",
+      "problem_id": 157,
+      "source_category": "OJ_A",
+      "pair_id": 315,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0315: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0317",
+      "problem_id": 158,
+      "source_category": "OJ_A",
+      "pair_id": 317,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-oja-0317: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0319",
+      "problem_id": 159,
+      "source_category": "OJ_A",
+      "pair_id": 319,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0319: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0335",
+      "problem_id": 167,
+      "source_category": "OJ_A",
+      "pair_id": 335,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0335: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0341",
+      "problem_id": 170,
+      "source_category": "OJ_A",
+      "pair_id": 341,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0341: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0351",
+      "problem_id": 175,
+      "source_category": "OJ_A",
+      "pair_id": 351,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0351: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0353",
+      "problem_id": 176,
+      "source_category": "OJ_A",
+      "pair_id": 353,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0353: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0361",
+      "problem_id": 180,
+      "source_category": "OJ_A",
+      "pair_id": 361,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0361: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0363",
+      "problem_id": 181,
+      "source_category": "OJ_A",
+      "pair_id": 363,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0363: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0371",
+      "problem_id": 185,
+      "source_category": "OJ_A",
+      "pair_id": 371,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-oja-0371: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0381",
+      "problem_id": 190,
+      "source_category": "OJ_A",
+      "pair_id": 381,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-oja-0381: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-oja-0395",
+      "problem_id": 197,
+      "source_category": "OJ_A",
+      "pair_id": 395,
+      "automated_exclusion_rules": [],
+      "error": "goeq-oja-0395: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0019",
+      "problem_id": 9,
+      "source_category": "OJ_V",
+      "pair_id": 19,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0019: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0021",
+      "problem_id": 10,
+      "source_category": "OJ_V",
+      "pair_id": 21,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0021: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0035",
+      "problem_id": 17,
+      "source_category": "OJ_V",
+      "pair_id": 35,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0035: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0037",
+      "problem_id": 18,
+      "source_category": "OJ_V",
+      "pair_id": 37,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0037: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0041",
+      "problem_id": 20,
+      "source_category": "OJ_V",
+      "pair_id": 41,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0041: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0043",
+      "problem_id": 21,
+      "source_category": "OJ_V",
+      "pair_id": 43,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0043: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0047",
+      "problem_id": 23,
+      "source_category": "OJ_V",
+      "pair_id": 47,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0047: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0049",
+      "problem_id": 24,
+      "source_category": "OJ_V",
+      "pair_id": 49,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0049: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0051",
+      "problem_id": 25,
+      "source_category": "OJ_V",
+      "pair_id": 51,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0051: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0055",
+      "problem_id": 27,
+      "source_category": "OJ_V",
+      "pair_id": 55,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojv-0055: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0057",
+      "problem_id": 28,
+      "source_category": "OJ_V",
+      "pair_id": 57,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0057: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0059",
+      "problem_id": 29,
+      "source_category": "OJ_V",
+      "pair_id": 59,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0059: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0087",
+      "problem_id": 43,
+      "source_category": "OJ_V",
+      "pair_id": 87,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0087: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0095",
+      "problem_id": 47,
+      "source_category": "OJ_V",
+      "pair_id": 95,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0095: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0096",
+      "problem_id": 48,
+      "source_category": "OJ_V",
+      "pair_id": 96,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0096: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojv-0097",
+      "problem_id": 48,
+      "source_category": "OJ_V",
+      "pair_id": 97,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0097: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojv-0098",
+      "problem_id": 49,
+      "source_category": "OJ_V",
+      "pair_id": 98,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0098: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojv-0101",
+      "problem_id": 50,
+      "source_category": "OJ_V",
+      "pair_id": 101,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0101: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0119",
+      "problem_id": 59,
+      "source_category": "OJ_V",
+      "pair_id": 119,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0119: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0129",
+      "problem_id": 64,
+      "source_category": "OJ_V",
+      "pair_id": 129,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0129: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0135",
+      "problem_id": 67,
+      "source_category": "OJ_V",
+      "pair_id": 135,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0135: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0137",
+      "problem_id": 68,
+      "source_category": "OJ_V",
+      "pair_id": 137,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0137: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0141",
+      "problem_id": 70,
+      "source_category": "OJ_V",
+      "pair_id": 141,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0141: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0157",
+      "problem_id": 78,
+      "source_category": "OJ_V",
+      "pair_id": 157,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0157: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0161",
+      "problem_id": 80,
+      "source_category": "OJ_V",
+      "pair_id": 161,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0161: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0166",
+      "problem_id": 83,
+      "source_category": "OJ_V",
+      "pair_id": 166,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0166: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojv-0169",
+      "problem_id": 84,
+      "source_category": "OJ_V",
+      "pair_id": 169,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0169: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0171",
+      "problem_id": 85,
+      "source_category": "OJ_V",
+      "pair_id": 171,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0171: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0173",
+      "problem_id": 86,
+      "source_category": "OJ_V",
+      "pair_id": 173,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0173: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0183",
+      "problem_id": 91,
+      "source_category": "OJ_V",
+      "pair_id": 183,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0183: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0187",
+      "problem_id": 93,
+      "source_category": "OJ_V",
+      "pair_id": 187,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0187: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0189",
+      "problem_id": 94,
+      "source_category": "OJ_V",
+      "pair_id": 189,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0189: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0191",
+      "problem_id": 95,
+      "source_category": "OJ_V",
+      "pair_id": 191,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0191: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0193",
+      "problem_id": 96,
+      "source_category": "OJ_V",
+      "pair_id": 193,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0193: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0197",
+      "problem_id": 98,
+      "source_category": "OJ_V",
+      "pair_id": 197,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojv-0197: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0199",
+      "problem_id": 99,
+      "source_category": "OJ_V",
+      "pair_id": 199,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0199: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0213",
+      "problem_id": 106,
+      "source_category": "OJ_V",
+      "pair_id": 213,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0213: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0217",
+      "problem_id": 108,
+      "source_category": "OJ_V",
+      "pair_id": 217,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0217: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0223",
+      "problem_id": 111,
+      "source_category": "OJ_V",
+      "pair_id": 223,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0223: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0233",
+      "problem_id": 116,
+      "source_category": "OJ_V",
+      "pair_id": 233,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0233: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0241",
+      "problem_id": 120,
+      "source_category": "OJ_V",
+      "pair_id": 241,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0241: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0245",
+      "problem_id": 122,
+      "source_category": "OJ_V",
+      "pair_id": 245,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0245: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0249",
+      "problem_id": 124,
+      "source_category": "OJ_V",
+      "pair_id": 249,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojv-0249: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0261",
+      "problem_id": 130,
+      "source_category": "OJ_V",
+      "pair_id": 261,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0261: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0263",
+      "problem_id": 131,
+      "source_category": "OJ_V",
+      "pair_id": 263,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0263: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0267",
+      "problem_id": 133,
+      "source_category": "OJ_V",
+      "pair_id": 267,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0267: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0271",
+      "problem_id": 135,
+      "source_category": "OJ_V",
+      "pair_id": 271,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0271: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0277",
+      "problem_id": 138,
+      "source_category": "OJ_V",
+      "pair_id": 277,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0277: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0282",
+      "problem_id": 141,
+      "source_category": "OJ_V",
+      "pair_id": 282,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0282: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojv-0283",
+      "problem_id": 141,
+      "source_category": "OJ_V",
+      "pair_id": 283,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0283: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojv-0285",
+      "problem_id": 142,
+      "source_category": "OJ_V",
+      "pair_id": 285,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0285: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0293",
+      "problem_id": 146,
+      "source_category": "OJ_V",
+      "pair_id": 293,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "Command '['/opt/homebrew/opt/python@3.14/bin/python3.14', '/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-iy7tzfsx/program.py']' timed out after 5 seconds"
+    },
+    {
+      "case_id": "goeq-ojv-0295",
+      "problem_id": 147,
+      "source_category": "OJ_V",
+      "pair_id": 295,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0295: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0296",
+      "problem_id": 148,
+      "source_category": "OJ_V",
+      "pair_id": 296,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0296: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojv-0297",
+      "problem_id": 148,
+      "source_category": "OJ_V",
+      "pair_id": 297,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0297: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojv-0305",
+      "problem_id": 152,
+      "source_category": "OJ_V",
+      "pair_id": 305,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0305: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0307",
+      "problem_id": 153,
+      "source_category": "OJ_V",
+      "pair_id": 307,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0307: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0313",
+      "problem_id": 156,
+      "source_category": "OJ_V",
+      "pair_id": 313,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0313: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0315",
+      "problem_id": 157,
+      "source_category": "OJ_V",
+      "pair_id": 315,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0315: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0317",
+      "problem_id": 158,
+      "source_category": "OJ_V",
+      "pair_id": 317,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojv-0317: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0319",
+      "problem_id": 159,
+      "source_category": "OJ_V",
+      "pair_id": 319,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0319: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0335",
+      "problem_id": 167,
+      "source_category": "OJ_V",
+      "pair_id": 335,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0335: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0341",
+      "problem_id": 170,
+      "source_category": "OJ_V",
+      "pair_id": 341,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0341: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0351",
+      "problem_id": 175,
+      "source_category": "OJ_V",
+      "pair_id": 351,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0351: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0353",
+      "problem_id": 176,
+      "source_category": "OJ_V",
+      "pair_id": 353,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0353: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0361",
+      "problem_id": 180,
+      "source_category": "OJ_V",
+      "pair_id": 361,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0361: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0363",
+      "problem_id": 181,
+      "source_category": "OJ_V",
+      "pair_id": 363,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0363: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0371",
+      "problem_id": 185,
+      "source_category": "OJ_V",
+      "pair_id": 371,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojv-0371: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0381",
+      "problem_id": 190,
+      "source_category": "OJ_V",
+      "pair_id": 381,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojv-0381: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojv-0395",
+      "problem_id": 197,
+      "source_category": "OJ_V",
+      "pair_id": 395,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojv-0395: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0019",
+      "problem_id": 9,
+      "source_category": "OJ_VA",
+      "pair_id": 19,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0019: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0021",
+      "problem_id": 10,
+      "source_category": "OJ_VA",
+      "pair_id": 21,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0021: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0027",
+      "problem_id": 13,
+      "source_category": "OJ_VA",
+      "pair_id": 27,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0027: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0035",
+      "problem_id": 17,
+      "source_category": "OJ_VA",
+      "pair_id": 35,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0035: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0037",
+      "problem_id": 18,
+      "source_category": "OJ_VA",
+      "pair_id": 37,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0037: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0041",
+      "problem_id": 20,
+      "source_category": "OJ_VA",
+      "pair_id": 41,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0041: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0043",
+      "problem_id": 21,
+      "source_category": "OJ_VA",
+      "pair_id": 43,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0043: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0047",
+      "problem_id": 23,
+      "source_category": "OJ_VA",
+      "pair_id": 47,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0047: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0049",
+      "problem_id": 24,
+      "source_category": "OJ_VA",
+      "pair_id": 49,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0049: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0051",
+      "problem_id": 25,
+      "source_category": "OJ_VA",
+      "pair_id": 51,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0051: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0055",
+      "problem_id": 27,
+      "source_category": "OJ_VA",
+      "pair_id": 55,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojva-0055: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0057",
+      "problem_id": 28,
+      "source_category": "OJ_VA",
+      "pair_id": 57,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0057: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0059",
+      "problem_id": 29,
+      "source_category": "OJ_VA",
+      "pair_id": 59,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0059: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0087",
+      "problem_id": 43,
+      "source_category": "OJ_VA",
+      "pair_id": 87,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0087: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0095",
+      "problem_id": 47,
+      "source_category": "OJ_VA",
+      "pair_id": 95,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0095: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0096",
+      "problem_id": 48,
+      "source_category": "OJ_VA",
+      "pair_id": 96,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0096: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojva-0097",
+      "problem_id": 48,
+      "source_category": "OJ_VA",
+      "pair_id": 97,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0097: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojva-0101",
+      "problem_id": 50,
+      "source_category": "OJ_VA",
+      "pair_id": 101,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0101: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0119",
+      "problem_id": 59,
+      "source_category": "OJ_VA",
+      "pair_id": 119,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0119: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0129",
+      "problem_id": 64,
+      "source_category": "OJ_VA",
+      "pair_id": 129,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0129: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0135",
+      "problem_id": 67,
+      "source_category": "OJ_VA",
+      "pair_id": 135,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0135: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0137",
+      "problem_id": 68,
+      "source_category": "OJ_VA",
+      "pair_id": 137,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0137: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0141",
+      "problem_id": 70,
+      "source_category": "OJ_VA",
+      "pair_id": 141,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0141: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0157",
+      "problem_id": 78,
+      "source_category": "OJ_VA",
+      "pair_id": 157,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0157: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0161",
+      "problem_id": 80,
+      "source_category": "OJ_VA",
+      "pair_id": 161,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0161: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0169",
+      "problem_id": 84,
+      "source_category": "OJ_VA",
+      "pair_id": 169,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0169: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0171",
+      "problem_id": 85,
+      "source_category": "OJ_VA",
+      "pair_id": 171,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0171: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0173",
+      "problem_id": 86,
+      "source_category": "OJ_VA",
+      "pair_id": 173,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0173: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0183",
+      "problem_id": 91,
+      "source_category": "OJ_VA",
+      "pair_id": 183,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0183: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0187",
+      "problem_id": 93,
+      "source_category": "OJ_VA",
+      "pair_id": 187,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0187: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0189",
+      "problem_id": 94,
+      "source_category": "OJ_VA",
+      "pair_id": 189,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0189: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0191",
+      "problem_id": 95,
+      "source_category": "OJ_VA",
+      "pair_id": 191,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0191: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0193",
+      "problem_id": 96,
+      "source_category": "OJ_VA",
+      "pair_id": 193,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0193: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0197",
+      "problem_id": 98,
+      "source_category": "OJ_VA",
+      "pair_id": 197,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0197: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0199",
+      "problem_id": 99,
+      "source_category": "OJ_VA",
+      "pair_id": 199,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0199: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0213",
+      "problem_id": 106,
+      "source_category": "OJ_VA",
+      "pair_id": 213,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0213: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0217",
+      "problem_id": 108,
+      "source_category": "OJ_VA",
+      "pair_id": 217,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0217: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0223",
+      "problem_id": 111,
+      "source_category": "OJ_VA",
+      "pair_id": 223,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0223: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0233",
+      "problem_id": 116,
+      "source_category": "OJ_VA",
+      "pair_id": 233,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0233: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0241",
+      "problem_id": 120,
+      "source_category": "OJ_VA",
+      "pair_id": 241,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0241: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0245",
+      "problem_id": 122,
+      "source_category": "OJ_VA",
+      "pair_id": 245,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0245: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0249",
+      "problem_id": 124,
+      "source_category": "OJ_VA",
+      "pair_id": 249,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojva-0249: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0261",
+      "problem_id": 130,
+      "source_category": "OJ_VA",
+      "pair_id": 261,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0261: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0263",
+      "problem_id": 131,
+      "source_category": "OJ_VA",
+      "pair_id": 263,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0263: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0267",
+      "problem_id": 133,
+      "source_category": "OJ_VA",
+      "pair_id": 267,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0267: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0271",
+      "problem_id": 135,
+      "source_category": "OJ_VA",
+      "pair_id": 271,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0271: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0277",
+      "problem_id": 138,
+      "source_category": "OJ_VA",
+      "pair_id": 277,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0277: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0282",
+      "problem_id": 141,
+      "source_category": "OJ_VA",
+      "pair_id": 282,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0282: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojva-0283",
+      "problem_id": 141,
+      "source_category": "OJ_VA",
+      "pair_id": 283,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0283: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojva-0285",
+      "problem_id": 142,
+      "source_category": "OJ_VA",
+      "pair_id": 285,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0285: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0293",
+      "problem_id": 146,
+      "source_category": "OJ_VA",
+      "pair_id": 293,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "Command '['/opt/homebrew/opt/python@3.14/bin/python3.14', '/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-dw5kdawb/program.py']' timed out after 5 seconds"
+    },
+    {
+      "case_id": "goeq-ojva-0295",
+      "problem_id": 147,
+      "source_category": "OJ_VA",
+      "pair_id": 295,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0295: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0296",
+      "problem_id": 148,
+      "source_category": "OJ_VA",
+      "pair_id": 296,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0296: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojva-0297",
+      "problem_id": 148,
+      "source_category": "OJ_VA",
+      "pair_id": 297,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0297: no statement sample pairs found"
+    },
+    {
+      "case_id": "goeq-ojva-0303",
+      "problem_id": 151,
+      "source_category": "OJ_VA",
+      "pair_id": 303,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0303: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0305",
+      "problem_id": 152,
+      "source_category": "OJ_VA",
+      "pair_id": 305,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0305: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0307",
+      "problem_id": 153,
+      "source_category": "OJ_VA",
+      "pair_id": 307,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0307: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0313",
+      "problem_id": 156,
+      "source_category": "OJ_VA",
+      "pair_id": 313,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0313: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0315",
+      "problem_id": 157,
+      "source_category": "OJ_VA",
+      "pair_id": 315,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0315: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0317",
+      "problem_id": 158,
+      "source_category": "OJ_VA",
+      "pair_id": 317,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojva-0317: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0319",
+      "problem_id": 159,
+      "source_category": "OJ_VA",
+      "pair_id": 319,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0319: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0335",
+      "problem_id": 167,
+      "source_category": "OJ_VA",
+      "pair_id": 335,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0335: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0341",
+      "problem_id": 170,
+      "source_category": "OJ_VA",
+      "pair_id": 341,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0341: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0351",
+      "problem_id": 175,
+      "source_category": "OJ_VA",
+      "pair_id": 351,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0351: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0353",
+      "problem_id": 176,
+      "source_category": "OJ_VA",
+      "pair_id": 353,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0353: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0361",
+      "problem_id": 180,
+      "source_category": "OJ_VA",
+      "pair_id": 361,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0361: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0363",
+      "problem_id": 181,
+      "source_category": "OJ_VA",
+      "pair_id": 363,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0363: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0371",
+      "problem_id": 185,
+      "source_category": "OJ_VA",
+      "pair_id": 371,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "error": "goeq-ojva-0371: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0381",
+      "problem_id": 190,
+      "source_category": "OJ_VA",
+      "pair_id": 381,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "error": "goeq-ojva-0381: no distinguishing sample witness found"
+    },
+    {
+      "case_id": "goeq-ojva-0395",
+      "problem_id": 197,
+      "source_category": "OJ_VA",
+      "pair_id": 395,
+      "automated_exclusion_rules": [],
+      "error": "goeq-ojva-0395: no distinguishing sample witness found"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "goeq-oja-0001",
+      "label": "inequivalent",
+      "problem_id": 0,
+      "source_category": "OJ_A",
+      "pair_id": 1,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0018",
+      "label": "equivalent",
+      "problem_id": 9,
+      "source_category": "OJ_A",
+      "pair_id": 18,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0020",
+      "label": "equivalent",
+      "problem_id": 10,
+      "source_category": "OJ_A",
+      "pair_id": 20,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0026",
+      "label": "equivalent",
+      "problem_id": 13,
+      "source_category": "OJ_A",
+      "pair_id": 26,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0027",
+      "label": "inequivalent",
+      "problem_id": 13,
+      "source_category": "OJ_A",
+      "pair_id": 27,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0030",
+      "label": "equivalent",
+      "problem_id": 15,
+      "source_category": "OJ_A",
+      "pair_id": 30,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0034",
+      "label": "equivalent",
+      "problem_id": 17,
+      "source_category": "OJ_A",
+      "pair_id": 34,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0036",
+      "label": "equivalent",
+      "problem_id": 18,
+      "source_category": "OJ_A",
+      "pair_id": 36,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0040",
+      "label": "equivalent",
+      "problem_id": 20,
+      "source_category": "OJ_A",
+      "pair_id": 40,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0042",
+      "label": "equivalent",
+      "problem_id": 21,
+      "source_category": "OJ_A",
+      "pair_id": 42,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0046",
+      "label": "equivalent",
+      "problem_id": 23,
+      "source_category": "OJ_A",
+      "pair_id": 46,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001",
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0048",
+      "label": "equivalent",
+      "problem_id": 24,
+      "source_category": "OJ_A",
+      "pair_id": 48,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0050",
+      "label": "equivalent",
+      "problem_id": 25,
+      "source_category": "OJ_A",
+      "pair_id": 50,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0052",
+      "label": "equivalent",
+      "problem_id": 26,
+      "source_category": "OJ_A",
+      "pair_id": 52,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0053",
+      "label": "inequivalent",
+      "problem_id": 26,
+      "source_category": "OJ_A",
+      "pair_id": 53,
+      "sample_count": 3,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0054",
+      "label": "equivalent",
+      "problem_id": 27,
+      "source_category": "OJ_A",
+      "pair_id": 54,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001",
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0056",
+      "label": "equivalent",
+      "problem_id": 28,
+      "source_category": "OJ_A",
+      "pair_id": 56,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0058",
+      "label": "equivalent",
+      "problem_id": 29,
+      "source_category": "OJ_A",
+      "pair_id": 58,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0060",
+      "label": "equivalent",
+      "problem_id": 30,
+      "source_category": "OJ_A",
+      "pair_id": 60,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0061",
+      "label": "inequivalent",
+      "problem_id": 30,
+      "source_category": "OJ_A",
+      "pair_id": 61,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0062",
+      "label": "equivalent",
+      "problem_id": 31,
+      "source_category": "OJ_A",
+      "pair_id": 62,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0065",
+      "label": "inequivalent",
+      "problem_id": 32,
+      "source_category": "OJ_A",
+      "pair_id": 65,
+      "sample_count": 2,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-oja-0070",
+      "label": "equivalent",
+      "problem_id": 35,
+      "source_category": "OJ_A",
+      "pair_id": 70,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0071",
+      "label": "inequivalent",
+      "problem_id": 35,
+      "source_category": "OJ_A",
+      "pair_id": 71,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0076",
+      "label": "equivalent",
+      "problem_id": 38,
+      "source_category": "OJ_A",
+      "pair_id": 76,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0077",
+      "label": "inequivalent",
+      "problem_id": 38,
+      "source_category": "OJ_A",
+      "pair_id": 77,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0078",
+      "label": "equivalent",
+      "problem_id": 39,
+      "source_category": "OJ_A",
+      "pair_id": 78,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0079",
+      "label": "inequivalent",
+      "problem_id": 39,
+      "source_category": "OJ_A",
+      "pair_id": 79,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0082",
+      "label": "equivalent",
+      "problem_id": 41,
+      "source_category": "OJ_A",
+      "pair_id": 82,
+      "sample_count": 6,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0083",
+      "label": "inequivalent",
+      "problem_id": 41,
+      "source_category": "OJ_A",
+      "pair_id": 83,
+      "sample_count": 6,
+      "witness_sample": "sample_04",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0084",
+      "label": "equivalent",
+      "problem_id": 42,
+      "source_category": "OJ_A",
+      "pair_id": 84,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0085",
+      "label": "inequivalent",
+      "problem_id": 42,
+      "source_category": "OJ_A",
+      "pair_id": 85,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0086",
+      "label": "equivalent",
+      "problem_id": 43,
+      "source_category": "OJ_A",
+      "pair_id": 86,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0088",
+      "label": "equivalent",
+      "problem_id": 44,
+      "source_category": "OJ_A",
+      "pair_id": 88,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001",
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0092",
+      "label": "equivalent",
+      "problem_id": 46,
+      "source_category": "OJ_A",
+      "pair_id": 92,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0093",
+      "label": "inequivalent",
+      "problem_id": 46,
+      "source_category": "OJ_A",
+      "pair_id": 93,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0100",
+      "label": "equivalent",
+      "problem_id": 50,
+      "source_category": "OJ_A",
+      "pair_id": 100,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0104",
+      "label": "equivalent",
+      "problem_id": 52,
+      "source_category": "OJ_A",
+      "pair_id": 104,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0109",
+      "label": "inequivalent",
+      "problem_id": 54,
+      "source_category": "OJ_A",
+      "pair_id": 109,
+      "sample_count": 1,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0114",
+      "label": "equivalent",
+      "problem_id": 57,
+      "source_category": "OJ_A",
+      "pair_id": 114,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0115",
+      "label": "inequivalent",
+      "problem_id": 57,
+      "source_category": "OJ_A",
+      "pair_id": 115,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0124",
+      "label": "equivalent",
+      "problem_id": 62,
+      "source_category": "OJ_A",
+      "pair_id": 124,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0125",
+      "label": "inequivalent",
+      "problem_id": 62,
+      "source_category": "OJ_A",
+      "pair_id": 125,
+      "sample_count": 2,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0128",
+      "label": "equivalent",
+      "problem_id": 64,
+      "source_category": "OJ_A",
+      "pair_id": 128,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0134",
+      "label": "equivalent",
+      "problem_id": 67,
+      "source_category": "OJ_A",
+      "pair_id": 134,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0136",
+      "label": "equivalent",
+      "problem_id": 68,
+      "source_category": "OJ_A",
+      "pair_id": 136,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0140",
+      "label": "equivalent",
+      "problem_id": 70,
+      "source_category": "OJ_A",
+      "pair_id": 140,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0142",
+      "label": "equivalent",
+      "problem_id": 71,
+      "source_category": "OJ_A",
+      "pair_id": 142,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0143",
+      "label": "inequivalent",
+      "problem_id": 71,
+      "source_category": "OJ_A",
+      "pair_id": 143,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0154",
+      "label": "equivalent",
+      "problem_id": 77,
+      "source_category": "OJ_A",
+      "pair_id": 154,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0160",
+      "label": "equivalent",
+      "problem_id": 80,
+      "source_category": "OJ_A",
+      "pair_id": 160,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0164",
+      "label": "equivalent",
+      "problem_id": 82,
+      "source_category": "OJ_A",
+      "pair_id": 164,
+      "sample_count": 5,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0168",
+      "label": "equivalent",
+      "problem_id": 84,
+      "source_category": "OJ_A",
+      "pair_id": 168,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0170",
+      "label": "equivalent",
+      "problem_id": 85,
+      "source_category": "OJ_A",
+      "pair_id": 170,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0172",
+      "label": "equivalent",
+      "problem_id": 86,
+      "source_category": "OJ_A",
+      "pair_id": 172,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0174",
+      "label": "equivalent",
+      "problem_id": 87,
+      "source_category": "OJ_A",
+      "pair_id": 174,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0175",
+      "label": "inequivalent",
+      "problem_id": 87,
+      "source_category": "OJ_A",
+      "pair_id": 175,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0180",
+      "label": "equivalent",
+      "problem_id": 90,
+      "source_category": "OJ_A",
+      "pair_id": 180,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0181",
+      "label": "inequivalent",
+      "problem_id": 90,
+      "source_category": "OJ_A",
+      "pair_id": 181,
+      "sample_count": 4,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0182",
+      "label": "equivalent",
+      "problem_id": 91,
+      "source_category": "OJ_A",
+      "pair_id": 182,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0184",
+      "label": "equivalent",
+      "problem_id": 92,
+      "source_category": "OJ_A",
+      "pair_id": 184,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0185",
+      "label": "inequivalent",
+      "problem_id": 92,
+      "source_category": "OJ_A",
+      "pair_id": 185,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0186",
+      "label": "equivalent",
+      "problem_id": 93,
+      "source_category": "OJ_A",
+      "pair_id": 186,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0188",
+      "label": "equivalent",
+      "problem_id": 94,
+      "source_category": "OJ_A",
+      "pair_id": 188,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0190",
+      "label": "equivalent",
+      "problem_id": 95,
+      "source_category": "OJ_A",
+      "pair_id": 190,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0196",
+      "label": "equivalent",
+      "problem_id": 98,
+      "source_category": "OJ_A",
+      "pair_id": 196,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0204",
+      "label": "equivalent",
+      "problem_id": 102,
+      "source_category": "OJ_A",
+      "pair_id": 204,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0205",
+      "label": "inequivalent",
+      "problem_id": 102,
+      "source_category": "OJ_A",
+      "pair_id": 205,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0206",
+      "label": "equivalent",
+      "problem_id": 103,
+      "source_category": "OJ_A",
+      "pair_id": 206,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0207",
+      "label": "inequivalent",
+      "problem_id": 103,
+      "source_category": "OJ_A",
+      "pair_id": 207,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0210",
+      "label": "equivalent",
+      "problem_id": 105,
+      "source_category": "OJ_A",
+      "pair_id": 210,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0211",
+      "label": "inequivalent",
+      "problem_id": 105,
+      "source_category": "OJ_A",
+      "pair_id": 211,
+      "sample_count": 3,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-oja-0212",
+      "label": "equivalent",
+      "problem_id": 106,
+      "source_category": "OJ_A",
+      "pair_id": 212,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0216",
+      "label": "equivalent",
+      "problem_id": 108,
+      "source_category": "OJ_A",
+      "pair_id": 216,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0218",
+      "label": "equivalent",
+      "problem_id": 109,
+      "source_category": "OJ_A",
+      "pair_id": 218,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0219",
+      "label": "inequivalent",
+      "problem_id": 109,
+      "source_category": "OJ_A",
+      "pair_id": 219,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0222",
+      "label": "equivalent",
+      "problem_id": 111,
+      "source_category": "OJ_A",
+      "pair_id": 222,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0226",
+      "label": "equivalent",
+      "problem_id": 113,
+      "source_category": "OJ_A",
+      "pair_id": 226,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0227",
+      "label": "inequivalent",
+      "problem_id": 113,
+      "source_category": "OJ_A",
+      "pair_id": 227,
+      "sample_count": 3,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-oja-0228",
+      "label": "equivalent",
+      "problem_id": 114,
+      "source_category": "OJ_A",
+      "pair_id": 228,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0229",
+      "label": "inequivalent",
+      "problem_id": 114,
+      "source_category": "OJ_A",
+      "pair_id": 229,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0230",
+      "label": "equivalent",
+      "problem_id": 115,
+      "source_category": "OJ_A",
+      "pair_id": 230,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0231",
+      "label": "inequivalent",
+      "problem_id": 115,
+      "source_category": "OJ_A",
+      "pair_id": 231,
+      "sample_count": 4,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0232",
+      "label": "equivalent",
+      "problem_id": 116,
+      "source_category": "OJ_A",
+      "pair_id": 232,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0234",
+      "label": "equivalent",
+      "problem_id": 117,
+      "source_category": "OJ_A",
+      "pair_id": 234,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0235",
+      "label": "inequivalent",
+      "problem_id": 117,
+      "source_category": "OJ_A",
+      "pair_id": 235,
+      "sample_count": 2,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0240",
+      "label": "equivalent",
+      "problem_id": 120,
+      "source_category": "OJ_A",
+      "pair_id": 240,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0241",
+      "label": "inequivalent",
+      "problem_id": 120,
+      "source_category": "OJ_A",
+      "pair_id": 241,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0242",
+      "label": "equivalent",
+      "problem_id": 121,
+      "source_category": "OJ_A",
+      "pair_id": 242,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0244",
+      "label": "equivalent",
+      "problem_id": 122,
+      "source_category": "OJ_A",
+      "pair_id": 244,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0248",
+      "label": "equivalent",
+      "problem_id": 124,
+      "source_category": "OJ_A",
+      "pair_id": 248,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0250",
+      "label": "equivalent",
+      "problem_id": 125,
+      "source_category": "OJ_A",
+      "pair_id": 250,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0252",
+      "label": "equivalent",
+      "problem_id": 126,
+      "source_category": "OJ_A",
+      "pair_id": 252,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0253",
+      "label": "inequivalent",
+      "problem_id": 126,
+      "source_category": "OJ_A",
+      "pair_id": 253,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0254",
+      "label": "equivalent",
+      "problem_id": 127,
+      "source_category": "OJ_A",
+      "pair_id": 254,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0255",
+      "label": "inequivalent",
+      "problem_id": 127,
+      "source_category": "OJ_A",
+      "pair_id": 255,
+      "sample_count": 4,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0260",
+      "label": "equivalent",
+      "problem_id": 130,
+      "source_category": "OJ_A",
+      "pair_id": 260,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0262",
+      "label": "equivalent",
+      "problem_id": 131,
+      "source_category": "OJ_A",
+      "pair_id": 262,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0265",
+      "label": "inequivalent",
+      "problem_id": 132,
+      "source_category": "OJ_A",
+      "pair_id": 265,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0268",
+      "label": "equivalent",
+      "problem_id": 134,
+      "source_category": "OJ_A",
+      "pair_id": 268,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0269",
+      "label": "inequivalent",
+      "problem_id": 134,
+      "source_category": "OJ_A",
+      "pair_id": 269,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0272",
+      "label": "equivalent",
+      "problem_id": 136,
+      "source_category": "OJ_A",
+      "pair_id": 272,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0273",
+      "label": "inequivalent",
+      "problem_id": 136,
+      "source_category": "OJ_A",
+      "pair_id": 273,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0274",
+      "label": "equivalent",
+      "problem_id": 137,
+      "source_category": "OJ_A",
+      "pair_id": 274,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0275",
+      "label": "inequivalent",
+      "problem_id": 137,
+      "source_category": "OJ_A",
+      "pair_id": 275,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0276",
+      "label": "equivalent",
+      "problem_id": 138,
+      "source_category": "OJ_A",
+      "pair_id": 276,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0278",
+      "label": "equivalent",
+      "problem_id": 139,
+      "source_category": "OJ_A",
+      "pair_id": 278,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0279",
+      "label": "inequivalent",
+      "problem_id": 139,
+      "source_category": "OJ_A",
+      "pair_id": 279,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    },
+    {
+      "case_id": "goeq-oja-0280",
+      "label": "equivalent",
+      "problem_id": 140,
+      "source_category": "OJ_A",
+      "pair_id": 280,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0281",
+      "label": "inequivalent",
+      "problem_id": 140,
+      "source_category": "OJ_A",
+      "pair_id": 281,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0284",
+      "label": "equivalent",
+      "problem_id": 142,
+      "source_category": "OJ_A",
+      "pair_id": 284,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0288",
+      "label": "equivalent",
+      "problem_id": 144,
+      "source_category": "OJ_A",
+      "pair_id": 288,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0289",
+      "label": "inequivalent",
+      "problem_id": 144,
+      "source_category": "OJ_A",
+      "pair_id": 289,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0292",
+      "label": "equivalent",
+      "problem_id": 146,
+      "source_category": "OJ_A",
+      "pair_id": 292,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0298",
+      "label": "equivalent",
+      "problem_id": 149,
+      "source_category": "OJ_A",
+      "pair_id": 298,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0299",
+      "label": "inequivalent",
+      "problem_id": 149,
+      "source_category": "OJ_A",
+      "pair_id": 299,
+      "sample_count": 3,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0300",
+      "label": "equivalent",
+      "problem_id": 150,
+      "source_category": "OJ_A",
+      "pair_id": 300,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0301",
+      "label": "inequivalent",
+      "problem_id": 150,
+      "source_category": "OJ_A",
+      "pair_id": 301,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0302",
+      "label": "equivalent",
+      "problem_id": 151,
+      "source_category": "OJ_A",
+      "pair_id": 302,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0303",
+      "label": "inequivalent",
+      "problem_id": 151,
+      "source_category": "OJ_A",
+      "pair_id": 303,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0304",
+      "label": "equivalent",
+      "problem_id": 152,
+      "source_category": "OJ_A",
+      "pair_id": 304,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0306",
+      "label": "equivalent",
+      "problem_id": 153,
+      "source_category": "OJ_A",
+      "pair_id": 306,
+      "sample_count": 6,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0312",
+      "label": "equivalent",
+      "problem_id": 156,
+      "source_category": "OJ_A",
+      "pair_id": 312,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0314",
+      "label": "equivalent",
+      "problem_id": 157,
+      "source_category": "OJ_A",
+      "pair_id": 314,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0316",
+      "label": "equivalent",
+      "problem_id": 158,
+      "source_category": "OJ_A",
+      "pair_id": 316,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0318",
+      "label": "equivalent",
+      "problem_id": 159,
+      "source_category": "OJ_A",
+      "pair_id": 318,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0320",
+      "label": "equivalent",
+      "problem_id": 160,
+      "source_category": "OJ_A",
+      "pair_id": 320,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0321",
+      "label": "inequivalent",
+      "problem_id": 160,
+      "source_category": "OJ_A",
+      "pair_id": 321,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0322",
+      "label": "equivalent",
+      "problem_id": 161,
+      "source_category": "OJ_A",
+      "pair_id": 322,
+      "sample_count": 5,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0324",
+      "label": "equivalent",
+      "problem_id": 162,
+      "source_category": "OJ_A",
+      "pair_id": 324,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0325",
+      "label": "inequivalent",
+      "problem_id": 162,
+      "source_category": "OJ_A",
+      "pair_id": 325,
+      "sample_count": 4,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0330",
+      "label": "equivalent",
+      "problem_id": 165,
+      "source_category": "OJ_A",
+      "pair_id": 330,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0332",
+      "label": "equivalent",
+      "problem_id": 166,
+      "source_category": "OJ_A",
+      "pair_id": 332,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0333",
+      "label": "inequivalent",
+      "problem_id": 166,
+      "source_category": "OJ_A",
+      "pair_id": 333,
+      "sample_count": 4,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0340",
+      "label": "equivalent",
+      "problem_id": 170,
+      "source_category": "OJ_A",
+      "pair_id": 340,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0344",
+      "label": "equivalent",
+      "problem_id": 172,
+      "source_category": "OJ_A",
+      "pair_id": 344,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0345",
+      "label": "inequivalent",
+      "problem_id": 172,
+      "source_category": "OJ_A",
+      "pair_id": 345,
+      "sample_count": 4,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-oja-0346",
+      "label": "equivalent",
+      "problem_id": 173,
+      "source_category": "OJ_A",
+      "pair_id": 346,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0348",
+      "label": "equivalent",
+      "problem_id": 174,
+      "source_category": "OJ_A",
+      "pair_id": 348,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0349",
+      "label": "inequivalent",
+      "problem_id": 174,
+      "source_category": "OJ_A",
+      "pair_id": 349,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0350",
+      "label": "equivalent",
+      "problem_id": 175,
+      "source_category": "OJ_A",
+      "pair_id": 350,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0352",
+      "label": "equivalent",
+      "problem_id": 176,
+      "source_category": "OJ_A",
+      "pair_id": 352,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0354",
+      "label": "equivalent",
+      "problem_id": 177,
+      "source_category": "OJ_A",
+      "pair_id": 354,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0356",
+      "label": "equivalent",
+      "problem_id": 178,
+      "source_category": "OJ_A",
+      "pair_id": 356,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0357",
+      "label": "inequivalent",
+      "problem_id": 178,
+      "source_category": "OJ_A",
+      "pair_id": 357,
+      "sample_count": 2,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-oja-0360",
+      "label": "equivalent",
+      "problem_id": 180,
+      "source_category": "OJ_A",
+      "pair_id": 360,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001",
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0362",
+      "label": "equivalent",
+      "problem_id": 181,
+      "source_category": "OJ_A",
+      "pair_id": 362,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0365",
+      "label": "inequivalent",
+      "problem_id": 182,
+      "source_category": "OJ_A",
+      "pair_id": 365,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0366",
+      "label": "equivalent",
+      "problem_id": 183,
+      "source_category": "OJ_A",
+      "pair_id": 366,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0368",
+      "label": "equivalent",
+      "problem_id": 184,
+      "source_category": "OJ_A",
+      "pair_id": 368,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0369",
+      "label": "inequivalent",
+      "problem_id": 184,
+      "source_category": "OJ_A",
+      "pair_id": 369,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    },
+    {
+      "case_id": "goeq-oja-0370",
+      "label": "equivalent",
+      "problem_id": 185,
+      "source_category": "OJ_A",
+      "pair_id": 370,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0374",
+      "label": "equivalent",
+      "problem_id": 187,
+      "source_category": "OJ_A",
+      "pair_id": 374,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0375",
+      "label": "inequivalent",
+      "problem_id": 187,
+      "source_category": "OJ_A",
+      "pair_id": 375,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0380",
+      "label": "equivalent",
+      "problem_id": 190,
+      "source_category": "OJ_A",
+      "pair_id": 380,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0382",
+      "label": "equivalent",
+      "problem_id": 191,
+      "source_category": "OJ_A",
+      "pair_id": 382,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0383",
+      "label": "inequivalent",
+      "problem_id": 191,
+      "source_category": "OJ_A",
+      "pair_id": 383,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0384",
+      "label": "equivalent",
+      "problem_id": 192,
+      "source_category": "OJ_A",
+      "pair_id": 384,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0385",
+      "label": "inequivalent",
+      "problem_id": 192,
+      "source_category": "OJ_A",
+      "pair_id": 385,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0391",
+      "label": "inequivalent",
+      "problem_id": 195,
+      "source_category": "OJ_A",
+      "pair_id": 391,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0392",
+      "label": "equivalent",
+      "problem_id": 196,
+      "source_category": "OJ_A",
+      "pair_id": 392,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0393",
+      "label": "inequivalent",
+      "problem_id": 196,
+      "source_category": "OJ_A",
+      "pair_id": 393,
+      "sample_count": 4,
+      "witness_sample": "sample_04",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0394",
+      "label": "equivalent",
+      "problem_id": 197,
+      "source_category": "OJ_A",
+      "pair_id": 394,
+      "sample_count": 5,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0397",
+      "label": "inequivalent",
+      "problem_id": 198,
+      "source_category": "OJ_A",
+      "pair_id": 397,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    },
+    {
+      "case_id": "goeq-ojv-0000",
+      "label": "equivalent",
+      "problem_id": 0,
+      "source_category": "OJ_V",
+      "pair_id": 0,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0001",
+      "label": "inequivalent",
+      "problem_id": 0,
+      "source_category": "OJ_V",
+      "pair_id": 1,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0010",
+      "label": "equivalent",
+      "problem_id": 5,
+      "source_category": "OJ_V",
+      "pair_id": 10,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0018",
+      "label": "equivalent",
+      "problem_id": 9,
+      "source_category": "OJ_V",
+      "pair_id": 18,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0020",
+      "label": "equivalent",
+      "problem_id": 10,
+      "source_category": "OJ_V",
+      "pair_id": 20,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0026",
+      "label": "equivalent",
+      "problem_id": 13,
+      "source_category": "OJ_V",
+      "pair_id": 26,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0027",
+      "label": "inequivalent",
+      "problem_id": 13,
+      "source_category": "OJ_V",
+      "pair_id": 27,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0030",
+      "label": "equivalent",
+      "problem_id": 15,
+      "source_category": "OJ_V",
+      "pair_id": 30,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0032",
+      "label": "equivalent",
+      "problem_id": 16,
+      "source_category": "OJ_V",
+      "pair_id": 32,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0034",
+      "label": "equivalent",
+      "problem_id": 17,
+      "source_category": "OJ_V",
+      "pair_id": 34,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0036",
+      "label": "equivalent",
+      "problem_id": 18,
+      "source_category": "OJ_V",
+      "pair_id": 36,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0040",
+      "label": "equivalent",
+      "problem_id": 20,
+      "source_category": "OJ_V",
+      "pair_id": 40,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0042",
+      "label": "equivalent",
+      "problem_id": 21,
+      "source_category": "OJ_V",
+      "pair_id": 42,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0046",
+      "label": "equivalent",
+      "problem_id": 23,
+      "source_category": "OJ_V",
+      "pair_id": 46,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0048",
+      "label": "equivalent",
+      "problem_id": 24,
+      "source_category": "OJ_V",
+      "pair_id": 48,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0050",
+      "label": "equivalent",
+      "problem_id": 25,
+      "source_category": "OJ_V",
+      "pair_id": 50,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0052",
+      "label": "equivalent",
+      "problem_id": 26,
+      "source_category": "OJ_V",
+      "pair_id": 52,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0053",
+      "label": "inequivalent",
+      "problem_id": 26,
+      "source_category": "OJ_V",
+      "pair_id": 53,
+      "sample_count": 3,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0054",
+      "label": "equivalent",
+      "problem_id": 27,
+      "source_category": "OJ_V",
+      "pair_id": 54,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0056",
+      "label": "equivalent",
+      "problem_id": 28,
+      "source_category": "OJ_V",
+      "pair_id": 56,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0058",
+      "label": "equivalent",
+      "problem_id": 29,
+      "source_category": "OJ_V",
+      "pair_id": 58,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0060",
+      "label": "equivalent",
+      "problem_id": 30,
+      "source_category": "OJ_V",
+      "pair_id": 60,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0061",
+      "label": "inequivalent",
+      "problem_id": 30,
+      "source_category": "OJ_V",
+      "pair_id": 61,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0062",
+      "label": "equivalent",
+      "problem_id": 31,
+      "source_category": "OJ_V",
+      "pair_id": 62,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0064",
+      "label": "equivalent",
+      "problem_id": 32,
+      "source_category": "OJ_V",
+      "pair_id": 64,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0065",
+      "label": "inequivalent",
+      "problem_id": 32,
+      "source_category": "OJ_V",
+      "pair_id": 65,
+      "sample_count": 2,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojv-0070",
+      "label": "equivalent",
+      "problem_id": 35,
+      "source_category": "OJ_V",
+      "pair_id": 70,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0071",
+      "label": "inequivalent",
+      "problem_id": 35,
+      "source_category": "OJ_V",
+      "pair_id": 71,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0076",
+      "label": "equivalent",
+      "problem_id": 38,
+      "source_category": "OJ_V",
+      "pair_id": 76,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0077",
+      "label": "inequivalent",
+      "problem_id": 38,
+      "source_category": "OJ_V",
+      "pair_id": 77,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0078",
+      "label": "equivalent",
+      "problem_id": 39,
+      "source_category": "OJ_V",
+      "pair_id": 78,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0079",
+      "label": "inequivalent",
+      "problem_id": 39,
+      "source_category": "OJ_V",
+      "pair_id": 79,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0082",
+      "label": "equivalent",
+      "problem_id": 41,
+      "source_category": "OJ_V",
+      "pair_id": 82,
+      "sample_count": 6,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0083",
+      "label": "inequivalent",
+      "problem_id": 41,
+      "source_category": "OJ_V",
+      "pair_id": 83,
+      "sample_count": 6,
+      "witness_sample": "sample_04",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0084",
+      "label": "equivalent",
+      "problem_id": 42,
+      "source_category": "OJ_V",
+      "pair_id": 84,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0085",
+      "label": "inequivalent",
+      "problem_id": 42,
+      "source_category": "OJ_V",
+      "pair_id": 85,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0086",
+      "label": "equivalent",
+      "problem_id": 43,
+      "source_category": "OJ_V",
+      "pair_id": 86,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0088",
+      "label": "equivalent",
+      "problem_id": 44,
+      "source_category": "OJ_V",
+      "pair_id": 88,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001",
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0092",
+      "label": "equivalent",
+      "problem_id": 46,
+      "source_category": "OJ_V",
+      "pair_id": 92,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0093",
+      "label": "inequivalent",
+      "problem_id": 46,
+      "source_category": "OJ_V",
+      "pair_id": 93,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0094",
+      "label": "equivalent",
+      "problem_id": 47,
+      "source_category": "OJ_V",
+      "pair_id": 94,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0100",
+      "label": "equivalent",
+      "problem_id": 50,
+      "source_category": "OJ_V",
+      "pair_id": 100,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0104",
+      "label": "equivalent",
+      "problem_id": 52,
+      "source_category": "OJ_V",
+      "pair_id": 104,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0108",
+      "label": "equivalent",
+      "problem_id": 54,
+      "source_category": "OJ_V",
+      "pair_id": 108,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0109",
+      "label": "inequivalent",
+      "problem_id": 54,
+      "source_category": "OJ_V",
+      "pair_id": 109,
+      "sample_count": 1,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0114",
+      "label": "equivalent",
+      "problem_id": 57,
+      "source_category": "OJ_V",
+      "pair_id": 114,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0115",
+      "label": "inequivalent",
+      "problem_id": 57,
+      "source_category": "OJ_V",
+      "pair_id": 115,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0118",
+      "label": "equivalent",
+      "problem_id": 59,
+      "source_category": "OJ_V",
+      "pair_id": 118,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0124",
+      "label": "equivalent",
+      "problem_id": 62,
+      "source_category": "OJ_V",
+      "pair_id": 124,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0125",
+      "label": "inequivalent",
+      "problem_id": 62,
+      "source_category": "OJ_V",
+      "pair_id": 125,
+      "sample_count": 2,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0128",
+      "label": "equivalent",
+      "problem_id": 64,
+      "source_category": "OJ_V",
+      "pair_id": 128,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0134",
+      "label": "equivalent",
+      "problem_id": 67,
+      "source_category": "OJ_V",
+      "pair_id": 134,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0136",
+      "label": "equivalent",
+      "problem_id": 68,
+      "source_category": "OJ_V",
+      "pair_id": 136,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0140",
+      "label": "equivalent",
+      "problem_id": 70,
+      "source_category": "OJ_V",
+      "pair_id": 140,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0142",
+      "label": "equivalent",
+      "problem_id": 71,
+      "source_category": "OJ_V",
+      "pair_id": 142,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0143",
+      "label": "inequivalent",
+      "problem_id": 71,
+      "source_category": "OJ_V",
+      "pair_id": 143,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0154",
+      "label": "equivalent",
+      "problem_id": 77,
+      "source_category": "OJ_V",
+      "pair_id": 154,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0156",
+      "label": "equivalent",
+      "problem_id": 78,
+      "source_category": "OJ_V",
+      "pair_id": 156,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0160",
+      "label": "equivalent",
+      "problem_id": 80,
+      "source_category": "OJ_V",
+      "pair_id": 160,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0162",
+      "label": "equivalent",
+      "problem_id": 81,
+      "source_category": "OJ_V",
+      "pair_id": 162,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0164",
+      "label": "equivalent",
+      "problem_id": 82,
+      "source_category": "OJ_V",
+      "pair_id": 164,
+      "sample_count": 5,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0168",
+      "label": "equivalent",
+      "problem_id": 84,
+      "source_category": "OJ_V",
+      "pair_id": 168,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0170",
+      "label": "equivalent",
+      "problem_id": 85,
+      "source_category": "OJ_V",
+      "pair_id": 170,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0172",
+      "label": "equivalent",
+      "problem_id": 86,
+      "source_category": "OJ_V",
+      "pair_id": 172,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0174",
+      "label": "equivalent",
+      "problem_id": 87,
+      "source_category": "OJ_V",
+      "pair_id": 174,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0175",
+      "label": "inequivalent",
+      "problem_id": 87,
+      "source_category": "OJ_V",
+      "pair_id": 175,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0180",
+      "label": "equivalent",
+      "problem_id": 90,
+      "source_category": "OJ_V",
+      "pair_id": 180,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0181",
+      "label": "inequivalent",
+      "problem_id": 90,
+      "source_category": "OJ_V",
+      "pair_id": 181,
+      "sample_count": 4,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0182",
+      "label": "equivalent",
+      "problem_id": 91,
+      "source_category": "OJ_V",
+      "pair_id": 182,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0184",
+      "label": "equivalent",
+      "problem_id": 92,
+      "source_category": "OJ_V",
+      "pair_id": 184,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0185",
+      "label": "inequivalent",
+      "problem_id": 92,
+      "source_category": "OJ_V",
+      "pair_id": 185,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0186",
+      "label": "equivalent",
+      "problem_id": 93,
+      "source_category": "OJ_V",
+      "pair_id": 186,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0188",
+      "label": "equivalent",
+      "problem_id": 94,
+      "source_category": "OJ_V",
+      "pair_id": 188,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0190",
+      "label": "equivalent",
+      "problem_id": 95,
+      "source_category": "OJ_V",
+      "pair_id": 190,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0192",
+      "label": "equivalent",
+      "problem_id": 96,
+      "source_category": "OJ_V",
+      "pair_id": 192,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0196",
+      "label": "equivalent",
+      "problem_id": 98,
+      "source_category": "OJ_V",
+      "pair_id": 196,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0198",
+      "label": "equivalent",
+      "problem_id": 99,
+      "source_category": "OJ_V",
+      "pair_id": 198,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0204",
+      "label": "equivalent",
+      "problem_id": 102,
+      "source_category": "OJ_V",
+      "pair_id": 204,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0205",
+      "label": "inequivalent",
+      "problem_id": 102,
+      "source_category": "OJ_V",
+      "pair_id": 205,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0206",
+      "label": "equivalent",
+      "problem_id": 103,
+      "source_category": "OJ_V",
+      "pair_id": 206,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0207",
+      "label": "inequivalent",
+      "problem_id": 103,
+      "source_category": "OJ_V",
+      "pair_id": 207,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0210",
+      "label": "equivalent",
+      "problem_id": 105,
+      "source_category": "OJ_V",
+      "pair_id": 210,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0211",
+      "label": "inequivalent",
+      "problem_id": 105,
+      "source_category": "OJ_V",
+      "pair_id": 211,
+      "sample_count": 3,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojv-0212",
+      "label": "equivalent",
+      "problem_id": 106,
+      "source_category": "OJ_V",
+      "pair_id": 212,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0216",
+      "label": "equivalent",
+      "problem_id": 108,
+      "source_category": "OJ_V",
+      "pair_id": 216,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0218",
+      "label": "equivalent",
+      "problem_id": 109,
+      "source_category": "OJ_V",
+      "pair_id": 218,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0219",
+      "label": "inequivalent",
+      "problem_id": 109,
+      "source_category": "OJ_V",
+      "pair_id": 219,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0222",
+      "label": "equivalent",
+      "problem_id": 111,
+      "source_category": "OJ_V",
+      "pair_id": 222,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0226",
+      "label": "equivalent",
+      "problem_id": 113,
+      "source_category": "OJ_V",
+      "pair_id": 226,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0227",
+      "label": "inequivalent",
+      "problem_id": 113,
+      "source_category": "OJ_V",
+      "pair_id": 227,
+      "sample_count": 3,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojv-0228",
+      "label": "equivalent",
+      "problem_id": 114,
+      "source_category": "OJ_V",
+      "pair_id": 228,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0229",
+      "label": "inequivalent",
+      "problem_id": 114,
+      "source_category": "OJ_V",
+      "pair_id": 229,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0230",
+      "label": "equivalent",
+      "problem_id": 115,
+      "source_category": "OJ_V",
+      "pair_id": 230,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0231",
+      "label": "inequivalent",
+      "problem_id": 115,
+      "source_category": "OJ_V",
+      "pair_id": 231,
+      "sample_count": 4,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0232",
+      "label": "equivalent",
+      "problem_id": 116,
+      "source_category": "OJ_V",
+      "pair_id": 232,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0234",
+      "label": "equivalent",
+      "problem_id": 117,
+      "source_category": "OJ_V",
+      "pair_id": 234,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0235",
+      "label": "inequivalent",
+      "problem_id": 117,
+      "source_category": "OJ_V",
+      "pair_id": 235,
+      "sample_count": 2,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0240",
+      "label": "equivalent",
+      "problem_id": 120,
+      "source_category": "OJ_V",
+      "pair_id": 240,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0242",
+      "label": "equivalent",
+      "problem_id": 121,
+      "source_category": "OJ_V",
+      "pair_id": 242,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0244",
+      "label": "equivalent",
+      "problem_id": 122,
+      "source_category": "OJ_V",
+      "pair_id": 244,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0248",
+      "label": "equivalent",
+      "problem_id": 124,
+      "source_category": "OJ_V",
+      "pair_id": 248,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0250",
+      "label": "equivalent",
+      "problem_id": 125,
+      "source_category": "OJ_V",
+      "pair_id": 250,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0252",
+      "label": "equivalent",
+      "problem_id": 126,
+      "source_category": "OJ_V",
+      "pair_id": 252,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0253",
+      "label": "inequivalent",
+      "problem_id": 126,
+      "source_category": "OJ_V",
+      "pair_id": 253,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0254",
+      "label": "equivalent",
+      "problem_id": 127,
+      "source_category": "OJ_V",
+      "pair_id": 254,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0255",
+      "label": "inequivalent",
+      "problem_id": 127,
+      "source_category": "OJ_V",
+      "pair_id": 255,
+      "sample_count": 4,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0260",
+      "label": "equivalent",
+      "problem_id": 130,
+      "source_category": "OJ_V",
+      "pair_id": 260,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0262",
+      "label": "equivalent",
+      "problem_id": 131,
+      "source_category": "OJ_V",
+      "pair_id": 262,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0264",
+      "label": "equivalent",
+      "problem_id": 132,
+      "source_category": "OJ_V",
+      "pair_id": 264,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0265",
+      "label": "inequivalent",
+      "problem_id": 132,
+      "source_category": "OJ_V",
+      "pair_id": 265,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0266",
+      "label": "equivalent",
+      "problem_id": 133,
+      "source_category": "OJ_V",
+      "pair_id": 266,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0268",
+      "label": "equivalent",
+      "problem_id": 134,
+      "source_category": "OJ_V",
+      "pair_id": 268,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0269",
+      "label": "inequivalent",
+      "problem_id": 134,
+      "source_category": "OJ_V",
+      "pair_id": 269,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0270",
+      "label": "equivalent",
+      "problem_id": 135,
+      "source_category": "OJ_V",
+      "pair_id": 270,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0272",
+      "label": "equivalent",
+      "problem_id": 136,
+      "source_category": "OJ_V",
+      "pair_id": 272,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0273",
+      "label": "inequivalent",
+      "problem_id": 136,
+      "source_category": "OJ_V",
+      "pair_id": 273,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0274",
+      "label": "equivalent",
+      "problem_id": 137,
+      "source_category": "OJ_V",
+      "pair_id": 274,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0275",
+      "label": "inequivalent",
+      "problem_id": 137,
+      "source_category": "OJ_V",
+      "pair_id": 275,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0276",
+      "label": "equivalent",
+      "problem_id": 138,
+      "source_category": "OJ_V",
+      "pair_id": 276,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0278",
+      "label": "equivalent",
+      "problem_id": 139,
+      "source_category": "OJ_V",
+      "pair_id": 278,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0279",
+      "label": "inequivalent",
+      "problem_id": 139,
+      "source_category": "OJ_V",
+      "pair_id": 279,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    },
+    {
+      "case_id": "goeq-ojv-0280",
+      "label": "equivalent",
+      "problem_id": 140,
+      "source_category": "OJ_V",
+      "pair_id": 280,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0281",
+      "label": "inequivalent",
+      "problem_id": 140,
+      "source_category": "OJ_V",
+      "pair_id": 281,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0284",
+      "label": "equivalent",
+      "problem_id": 142,
+      "source_category": "OJ_V",
+      "pair_id": 284,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0286",
+      "label": "equivalent",
+      "problem_id": 143,
+      "source_category": "OJ_V",
+      "pair_id": 286,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0288",
+      "label": "equivalent",
+      "problem_id": 144,
+      "source_category": "OJ_V",
+      "pair_id": 288,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0289",
+      "label": "inequivalent",
+      "problem_id": 144,
+      "source_category": "OJ_V",
+      "pair_id": 289,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0290",
+      "label": "equivalent",
+      "problem_id": 145,
+      "source_category": "OJ_V",
+      "pair_id": 290,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0292",
+      "label": "equivalent",
+      "problem_id": 146,
+      "source_category": "OJ_V",
+      "pair_id": 292,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0294",
+      "label": "equivalent",
+      "problem_id": 147,
+      "source_category": "OJ_V",
+      "pair_id": 294,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0298",
+      "label": "equivalent",
+      "problem_id": 149,
+      "source_category": "OJ_V",
+      "pair_id": 298,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0299",
+      "label": "inequivalent",
+      "problem_id": 149,
+      "source_category": "OJ_V",
+      "pair_id": 299,
+      "sample_count": 3,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0300",
+      "label": "equivalent",
+      "problem_id": 150,
+      "source_category": "OJ_V",
+      "pair_id": 300,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0301",
+      "label": "inequivalent",
+      "problem_id": 150,
+      "source_category": "OJ_V",
+      "pair_id": 301,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0302",
+      "label": "equivalent",
+      "problem_id": 151,
+      "source_category": "OJ_V",
+      "pair_id": 302,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0303",
+      "label": "inequivalent",
+      "problem_id": 151,
+      "source_category": "OJ_V",
+      "pair_id": 303,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0304",
+      "label": "equivalent",
+      "problem_id": 152,
+      "source_category": "OJ_V",
+      "pair_id": 304,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0306",
+      "label": "equivalent",
+      "problem_id": 153,
+      "source_category": "OJ_V",
+      "pair_id": 306,
+      "sample_count": 6,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0312",
+      "label": "equivalent",
+      "problem_id": 156,
+      "source_category": "OJ_V",
+      "pair_id": 312,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0314",
+      "label": "equivalent",
+      "problem_id": 157,
+      "source_category": "OJ_V",
+      "pair_id": 314,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0316",
+      "label": "equivalent",
+      "problem_id": 158,
+      "source_category": "OJ_V",
+      "pair_id": 316,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0318",
+      "label": "equivalent",
+      "problem_id": 159,
+      "source_category": "OJ_V",
+      "pair_id": 318,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0320",
+      "label": "equivalent",
+      "problem_id": 160,
+      "source_category": "OJ_V",
+      "pair_id": 320,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0321",
+      "label": "inequivalent",
+      "problem_id": 160,
+      "source_category": "OJ_V",
+      "pair_id": 321,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0322",
+      "label": "equivalent",
+      "problem_id": 161,
+      "source_category": "OJ_V",
+      "pair_id": 322,
+      "sample_count": 5,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0324",
+      "label": "equivalent",
+      "problem_id": 162,
+      "source_category": "OJ_V",
+      "pair_id": 324,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0325",
+      "label": "inequivalent",
+      "problem_id": 162,
+      "source_category": "OJ_V",
+      "pair_id": 325,
+      "sample_count": 4,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0330",
+      "label": "equivalent",
+      "problem_id": 165,
+      "source_category": "OJ_V",
+      "pair_id": 330,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0332",
+      "label": "equivalent",
+      "problem_id": 166,
+      "source_category": "OJ_V",
+      "pair_id": 332,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0333",
+      "label": "inequivalent",
+      "problem_id": 166,
+      "source_category": "OJ_V",
+      "pair_id": 333,
+      "sample_count": 4,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0334",
+      "label": "equivalent",
+      "problem_id": 167,
+      "source_category": "OJ_V",
+      "pair_id": 334,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0340",
+      "label": "equivalent",
+      "problem_id": 170,
+      "source_category": "OJ_V",
+      "pair_id": 340,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0344",
+      "label": "equivalent",
+      "problem_id": 172,
+      "source_category": "OJ_V",
+      "pair_id": 344,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0345",
+      "label": "inequivalent",
+      "problem_id": 172,
+      "source_category": "OJ_V",
+      "pair_id": 345,
+      "sample_count": 4,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojv-0346",
+      "label": "equivalent",
+      "problem_id": 173,
+      "source_category": "OJ_V",
+      "pair_id": 346,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0348",
+      "label": "equivalent",
+      "problem_id": 174,
+      "source_category": "OJ_V",
+      "pair_id": 348,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0349",
+      "label": "inequivalent",
+      "problem_id": 174,
+      "source_category": "OJ_V",
+      "pair_id": 349,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0350",
+      "label": "equivalent",
+      "problem_id": 175,
+      "source_category": "OJ_V",
+      "pair_id": 350,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0352",
+      "label": "equivalent",
+      "problem_id": 176,
+      "source_category": "OJ_V",
+      "pair_id": 352,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0354",
+      "label": "equivalent",
+      "problem_id": 177,
+      "source_category": "OJ_V",
+      "pair_id": 354,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0356",
+      "label": "equivalent",
+      "problem_id": 178,
+      "source_category": "OJ_V",
+      "pair_id": 356,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0357",
+      "label": "inequivalent",
+      "problem_id": 178,
+      "source_category": "OJ_V",
+      "pair_id": 357,
+      "sample_count": 2,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojv-0360",
+      "label": "equivalent",
+      "problem_id": 180,
+      "source_category": "OJ_V",
+      "pair_id": 360,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0362",
+      "label": "equivalent",
+      "problem_id": 181,
+      "source_category": "OJ_V",
+      "pair_id": 362,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0364",
+      "label": "equivalent",
+      "problem_id": 182,
+      "source_category": "OJ_V",
+      "pair_id": 364,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0365",
+      "label": "inequivalent",
+      "problem_id": 182,
+      "source_category": "OJ_V",
+      "pair_id": 365,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0366",
+      "label": "equivalent",
+      "problem_id": 183,
+      "source_category": "OJ_V",
+      "pair_id": 366,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0368",
+      "label": "equivalent",
+      "problem_id": 184,
+      "source_category": "OJ_V",
+      "pair_id": 368,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0369",
+      "label": "inequivalent",
+      "problem_id": 184,
+      "source_category": "OJ_V",
+      "pair_id": 369,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    },
+    {
+      "case_id": "goeq-ojv-0370",
+      "label": "equivalent",
+      "problem_id": 185,
+      "source_category": "OJ_V",
+      "pair_id": 370,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0374",
+      "label": "equivalent",
+      "problem_id": 187,
+      "source_category": "OJ_V",
+      "pair_id": 374,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0375",
+      "label": "inequivalent",
+      "problem_id": 187,
+      "source_category": "OJ_V",
+      "pair_id": 375,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0380",
+      "label": "equivalent",
+      "problem_id": 190,
+      "source_category": "OJ_V",
+      "pair_id": 380,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0382",
+      "label": "equivalent",
+      "problem_id": 191,
+      "source_category": "OJ_V",
+      "pair_id": 382,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0383",
+      "label": "inequivalent",
+      "problem_id": 191,
+      "source_category": "OJ_V",
+      "pair_id": 383,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0384",
+      "label": "equivalent",
+      "problem_id": 192,
+      "source_category": "OJ_V",
+      "pair_id": 384,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0385",
+      "label": "inequivalent",
+      "problem_id": 192,
+      "source_category": "OJ_V",
+      "pair_id": 385,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0388",
+      "label": "equivalent",
+      "problem_id": 194,
+      "source_category": "OJ_V",
+      "pair_id": 388,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0390",
+      "label": "equivalent",
+      "problem_id": 195,
+      "source_category": "OJ_V",
+      "pair_id": 390,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0391",
+      "label": "inequivalent",
+      "problem_id": 195,
+      "source_category": "OJ_V",
+      "pair_id": 391,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0392",
+      "label": "equivalent",
+      "problem_id": 196,
+      "source_category": "OJ_V",
+      "pair_id": 392,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0393",
+      "label": "inequivalent",
+      "problem_id": 196,
+      "source_category": "OJ_V",
+      "pair_id": 393,
+      "sample_count": 4,
+      "witness_sample": "sample_04",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0394",
+      "label": "equivalent",
+      "problem_id": 197,
+      "source_category": "OJ_V",
+      "pair_id": 394,
+      "sample_count": 5,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0396",
+      "label": "equivalent",
+      "problem_id": 198,
+      "source_category": "OJ_V",
+      "pair_id": 396,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0397",
+      "label": "inequivalent",
+      "problem_id": 198,
+      "source_category": "OJ_V",
+      "pair_id": 397,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    },
+    {
+      "case_id": "goeq-ojva-0001",
+      "label": "inequivalent",
+      "problem_id": 0,
+      "source_category": "OJ_VA",
+      "pair_id": 1,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0018",
+      "label": "equivalent",
+      "problem_id": 9,
+      "source_category": "OJ_VA",
+      "pair_id": 18,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0020",
+      "label": "equivalent",
+      "problem_id": 10,
+      "source_category": "OJ_VA",
+      "pair_id": 20,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0026",
+      "label": "equivalent",
+      "problem_id": 13,
+      "source_category": "OJ_VA",
+      "pair_id": 26,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0030",
+      "label": "equivalent",
+      "problem_id": 15,
+      "source_category": "OJ_VA",
+      "pair_id": 30,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0034",
+      "label": "equivalent",
+      "problem_id": 17,
+      "source_category": "OJ_VA",
+      "pair_id": 34,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0036",
+      "label": "equivalent",
+      "problem_id": 18,
+      "source_category": "OJ_VA",
+      "pair_id": 36,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0040",
+      "label": "equivalent",
+      "problem_id": 20,
+      "source_category": "OJ_VA",
+      "pair_id": 40,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0042",
+      "label": "equivalent",
+      "problem_id": 21,
+      "source_category": "OJ_VA",
+      "pair_id": 42,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0046",
+      "label": "equivalent",
+      "problem_id": 23,
+      "source_category": "OJ_VA",
+      "pair_id": 46,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0048",
+      "label": "equivalent",
+      "problem_id": 24,
+      "source_category": "OJ_VA",
+      "pair_id": 48,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0050",
+      "label": "equivalent",
+      "problem_id": 25,
+      "source_category": "OJ_VA",
+      "pair_id": 50,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0052",
+      "label": "equivalent",
+      "problem_id": 26,
+      "source_category": "OJ_VA",
+      "pair_id": 52,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0053",
+      "label": "inequivalent",
+      "problem_id": 26,
+      "source_category": "OJ_VA",
+      "pair_id": 53,
+      "sample_count": 3,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0054",
+      "label": "equivalent",
+      "problem_id": 27,
+      "source_category": "OJ_VA",
+      "pair_id": 54,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001",
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0056",
+      "label": "equivalent",
+      "problem_id": 28,
+      "source_category": "OJ_VA",
+      "pair_id": 56,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0058",
+      "label": "equivalent",
+      "problem_id": 29,
+      "source_category": "OJ_VA",
+      "pair_id": 58,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0060",
+      "label": "equivalent",
+      "problem_id": 30,
+      "source_category": "OJ_VA",
+      "pair_id": 60,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0061",
+      "label": "inequivalent",
+      "problem_id": 30,
+      "source_category": "OJ_VA",
+      "pair_id": 61,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0062",
+      "label": "equivalent",
+      "problem_id": 31,
+      "source_category": "OJ_VA",
+      "pair_id": 62,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0065",
+      "label": "inequivalent",
+      "problem_id": 32,
+      "source_category": "OJ_VA",
+      "pair_id": 65,
+      "sample_count": 2,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojva-0070",
+      "label": "equivalent",
+      "problem_id": 35,
+      "source_category": "OJ_VA",
+      "pair_id": 70,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0071",
+      "label": "inequivalent",
+      "problem_id": 35,
+      "source_category": "OJ_VA",
+      "pair_id": 71,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0076",
+      "label": "equivalent",
+      "problem_id": 38,
+      "source_category": "OJ_VA",
+      "pair_id": 76,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0077",
+      "label": "inequivalent",
+      "problem_id": 38,
+      "source_category": "OJ_VA",
+      "pair_id": 77,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0078",
+      "label": "equivalent",
+      "problem_id": 39,
+      "source_category": "OJ_VA",
+      "pair_id": 78,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0079",
+      "label": "inequivalent",
+      "problem_id": 39,
+      "source_category": "OJ_VA",
+      "pair_id": 79,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0082",
+      "label": "equivalent",
+      "problem_id": 41,
+      "source_category": "OJ_VA",
+      "pair_id": 82,
+      "sample_count": 6,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0083",
+      "label": "inequivalent",
+      "problem_id": 41,
+      "source_category": "OJ_VA",
+      "pair_id": 83,
+      "sample_count": 6,
+      "witness_sample": "sample_04",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0084",
+      "label": "equivalent",
+      "problem_id": 42,
+      "source_category": "OJ_VA",
+      "pair_id": 84,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0085",
+      "label": "inequivalent",
+      "problem_id": 42,
+      "source_category": "OJ_VA",
+      "pair_id": 85,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0086",
+      "label": "equivalent",
+      "problem_id": 43,
+      "source_category": "OJ_VA",
+      "pair_id": 86,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0088",
+      "label": "equivalent",
+      "problem_id": 44,
+      "source_category": "OJ_VA",
+      "pair_id": 88,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001",
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0092",
+      "label": "equivalent",
+      "problem_id": 46,
+      "source_category": "OJ_VA",
+      "pair_id": 92,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0093",
+      "label": "inequivalent",
+      "problem_id": 46,
+      "source_category": "OJ_VA",
+      "pair_id": 93,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0100",
+      "label": "equivalent",
+      "problem_id": 50,
+      "source_category": "OJ_VA",
+      "pair_id": 100,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0104",
+      "label": "equivalent",
+      "problem_id": 52,
+      "source_category": "OJ_VA",
+      "pair_id": 104,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0109",
+      "label": "inequivalent",
+      "problem_id": 54,
+      "source_category": "OJ_VA",
+      "pair_id": 109,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0114",
+      "label": "equivalent",
+      "problem_id": 57,
+      "source_category": "OJ_VA",
+      "pair_id": 114,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0115",
+      "label": "inequivalent",
+      "problem_id": 57,
+      "source_category": "OJ_VA",
+      "pair_id": 115,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0124",
+      "label": "equivalent",
+      "problem_id": 62,
+      "source_category": "OJ_VA",
+      "pair_id": 124,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0125",
+      "label": "inequivalent",
+      "problem_id": 62,
+      "source_category": "OJ_VA",
+      "pair_id": 125,
+      "sample_count": 2,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0128",
+      "label": "equivalent",
+      "problem_id": 64,
+      "source_category": "OJ_VA",
+      "pair_id": 128,
+      "sample_count": 1,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0134",
+      "label": "equivalent",
+      "problem_id": 67,
+      "source_category": "OJ_VA",
+      "pair_id": 134,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0136",
+      "label": "equivalent",
+      "problem_id": 68,
+      "source_category": "OJ_VA",
+      "pair_id": 136,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0140",
+      "label": "equivalent",
+      "problem_id": 70,
+      "source_category": "OJ_VA",
+      "pair_id": 140,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0142",
+      "label": "equivalent",
+      "problem_id": 71,
+      "source_category": "OJ_VA",
+      "pair_id": 142,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0143",
+      "label": "inequivalent",
+      "problem_id": 71,
+      "source_category": "OJ_VA",
+      "pair_id": 143,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0154",
+      "label": "equivalent",
+      "problem_id": 77,
+      "source_category": "OJ_VA",
+      "pair_id": 154,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0160",
+      "label": "equivalent",
+      "problem_id": 80,
+      "source_category": "OJ_VA",
+      "pair_id": 160,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0164",
+      "label": "equivalent",
+      "problem_id": 82,
+      "source_category": "OJ_VA",
+      "pair_id": 164,
+      "sample_count": 5,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0168",
+      "label": "equivalent",
+      "problem_id": 84,
+      "source_category": "OJ_VA",
+      "pair_id": 168,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0170",
+      "label": "equivalent",
+      "problem_id": 85,
+      "source_category": "OJ_VA",
+      "pair_id": 170,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0172",
+      "label": "equivalent",
+      "problem_id": 86,
+      "source_category": "OJ_VA",
+      "pair_id": 172,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0174",
+      "label": "equivalent",
+      "problem_id": 87,
+      "source_category": "OJ_VA",
+      "pair_id": 174,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0175",
+      "label": "inequivalent",
+      "problem_id": 87,
+      "source_category": "OJ_VA",
+      "pair_id": 175,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0180",
+      "label": "equivalent",
+      "problem_id": 90,
+      "source_category": "OJ_VA",
+      "pair_id": 180,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0181",
+      "label": "inequivalent",
+      "problem_id": 90,
+      "source_category": "OJ_VA",
+      "pair_id": 181,
+      "sample_count": 4,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0182",
+      "label": "equivalent",
+      "problem_id": 91,
+      "source_category": "OJ_VA",
+      "pair_id": 182,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0184",
+      "label": "equivalent",
+      "problem_id": 92,
+      "source_category": "OJ_VA",
+      "pair_id": 184,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0185",
+      "label": "inequivalent",
+      "problem_id": 92,
+      "source_category": "OJ_VA",
+      "pair_id": 185,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0186",
+      "label": "equivalent",
+      "problem_id": 93,
+      "source_category": "OJ_VA",
+      "pair_id": 186,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0188",
+      "label": "equivalent",
+      "problem_id": 94,
+      "source_category": "OJ_VA",
+      "pair_id": 188,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0190",
+      "label": "equivalent",
+      "problem_id": 95,
+      "source_category": "OJ_VA",
+      "pair_id": 190,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0196",
+      "label": "equivalent",
+      "problem_id": 98,
+      "source_category": "OJ_VA",
+      "pair_id": 196,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0204",
+      "label": "equivalent",
+      "problem_id": 102,
+      "source_category": "OJ_VA",
+      "pair_id": 204,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0205",
+      "label": "inequivalent",
+      "problem_id": 102,
+      "source_category": "OJ_VA",
+      "pair_id": 205,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0206",
+      "label": "equivalent",
+      "problem_id": 103,
+      "source_category": "OJ_VA",
+      "pair_id": 206,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0207",
+      "label": "inequivalent",
+      "problem_id": 103,
+      "source_category": "OJ_VA",
+      "pair_id": 207,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0210",
+      "label": "equivalent",
+      "problem_id": 105,
+      "source_category": "OJ_VA",
+      "pair_id": 210,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0211",
+      "label": "inequivalent",
+      "problem_id": 105,
+      "source_category": "OJ_VA",
+      "pair_id": 211,
+      "sample_count": 3,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojva-0212",
+      "label": "equivalent",
+      "problem_id": 106,
+      "source_category": "OJ_VA",
+      "pair_id": 212,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0216",
+      "label": "equivalent",
+      "problem_id": 108,
+      "source_category": "OJ_VA",
+      "pair_id": 216,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0218",
+      "label": "equivalent",
+      "problem_id": 109,
+      "source_category": "OJ_VA",
+      "pair_id": 218,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0219",
+      "label": "inequivalent",
+      "problem_id": 109,
+      "source_category": "OJ_VA",
+      "pair_id": 219,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0222",
+      "label": "equivalent",
+      "problem_id": 111,
+      "source_category": "OJ_VA",
+      "pair_id": 222,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0226",
+      "label": "equivalent",
+      "problem_id": 113,
+      "source_category": "OJ_VA",
+      "pair_id": 226,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0227",
+      "label": "inequivalent",
+      "problem_id": 113,
+      "source_category": "OJ_VA",
+      "pair_id": 227,
+      "sample_count": 3,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojva-0228",
+      "label": "equivalent",
+      "problem_id": 114,
+      "source_category": "OJ_VA",
+      "pair_id": 228,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0229",
+      "label": "inequivalent",
+      "problem_id": 114,
+      "source_category": "OJ_VA",
+      "pair_id": 229,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0230",
+      "label": "equivalent",
+      "problem_id": 115,
+      "source_category": "OJ_VA",
+      "pair_id": 230,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0231",
+      "label": "inequivalent",
+      "problem_id": 115,
+      "source_category": "OJ_VA",
+      "pair_id": 231,
+      "sample_count": 4,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0232",
+      "label": "equivalent",
+      "problem_id": 116,
+      "source_category": "OJ_VA",
+      "pair_id": 232,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0234",
+      "label": "equivalent",
+      "problem_id": 117,
+      "source_category": "OJ_VA",
+      "pair_id": 234,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0235",
+      "label": "inequivalent",
+      "problem_id": 117,
+      "source_category": "OJ_VA",
+      "pair_id": 235,
+      "sample_count": 2,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0240",
+      "label": "equivalent",
+      "problem_id": 120,
+      "source_category": "OJ_VA",
+      "pair_id": 240,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0242",
+      "label": "equivalent",
+      "problem_id": 121,
+      "source_category": "OJ_VA",
+      "pair_id": 242,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0244",
+      "label": "equivalent",
+      "problem_id": 122,
+      "source_category": "OJ_VA",
+      "pair_id": 244,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0248",
+      "label": "equivalent",
+      "problem_id": 124,
+      "source_category": "OJ_VA",
+      "pair_id": 248,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0250",
+      "label": "equivalent",
+      "problem_id": 125,
+      "source_category": "OJ_VA",
+      "pair_id": 250,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0252",
+      "label": "equivalent",
+      "problem_id": 126,
+      "source_category": "OJ_VA",
+      "pair_id": 252,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0253",
+      "label": "inequivalent",
+      "problem_id": 126,
+      "source_category": "OJ_VA",
+      "pair_id": 253,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0254",
+      "label": "equivalent",
+      "problem_id": 127,
+      "source_category": "OJ_VA",
+      "pair_id": 254,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0255",
+      "label": "inequivalent",
+      "problem_id": 127,
+      "source_category": "OJ_VA",
+      "pair_id": 255,
+      "sample_count": 4,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0260",
+      "label": "equivalent",
+      "problem_id": 130,
+      "source_category": "OJ_VA",
+      "pair_id": 260,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0262",
+      "label": "equivalent",
+      "problem_id": 131,
+      "source_category": "OJ_VA",
+      "pair_id": 262,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0265",
+      "label": "inequivalent",
+      "problem_id": 132,
+      "source_category": "OJ_VA",
+      "pair_id": 265,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0268",
+      "label": "equivalent",
+      "problem_id": 134,
+      "source_category": "OJ_VA",
+      "pair_id": 268,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0269",
+      "label": "inequivalent",
+      "problem_id": 134,
+      "source_category": "OJ_VA",
+      "pair_id": 269,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0272",
+      "label": "equivalent",
+      "problem_id": 136,
+      "source_category": "OJ_VA",
+      "pair_id": 272,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0273",
+      "label": "inequivalent",
+      "problem_id": 136,
+      "source_category": "OJ_VA",
+      "pair_id": 273,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0274",
+      "label": "equivalent",
+      "problem_id": 137,
+      "source_category": "OJ_VA",
+      "pair_id": 274,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0275",
+      "label": "inequivalent",
+      "problem_id": 137,
+      "source_category": "OJ_VA",
+      "pair_id": 275,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0276",
+      "label": "equivalent",
+      "problem_id": 138,
+      "source_category": "OJ_VA",
+      "pair_id": 276,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0278",
+      "label": "equivalent",
+      "problem_id": 139,
+      "source_category": "OJ_VA",
+      "pair_id": 278,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0279",
+      "label": "inequivalent",
+      "problem_id": 139,
+      "source_category": "OJ_VA",
+      "pair_id": 279,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    },
+    {
+      "case_id": "goeq-ojva-0280",
+      "label": "equivalent",
+      "problem_id": 140,
+      "source_category": "OJ_VA",
+      "pair_id": 280,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0281",
+      "label": "inequivalent",
+      "problem_id": 140,
+      "source_category": "OJ_VA",
+      "pair_id": 281,
+      "sample_count": 3,
+      "witness_sample": "sample_02",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0284",
+      "label": "equivalent",
+      "problem_id": 142,
+      "source_category": "OJ_VA",
+      "pair_id": 284,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0288",
+      "label": "equivalent",
+      "problem_id": 144,
+      "source_category": "OJ_VA",
+      "pair_id": 288,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0289",
+      "label": "inequivalent",
+      "problem_id": 144,
+      "source_category": "OJ_VA",
+      "pair_id": 289,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0292",
+      "label": "equivalent",
+      "problem_id": 146,
+      "source_category": "OJ_VA",
+      "pair_id": 292,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0298",
+      "label": "equivalent",
+      "problem_id": 149,
+      "source_category": "OJ_VA",
+      "pair_id": 298,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0299",
+      "label": "inequivalent",
+      "problem_id": 149,
+      "source_category": "OJ_VA",
+      "pair_id": 299,
+      "sample_count": 3,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0300",
+      "label": "equivalent",
+      "problem_id": 150,
+      "source_category": "OJ_VA",
+      "pair_id": 300,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0301",
+      "label": "inequivalent",
+      "problem_id": 150,
+      "source_category": "OJ_VA",
+      "pair_id": 301,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0302",
+      "label": "equivalent",
+      "problem_id": 151,
+      "source_category": "OJ_VA",
+      "pair_id": 302,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0304",
+      "label": "equivalent",
+      "problem_id": 152,
+      "source_category": "OJ_VA",
+      "pair_id": 304,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0306",
+      "label": "equivalent",
+      "problem_id": 153,
+      "source_category": "OJ_VA",
+      "pair_id": 306,
+      "sample_count": 6,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0312",
+      "label": "equivalent",
+      "problem_id": 156,
+      "source_category": "OJ_VA",
+      "pair_id": 312,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0314",
+      "label": "equivalent",
+      "problem_id": 157,
+      "source_category": "OJ_VA",
+      "pair_id": 314,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0316",
+      "label": "equivalent",
+      "problem_id": 158,
+      "source_category": "OJ_VA",
+      "pair_id": 316,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0318",
+      "label": "equivalent",
+      "problem_id": 159,
+      "source_category": "OJ_VA",
+      "pair_id": 318,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0320",
+      "label": "equivalent",
+      "problem_id": 160,
+      "source_category": "OJ_VA",
+      "pair_id": 320,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0321",
+      "label": "inequivalent",
+      "problem_id": 160,
+      "source_category": "OJ_VA",
+      "pair_id": 321,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0322",
+      "label": "equivalent",
+      "problem_id": 161,
+      "source_category": "OJ_VA",
+      "pair_id": 322,
+      "sample_count": 5,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0324",
+      "label": "equivalent",
+      "problem_id": 162,
+      "source_category": "OJ_VA",
+      "pair_id": 324,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0325",
+      "label": "inequivalent",
+      "problem_id": 162,
+      "source_category": "OJ_VA",
+      "pair_id": 325,
+      "sample_count": 4,
+      "witness_sample": "sample_03",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0330",
+      "label": "equivalent",
+      "problem_id": 165,
+      "source_category": "OJ_VA",
+      "pair_id": 330,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0332",
+      "label": "equivalent",
+      "problem_id": 166,
+      "source_category": "OJ_VA",
+      "pair_id": 332,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0333",
+      "label": "inequivalent",
+      "problem_id": 166,
+      "source_category": "OJ_VA",
+      "pair_id": 333,
+      "sample_count": 4,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0340",
+      "label": "equivalent",
+      "problem_id": 170,
+      "source_category": "OJ_VA",
+      "pair_id": 340,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0344",
+      "label": "equivalent",
+      "problem_id": 172,
+      "source_category": "OJ_VA",
+      "pair_id": 344,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0345",
+      "label": "inequivalent",
+      "problem_id": 172,
+      "source_category": "OJ_VA",
+      "pair_id": 345,
+      "sample_count": 4,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojva-0346",
+      "label": "equivalent",
+      "problem_id": 173,
+      "source_category": "OJ_VA",
+      "pair_id": 346,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0348",
+      "label": "equivalent",
+      "problem_id": 174,
+      "source_category": "OJ_VA",
+      "pair_id": 348,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0349",
+      "label": "inequivalent",
+      "problem_id": 174,
+      "source_category": "OJ_VA",
+      "pair_id": 349,
+      "sample_count": 4,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0350",
+      "label": "equivalent",
+      "problem_id": 175,
+      "source_category": "OJ_VA",
+      "pair_id": 350,
+      "sample_count": 4,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0352",
+      "label": "equivalent",
+      "problem_id": 176,
+      "source_category": "OJ_VA",
+      "pair_id": 352,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0354",
+      "label": "equivalent",
+      "problem_id": 177,
+      "source_category": "OJ_VA",
+      "pair_id": 354,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0356",
+      "label": "equivalent",
+      "problem_id": 178,
+      "source_category": "OJ_VA",
+      "pair_id": 356,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0357",
+      "label": "inequivalent",
+      "problem_id": 178,
+      "source_category": "OJ_VA",
+      "pair_id": 357,
+      "sample_count": 2,
+      "witness_sample": "sample_02"
+    },
+    {
+      "case_id": "goeq-ojva-0360",
+      "label": "equivalent",
+      "problem_id": 180,
+      "source_category": "OJ_VA",
+      "pair_id": 360,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0362",
+      "label": "equivalent",
+      "problem_id": 181,
+      "source_category": "OJ_VA",
+      "pair_id": 362,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0365",
+      "label": "inequivalent",
+      "problem_id": 182,
+      "source_category": "OJ_VA",
+      "pair_id": 365,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0366",
+      "label": "equivalent",
+      "problem_id": 183,
+      "source_category": "OJ_VA",
+      "pair_id": 366,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0368",
+      "label": "equivalent",
+      "problem_id": 184,
+      "source_category": "OJ_VA",
+      "pair_id": 368,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0369",
+      "label": "inequivalent",
+      "problem_id": 184,
+      "source_category": "OJ_VA",
+      "pair_id": 369,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    },
+    {
+      "case_id": "goeq-ojva-0370",
+      "label": "equivalent",
+      "problem_id": 185,
+      "source_category": "OJ_VA",
+      "pair_id": 370,
+      "sample_count": 3,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0374",
+      "label": "equivalent",
+      "problem_id": 187,
+      "source_category": "OJ_VA",
+      "pair_id": 374,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0375",
+      "label": "inequivalent",
+      "problem_id": 187,
+      "source_category": "OJ_VA",
+      "pair_id": 375,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0380",
+      "label": "equivalent",
+      "problem_id": 190,
+      "source_category": "OJ_VA",
+      "pair_id": 380,
+      "sample_count": 2,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0382",
+      "label": "equivalent",
+      "problem_id": 191,
+      "source_category": "OJ_VA",
+      "pair_id": 382,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0383",
+      "label": "inequivalent",
+      "problem_id": 191,
+      "source_category": "OJ_VA",
+      "pair_id": 383,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0384",
+      "label": "equivalent",
+      "problem_id": 192,
+      "source_category": "OJ_VA",
+      "pair_id": 384,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0385",
+      "label": "inequivalent",
+      "problem_id": 192,
+      "source_category": "OJ_VA",
+      "pair_id": 385,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0391",
+      "label": "inequivalent",
+      "problem_id": 195,
+      "source_category": "OJ_VA",
+      "pair_id": 391,
+      "sample_count": 3,
+      "witness_sample": "sample_01",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0392",
+      "label": "equivalent",
+      "problem_id": 196,
+      "source_category": "OJ_VA",
+      "pair_id": 392,
+      "sample_count": 4,
+      "witness_sample": "",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0393",
+      "label": "inequivalent",
+      "problem_id": 196,
+      "source_category": "OJ_VA",
+      "pair_id": 393,
+      "sample_count": 4,
+      "witness_sample": "sample_04",
+      "known_automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0394",
+      "label": "equivalent",
+      "problem_id": 197,
+      "source_category": "OJ_VA",
+      "pair_id": 394,
+      "sample_count": 5,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0397",
+      "label": "inequivalent",
+      "problem_id": 198,
+      "source_category": "OJ_VA",
+      "pair_id": 397,
+      "sample_count": 3,
+      "witness_sample": "sample_03"
+    }
+  ]
+}

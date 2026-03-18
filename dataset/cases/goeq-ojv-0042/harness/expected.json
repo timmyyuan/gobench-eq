@@ -1,0 +1,34 @@
+{
+  "stdin": "23.5\n158.1\n-1.0\n",
+  "source_prog_a": {
+    "stdout": "00010111.1000\nNA\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "00010111.1000\nNA\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "23.5\n158.1\n-1.0\n",
+      "statement_stdout": "00010111.1000\nNA\n",
+      "source_prog_a": {
+        "stdout": "00010111.1000\nNA\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "00010111.1000\nNA\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

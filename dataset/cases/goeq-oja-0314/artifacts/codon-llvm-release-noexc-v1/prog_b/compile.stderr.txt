@@ -1,0 +1,2 @@
+[1mpreprocessed.py:13 (11-25): [1;31merror:[0m[1m 'List[Generator[int]]' does not match expected type 'List[List[int]]'[0m
+╰─ [1mpreprocessed.py:15 (5-9): [1;31merror:[0m[1m during the realization of main()[0m

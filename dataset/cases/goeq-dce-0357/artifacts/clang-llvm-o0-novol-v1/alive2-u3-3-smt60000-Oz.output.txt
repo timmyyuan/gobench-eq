@@ -1,0 +1,15 @@
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+ERROR: Unsupported interprocedural transformation: global variable @g_3 has different size in source and target (4 vs 1 bytes)
+
+ERROR: Unsupported interprocedural transformation: global variable @g_3 has different size in source and target (4 vs 1 bytes)
+
+Summary:
+  3 correct transformations
+  0 incorrect transformations
+  2 failed-to-prove transformations
+  0 Alive2 errors

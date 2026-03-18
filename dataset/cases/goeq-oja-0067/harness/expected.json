@@ -1,0 +1,68 @@
+{
+  "stdin": "ABCD\n3\nABCDXXXXXX\nYYYYABCDXX\nDCBAZZZZZZ\n",
+  "source_prog_a": {
+    "stdout": "2\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "3\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "ABCD\n3\nABCDXXXXXX\nYYYYABCDXX\nDCBAZZZZZZ\n",
+      "statement_stdout": "2\n",
+      "source_prog_a": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "3\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "XYZ\n1\nZAAAAAAAXY\n",
+      "statement_stdout": "1\n",
+      "source_prog_a": {
+        "stdout": "1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "PQR\n3\nPQRAAAAPQR\nBBPQRBBBBB\nCCCCCCCCCC\n",
+      "statement_stdout": "2\n",
+      "source_prog_a": {
+        "stdout": "2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "3\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

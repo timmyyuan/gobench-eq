@@ -1,0 +1,7 @@
+__codon_parts_1 = input().split()
+Q = int(__codon_parts_1[0])
+H = int(__codon_parts_1[1])
+S = int(__codon_parts_1[2])
+D = int(__codon_parts_1[3])
+N = int(input())
+print(N // 2 * min(8 * Q, 4 * H, 2 * S, D) + N % 2 * min(4 * Q, 2 * H, S))

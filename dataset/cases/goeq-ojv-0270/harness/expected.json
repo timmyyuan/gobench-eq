@@ -1,0 +1,68 @@
+{
+  "stdin": "3 3\n",
+  "source_prog_a": {
+    "stdout": "7\n7\n4\n7\n7\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "7\n7\n4\n7\n7\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "3 3\n",
+      "statement_stdout": "7\n7\n4\n7\n7\n",
+      "source_prog_a": {
+        "stdout": "7\n7\n4\n7\n7\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "7\n7\n4\n7\n7\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "4 5\n",
+      "statement_stdout": "36\n36\n20\n20\n20\n36\n36\n",
+      "source_prog_a": {
+        "stdout": "36\n36\n20\n20\n20\n36\n36\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "36\n36\n20\n20\n20\n36\n36\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "6 1000\n",
+      "statement_stdout": "149393349\n149393349\n668669001\n668669001\n4000002\n4000002\n4000002\n668669001\n668669001\n149393349\n149393349\n",
+      "source_prog_a": {
+        "stdout": "149393349\n149393349\n668669001\n668669001\n4000002\n4000002\n4000002\n668669001\n668669001\n149393349\n149393349\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "149393349\n149393349\n668669001\n668669001\n4000002\n4000002\n4000002\n668669001\n668669001\n149393349\n149393349\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

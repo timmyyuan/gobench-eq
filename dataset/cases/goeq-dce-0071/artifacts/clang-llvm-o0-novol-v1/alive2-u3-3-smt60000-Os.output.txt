@@ -1,0 +1,19 @@
+ERROR: Unsupported interprocedural transformation: non-constant global variable @g_140 is introduced in target
+
+ERROR: Unsupported interprocedural transformation: non-constant global variable @g_140 is introduced in target
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Summary:
+  5 correct transformations
+  0 incorrect transformations
+  2 failed-to-prove transformations
+  0 Alive2 errors

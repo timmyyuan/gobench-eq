@@ -1,0 +1,1 @@
+print(input().replace('peach','@@@@@').replace('apple','peach').replace('@@@@@','apple'))

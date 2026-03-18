@@ -1,0 +1,85 @@
+{
+  "stdin": "atcoder beginner contest\n",
+  "source_prog_a": {
+    "stdout": "ABC\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "atcoder beginner contest\n",
+      "statement_stdout": "ABC\n",
+      "source_prog_a": {
+        "stdout": "ABC\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "resident register number\n",
+      "statement_stdout": "RRN\n",
+      "source_prog_a": {
+        "stdout": "RRN\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "k nearest neighbor\n",
+      "statement_stdout": "KNN\n",
+      "source_prog_a": {
+        "stdout": "KNN\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_04",
+      "stdin": "async layered coding\n",
+      "statement_stdout": "ALC\n",
+      "source_prog_a": {
+        "stdout": "ALC\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "stdin": "chokudai\nchokudaiz\n",
+  "source_prog_a": {
+    "stdout": "Yes\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "Yes\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "chokudai\nchokudaiz\n",
+      "statement_stdout": "Yes\n",
+      "source_prog_a": {
+        "stdout": "Yes\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "Yes\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "snuke\nsnekee\n",
+      "statement_stdout": "No\n",
+      "source_prog_a": {
+        "stdout": "No\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "No\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "a\naa\n",
+      "statement_stdout": "Yes\n",
+      "source_prog_a": {
+        "stdout": "Yes\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "Yes\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

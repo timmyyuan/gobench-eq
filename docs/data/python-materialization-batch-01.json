@@ -1,0 +1,551 @@
+{
+  "batch_path": "docs/data/python-seed-batch-01.json",
+  "input_root": "testdata/EquiBench/data",
+  "output_root": "dataset/cases",
+  "materialized_case_count": 48,
+  "excluded_case_count": 12,
+  "excluded_cases": [
+    {
+      "case_id": "goeq-oja-0052",
+      "problem_id": 26,
+      "source_category": "OJ_A",
+      "pair_id": 52,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0053",
+      "problem_id": 26,
+      "source_category": "OJ_A",
+      "pair_id": 53,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0052",
+      "problem_id": 26,
+      "source_category": "OJ_V",
+      "pair_id": 52,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0053",
+      "problem_id": 26,
+      "source_category": "OJ_V",
+      "pair_id": 53,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0052",
+      "problem_id": 26,
+      "source_category": "OJ_VA",
+      "pair_id": 52,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0053",
+      "problem_id": 26,
+      "source_category": "OJ_VA",
+      "pair_id": 53,
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0114",
+      "problem_id": 57,
+      "source_category": "OJ_A",
+      "pair_id": 114,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0115",
+      "problem_id": 57,
+      "source_category": "OJ_A",
+      "pair_id": 115,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0114",
+      "problem_id": 57,
+      "source_category": "OJ_V",
+      "pair_id": 114,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0115",
+      "problem_id": 57,
+      "source_category": "OJ_V",
+      "pair_id": 115,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0114",
+      "problem_id": 57,
+      "source_category": "OJ_VA",
+      "pair_id": 114,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0115",
+      "problem_id": 57,
+      "source_category": "OJ_VA",
+      "pair_id": 115,
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "goeq-oja-0090",
+      "label": "equivalent",
+      "problem_id": 45,
+      "source_category": "OJ_A",
+      "pair_id": 90,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0091",
+      "label": "inequivalent",
+      "problem_id": 45,
+      "source_category": "OJ_A",
+      "pair_id": 91,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0090",
+      "label": "equivalent",
+      "problem_id": 45,
+      "source_category": "OJ_V",
+      "pair_id": 90,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0091",
+      "label": "inequivalent",
+      "problem_id": 45,
+      "source_category": "OJ_V",
+      "pair_id": 91,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0090",
+      "label": "equivalent",
+      "problem_id": 45,
+      "source_category": "OJ_VA",
+      "pair_id": 90,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0091",
+      "label": "inequivalent",
+      "problem_id": 45,
+      "source_category": "OJ_VA",
+      "pair_id": 91,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0008",
+      "label": "equivalent",
+      "problem_id": 4,
+      "source_category": "OJ_A",
+      "pair_id": 8,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0009",
+      "label": "inequivalent",
+      "problem_id": 4,
+      "source_category": "OJ_A",
+      "pair_id": 9,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0008",
+      "label": "equivalent",
+      "problem_id": 4,
+      "source_category": "OJ_V",
+      "pair_id": 8,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0009",
+      "label": "inequivalent",
+      "problem_id": 4,
+      "source_category": "OJ_V",
+      "pair_id": 9,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0008",
+      "label": "equivalent",
+      "problem_id": 4,
+      "source_category": "OJ_VA",
+      "pair_id": 8,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0009",
+      "label": "inequivalent",
+      "problem_id": 4,
+      "source_category": "OJ_VA",
+      "pair_id": 9,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0074",
+      "label": "equivalent",
+      "problem_id": 37,
+      "source_category": "OJ_A",
+      "pair_id": 74,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0075",
+      "label": "inequivalent",
+      "problem_id": 37,
+      "source_category": "OJ_A",
+      "pair_id": 75,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0074",
+      "label": "equivalent",
+      "problem_id": 37,
+      "source_category": "OJ_V",
+      "pair_id": 74,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0075",
+      "label": "inequivalent",
+      "problem_id": 37,
+      "source_category": "OJ_V",
+      "pair_id": 75,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0074",
+      "label": "equivalent",
+      "problem_id": 37,
+      "source_category": "OJ_VA",
+      "pair_id": 74,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0075",
+      "label": "inequivalent",
+      "problem_id": 37,
+      "source_category": "OJ_VA",
+      "pair_id": 75,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0130",
+      "label": "equivalent",
+      "problem_id": 65,
+      "source_category": "OJ_A",
+      "pair_id": 130,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0131",
+      "label": "inequivalent",
+      "problem_id": 65,
+      "source_category": "OJ_A",
+      "pair_id": 131,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0130",
+      "label": "equivalent",
+      "problem_id": 65,
+      "source_category": "OJ_V",
+      "pair_id": 130,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0131",
+      "label": "inequivalent",
+      "problem_id": 65,
+      "source_category": "OJ_V",
+      "pair_id": 131,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0130",
+      "label": "equivalent",
+      "problem_id": 65,
+      "source_category": "OJ_VA",
+      "pair_id": 130,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0131",
+      "label": "inequivalent",
+      "problem_id": 65,
+      "source_category": "OJ_VA",
+      "pair_id": 131,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0122",
+      "label": "equivalent",
+      "problem_id": 61,
+      "source_category": "OJ_A",
+      "pair_id": 122,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0123",
+      "label": "inequivalent",
+      "problem_id": 61,
+      "source_category": "OJ_A",
+      "pair_id": 123,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0122",
+      "label": "equivalent",
+      "problem_id": 61,
+      "source_category": "OJ_V",
+      "pair_id": 122,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0123",
+      "label": "inequivalent",
+      "problem_id": 61,
+      "source_category": "OJ_V",
+      "pair_id": 123,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0122",
+      "label": "equivalent",
+      "problem_id": 61,
+      "source_category": "OJ_VA",
+      "pair_id": 122,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0123",
+      "label": "inequivalent",
+      "problem_id": 61,
+      "source_category": "OJ_VA",
+      "pair_id": 123,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0066",
+      "label": "equivalent",
+      "problem_id": 33,
+      "source_category": "OJ_A",
+      "pair_id": 66,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0067",
+      "label": "inequivalent",
+      "problem_id": 33,
+      "source_category": "OJ_A",
+      "pair_id": 67,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0066",
+      "label": "equivalent",
+      "problem_id": 33,
+      "source_category": "OJ_V",
+      "pair_id": 66,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0067",
+      "label": "inequivalent",
+      "problem_id": 33,
+      "source_category": "OJ_V",
+      "pair_id": 67,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0066",
+      "label": "equivalent",
+      "problem_id": 33,
+      "source_category": "OJ_VA",
+      "pair_id": 66,
+      "sample_count": 3,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0067",
+      "label": "inequivalent",
+      "problem_id": 33,
+      "source_category": "OJ_VA",
+      "pair_id": 67,
+      "sample_count": 3,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0004",
+      "label": "equivalent",
+      "problem_id": 2,
+      "source_category": "OJ_A",
+      "pair_id": 4,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0005",
+      "label": "inequivalent",
+      "problem_id": 2,
+      "source_category": "OJ_A",
+      "pair_id": 5,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0004",
+      "label": "equivalent",
+      "problem_id": 2,
+      "source_category": "OJ_V",
+      "pair_id": 4,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0005",
+      "label": "inequivalent",
+      "problem_id": 2,
+      "source_category": "OJ_V",
+      "pair_id": 5,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0004",
+      "label": "equivalent",
+      "problem_id": 2,
+      "source_category": "OJ_VA",
+      "pair_id": 4,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0005",
+      "label": "inequivalent",
+      "problem_id": 2,
+      "source_category": "OJ_VA",
+      "pair_id": 5,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0126",
+      "label": "equivalent",
+      "problem_id": 63,
+      "source_category": "OJ_A",
+      "pair_id": 126,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0127",
+      "label": "inequivalent",
+      "problem_id": 63,
+      "source_category": "OJ_A",
+      "pair_id": 127,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0126",
+      "label": "equivalent",
+      "problem_id": 63,
+      "source_category": "OJ_V",
+      "pair_id": 126,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0127",
+      "label": "inequivalent",
+      "problem_id": 63,
+      "source_category": "OJ_V",
+      "pair_id": 127,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0126",
+      "label": "equivalent",
+      "problem_id": 63,
+      "source_category": "OJ_VA",
+      "pair_id": 126,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0127",
+      "label": "inequivalent",
+      "problem_id": 63,
+      "source_category": "OJ_VA",
+      "pair_id": 127,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    }
+  ]
+}

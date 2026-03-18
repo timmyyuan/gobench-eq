@@ -1,0 +1,22 @@
+{
+  "case_id": "goeq-dce-0062",
+  "expected_label": "equivalent",
+  "artifact_dir": "dataset/cases/goeq-dce-0062/artifacts/clang-llvm-o0-novol-v1",
+  "prog_a_ir_path": "dataset/cases/goeq-dce-0062/artifacts/clang-llvm-o0-novol-v1/prog_a/module.ll",
+  "prog_b_ir_path": "dataset/cases/goeq-dce-0062/artifacts/clang-llvm-o0-novol-v1/prog_b/module.ll",
+  "successful": false,
+  "correct": false,
+  "predicted_label": "",
+  "raw_output": "tool-error",
+  "status": "timeout",
+  "exit_code": null,
+  "timed_out": true,
+  "correct_count": 0,
+  "incorrect_count": 0,
+  "failed_to_prove_count": 0,
+  "error_count": 0,
+  "headline": "Alive2 timed out",
+  "error": "alive-tv timed out: Command '['alive2/build-llvm22/alive-tv', '--quiet', '--disable-undef-input', '--disable-poison-input', '--src-unroll=2', '--tgt-unroll=2', '--smt-to=60000', 'dataset/cases/goeq-dce-0062/artifacts/clang-llvm-o0-novol-v1/prog_a/module.ll', 'dataset/cases/goeq-dce-0062/artifacts/clang-llvm-o0-novol-v1/prog_b/module.ll']' timed out after 120 seconds",
+  "raw_output_path": "dataset/cases/goeq-dce-0062/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.output.txt",
+  "result_path": "dataset/cases/goeq-dce-0062/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.report.json"
+}

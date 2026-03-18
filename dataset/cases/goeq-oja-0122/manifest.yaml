@@ -1,0 +1,48 @@
+id: goeq-oja-0122
+title: EquiBench OJ_A pair 122 (Watch)
+status: draft
+split: dev
+track: core
+label: equivalent
+category: algorithm
+tags:
+  - equibench
+  - python
+  - oj_a
+  - sample-baseline
+  - seed-batch-01
+provenance:
+  origin: benchmark-derived
+  source_benchmark: EquiBench
+  source_case_id: OJ_A/pair-0122
+  source_language: python
+  license: Apache-2.0
+translation:
+  kind: python-to-go
+  translator: pytago_adapter
+  translator_version: "git:3aac07374f2a"
+  status: auto
+environment:
+  go_version: "1.24.0"
+  goos: linux
+  goarch: amd64
+  cgo_enabled: false
+target:
+  package_a: "./prog_a"
+  package_b: "./prog_b"
+  symbol: "main"
+  kind: program
+observables:
+  return_value: false
+  exit_code: true
+  stdout: true
+  stderr: true
+  panic: false
+oracle:
+  method: source-output-baseline
+  path: harness/expected.json
+validation:
+  level: source-baseline
+  witness_type: statement-sample-baseline
+evidence:
+  summary: Captured source-program outputs on fixed statement samples and backfilled auto-generated Go translations via pytago_adapter; stored harness samples currently replay successfully for both sides.

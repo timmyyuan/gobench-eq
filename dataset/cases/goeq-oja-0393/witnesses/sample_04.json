@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-oja-0393",
+  "name": "sample_04",
+  "stdin": "33 3\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n",
+  "statement_stdout": "8589934591\n",
+  "source_prog_a": {
+    "stdout": "8589934591\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "8589934590\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

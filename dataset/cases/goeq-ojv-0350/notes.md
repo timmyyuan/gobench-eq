@@ -1,0 +1,36 @@
+# goeq-ojv-0350
+
+- Source benchmark: EquiBench
+- Source category: OJ_V
+- Pair ID: 350
+- Problem ID: 175
+- Problem path: `dataset/organized/OJ/175`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/175/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/175/obfus_accepted_0.py`
+- Stored sample count: `4`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: '36\n24\n'
+- sample_01 statement stdout: 'GREATER\n'
+- sample_01 source stdout A: 'GREATER\n'
+- sample_01 source stdout B: 'GREATER\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: '850\n3777\n'
+- sample_02 statement stdout: 'LESS\n'
+- sample_02 source stdout A: 'LESS\n'
+- sample_02 source stdout B: 'LESS\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: '9720246\n22516266\n'
+- sample_03 statement stdout: 'LESS\n'
+- sample_03 source stdout A: 'LESS\n'
+- sample_03 source stdout B: 'LESS\n'
+- sample_03 statement match A: `True`
+- sample_03 statement match B: `True`
+- sample_04 stdin: '123456789012345678901234567890\n234567890123456789012345678901\n'
+- sample_04 statement stdout: 'LESS\n'
+- sample_04 source stdout A: 'LESS\n'
+- sample_04 source stdout B: 'LESS\n'
+- sample_04 statement match A: `True`
+- sample_04 statement match B: `True`

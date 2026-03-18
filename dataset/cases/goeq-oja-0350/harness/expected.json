@@ -1,0 +1,85 @@
+{
+  "stdin": "36\n24\n",
+  "source_prog_a": {
+    "stdout": "GREATER\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "GREATER\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "36\n24\n",
+      "statement_stdout": "GREATER\n",
+      "source_prog_a": {
+        "stdout": "GREATER\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "GREATER\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "850\n3777\n",
+      "statement_stdout": "LESS\n",
+      "source_prog_a": {
+        "stdout": "LESS\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "LESS\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "9720246\n22516266\n",
+      "statement_stdout": "LESS\n",
+      "source_prog_a": {
+        "stdout": "LESS\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "LESS\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_04",
+      "stdin": "123456789012345678901234567890\n234567890123456789012345678901\n",
+      "statement_stdout": "LESS\n",
+      "source_prog_a": {
+        "stdout": "LESS\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "LESS\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# goeq-ojv-0348
+
+- Source benchmark: EquiBench
+- Source category: OJ_V
+- Pair ID: 348
+- Problem ID: 174
+- Problem path: `dataset/organized/OJ/174`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/174/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/174/obfus_accepted_0.py`
+- Stored sample count: `4`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: 'atcoder beginner contest\n'
+- sample_01 statement stdout: 'ABC\n'
+- sample_01 source stdout A: 'ABC\n'
+- sample_01 source stdout B: 'ABC\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: 'resident register number\n'
+- sample_02 statement stdout: 'RRN\n'
+- sample_02 source stdout A: 'RRN\n'
+- sample_02 source stdout B: 'RRN\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: 'k nearest neighbor\n'
+- sample_03 statement stdout: 'KNN\n'
+- sample_03 source stdout A: 'KNN\n'
+- sample_03 source stdout B: 'KNN\n'
+- sample_03 statement match A: `True`
+- sample_03 statement match B: `True`
+- sample_04 stdin: 'async layered coding\n'
+- sample_04 statement stdout: 'ALC\n'
+- sample_04 source stdout A: 'ALC\n'
+- sample_04 source stdout B: 'ALC\n'
+- sample_04 statement match A: `True`
+- sample_04 statement match B: `True`

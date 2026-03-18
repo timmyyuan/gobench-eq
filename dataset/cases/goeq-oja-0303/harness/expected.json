@@ -1,0 +1,68 @@
+{
+  "stdin": "3 4\n269-6650\n",
+  "source_prog_a": {
+    "stdout": "Yes\n",
+    "stderr": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-swexs16r/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-swexs16r/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "Yes\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "3 4\n269-6650\n",
+      "statement_stdout": "Yes\n",
+      "source_prog_a": {
+        "stdout": "Yes\n",
+        "stderr": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-swexs16r/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-swexs16r/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "Yes\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "1 1\n---\n",
+      "statement_stdout": "No\n",
+      "source_prog_a": {
+        "stdout": "No\n",
+        "stderr": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-f3tiulht/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-f3tiulht/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "No\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "1 2\n7444\n",
+      "statement_stdout": "No\n",
+      "source_prog_a": {
+        "stdout": "No\n",
+        "stderr": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-6o_14mh6/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-6o_14mh6/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "No\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

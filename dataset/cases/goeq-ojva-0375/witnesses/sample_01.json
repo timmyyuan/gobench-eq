@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-ojva-0375",
+  "name": "sample_01",
+  "stdin": "15 10\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snuke snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\n",
+  "statement_stdout": "H6\n",
+  "source_prog_a": {
+    "stdout": "H6\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

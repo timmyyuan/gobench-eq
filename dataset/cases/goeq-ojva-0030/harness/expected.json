@@ -1,0 +1,34 @@
+{
+  "stdin": "12\n100\n200\n300\n0\n",
+  "source_prog_a": {
+    "stdout": "5 7\n71 73\n197 199\n281 283\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "5 7\n71 73\n197 199\n281 283\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "12\n100\n200\n300\n0\n",
+      "statement_stdout": "5 7\n71 73\n197 199\n281 283\n",
+      "source_prog_a": {
+        "stdout": "5 7\n71 73\n197 199\n281 283\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "5 7\n71 73\n197 199\n281 283\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-oja-0289",
+  "name": "sample_01",
+  "stdin": "3 3\n.#.\n###\n.#.\n",
+  "statement_stdout": "Yes\n",
+  "source_prog_a": {
+    "stdout": "Yes\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "No\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

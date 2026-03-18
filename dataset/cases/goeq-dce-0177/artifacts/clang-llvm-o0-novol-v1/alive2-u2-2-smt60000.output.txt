@@ -1,0 +1,57 @@
+ERROR: The source program doesn't reach a return instruction.
+Consider increasing the unroll factor if it has loops
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct!
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+ERROR: Unsupported attribute: noalias
+ERROR: Unsupported attribute: sret(%struct.S0)
+ERROR: Could not translate 'func_28' to Alive IR
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Summary:
+  23 correct transformations
+  0 incorrect transformations
+  1 failed-to-prove transformations
+  1 Alive2 errors

@@ -1,0 +1,23 @@
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+ERROR: Unsupported interprocedural transformation: non-constant global variable @g_36.0 is introduced in target
+
+ERROR: Signature mismatch between src and tgt
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Summary:
+  6 correct transformations
+  1 incorrect transformations
+  2 failed-to-prove transformations
+  0 Alive2 errors

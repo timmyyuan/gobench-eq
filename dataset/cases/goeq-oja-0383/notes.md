@@ -1,0 +1,25 @@
+# goeq-oja-0383
+
+- Source benchmark: EquiBench
+- Source category: OJ_A
+- Pair ID: 383
+- Problem ID: 191
+- Problem path: `dataset/organized/OJ/191`
+- Source label: `inequivalent`
+- Source program A path: `dataset/organized/OJ/191/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/191/wrong_0.py`
+- Stored sample count: `2`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- Witness sample: `sample_01`
+- sample_01 stdin: 'C0DEFESTIVAL2O16\n'
+- sample_01 statement stdout: '2\n'
+- sample_01 source stdout A: '2\n'
+- sample_01 source stdout B: ''
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `False`
+- sample_02 stdin: 'FESTIVAL2016CODE\n'
+- sample_02 statement stdout: '16\n'
+- sample_02 source stdout A: '16\n'
+- sample_02 source stdout B: ''
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `False`

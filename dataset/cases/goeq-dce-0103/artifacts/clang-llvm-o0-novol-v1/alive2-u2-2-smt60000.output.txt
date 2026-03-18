@@ -1,0 +1,3 @@
+ERROR: The source program doesn't reach a return instruction.
+Consider increasing the unroll factor if it has loops
+

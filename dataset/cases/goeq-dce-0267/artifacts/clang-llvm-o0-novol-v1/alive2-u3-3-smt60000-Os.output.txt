@@ -1,0 +1,23 @@
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Summary:
+  7 correct transformations
+  2 incorrect transformations
+  0 failed-to-prove transformations
+  0 Alive2 errors

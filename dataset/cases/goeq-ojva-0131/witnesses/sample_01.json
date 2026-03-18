@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-ojva-0131",
+  "name": "sample_01",
+  "stdin": "2\n",
+  "statement_stdout": "12.566371 12.566371\n",
+  "source_prog_a": {
+    "stdout": "12.566370614359172 12.566370614359172\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "12.566 33.50933333333334\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

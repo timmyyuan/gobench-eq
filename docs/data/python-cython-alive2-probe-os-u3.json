@@ -1,0 +1,691 @@
+{
+  "sample_source_report": "docs/data/python-cython-probe.json",
+  "report_path": "docs/data/python-cython-alive2-probe-os-u3.json",
+  "tool": {
+    "cython_bin": "/private/tmp/venv-cython/bin/cython",
+    "clang_bin": "/opt/homebrew/opt/llvm@20/bin/clang",
+    "opt_bin": "/opt/homebrew/opt/llvm@20/bin/opt",
+    "alive_tv_bin": "alive2/build-llvm22/alive-tv",
+    "python_config_bin": "python3-config",
+    "python_include_flags": [
+      "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+      "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14"
+    ],
+    "compare_func": "main",
+    "opt_pipeline": "default<Os>",
+    "src_unroll": 3,
+    "tgt_unroll": 3,
+    "timeout_seconds": 60
+  },
+  "aggregate": {
+    "case_count": 4,
+    "program_count": 8,
+    "translated_program_count": 8,
+    "ir_ready_program_count": 8,
+    "status_counts": {
+      "failed_to_prove": 8
+    }
+  },
+  "cases": [
+    {
+      "case_id": "goeq-oja-0004",
+      "problem_id": 2,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 4,
+      "programs": [
+        {
+          "case_id": "goeq-oja-0004",
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0004/source/prog_a/original.py",
+          "translation_ok": true,
+          "ir_ok": true,
+          "status": "failed_to_prove",
+          "headline": "ERROR: Timeout",
+          "correct_count": 0,
+          "incorrect_count": 0,
+          "failed_to_prove_count": 1,
+          "error_count": 0,
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/venv-cython/bin/cython",
+              "--embed",
+              "-3",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-3eb2vej1/program.c",
+              "dataset/cases/goeq-oja-0004/source/prog_a/original.py"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "clang_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/clang",
+              "-S",
+              "-emit-llvm",
+              "-O0",
+              "-g0",
+              "-Xclang",
+              "-disable-O0-optnone",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-3eb2vej1/program.c",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-3eb2vej1/module.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "opt_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/opt",
+              "-S",
+              "-passes=default<Os>",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-3eb2vej1/module.ll",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-3eb2vej1/module.Os.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "alive2_result": {
+            "cmd": [
+              "alive2/build-llvm22/alive-tv",
+              "--quiet",
+              "--disable-undef-input",
+              "--disable-poison-input",
+              "--func=main",
+              "--src-unroll=3",
+              "--tgt-unroll=3",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-3eb2vej1/module.ll",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-3eb2vej1/module.Os.ll"
+            ],
+            "stdout": "ERROR: Timeout\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          }
+        },
+        {
+          "case_id": "goeq-oja-0004",
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0004/source/prog_b/original.py",
+          "translation_ok": true,
+          "ir_ok": true,
+          "status": "failed_to_prove",
+          "headline": "ERROR: Timeout",
+          "correct_count": 0,
+          "incorrect_count": 0,
+          "failed_to_prove_count": 1,
+          "error_count": 0,
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/venv-cython/bin/cython",
+              "--embed",
+              "-3",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-58is8l3d/program.c",
+              "dataset/cases/goeq-oja-0004/source/prog_b/original.py"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "clang_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/clang",
+              "-S",
+              "-emit-llvm",
+              "-O0",
+              "-g0",
+              "-Xclang",
+              "-disable-O0-optnone",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-58is8l3d/program.c",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-58is8l3d/module.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "opt_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/opt",
+              "-S",
+              "-passes=default<Os>",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-58is8l3d/module.ll",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-58is8l3d/module.Os.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "alive2_result": {
+            "cmd": [
+              "alive2/build-llvm22/alive-tv",
+              "--quiet",
+              "--disable-undef-input",
+              "--disable-poison-input",
+              "--func=main",
+              "--src-unroll=3",
+              "--tgt-unroll=3",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-58is8l3d/module.ll",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-58is8l3d/module.Os.ll"
+            ],
+            "stdout": "ERROR: Timeout\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0005",
+      "problem_id": 2,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 5,
+      "programs": [
+        {
+          "case_id": "goeq-oja-0005",
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0005/source/prog_a/original.py",
+          "translation_ok": true,
+          "ir_ok": true,
+          "status": "failed_to_prove",
+          "headline": "ERROR: Timeout",
+          "correct_count": 0,
+          "incorrect_count": 0,
+          "failed_to_prove_count": 1,
+          "error_count": 0,
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/venv-cython/bin/cython",
+              "--embed",
+              "-3",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-78xzy03e/program.c",
+              "dataset/cases/goeq-oja-0005/source/prog_a/original.py"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "clang_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/clang",
+              "-S",
+              "-emit-llvm",
+              "-O0",
+              "-g0",
+              "-Xclang",
+              "-disable-O0-optnone",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-78xzy03e/program.c",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-78xzy03e/module.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "opt_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/opt",
+              "-S",
+              "-passes=default<Os>",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-78xzy03e/module.ll",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-78xzy03e/module.Os.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "alive2_result": {
+            "cmd": [
+              "alive2/build-llvm22/alive-tv",
+              "--quiet",
+              "--disable-undef-input",
+              "--disable-poison-input",
+              "--func=main",
+              "--src-unroll=3",
+              "--tgt-unroll=3",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-78xzy03e/module.ll",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-78xzy03e/module.Os.ll"
+            ],
+            "stdout": "ERROR: Timeout\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          }
+        },
+        {
+          "case_id": "goeq-oja-0005",
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0005/source/prog_b/original.py",
+          "translation_ok": true,
+          "ir_ok": true,
+          "status": "failed_to_prove",
+          "headline": "ERROR: Timeout",
+          "correct_count": 0,
+          "incorrect_count": 0,
+          "failed_to_prove_count": 1,
+          "error_count": 0,
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/venv-cython/bin/cython",
+              "--embed",
+              "-3",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-psn0rt99/program.c",
+              "dataset/cases/goeq-oja-0005/source/prog_b/original.py"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "clang_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/clang",
+              "-S",
+              "-emit-llvm",
+              "-O0",
+              "-g0",
+              "-Xclang",
+              "-disable-O0-optnone",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-psn0rt99/program.c",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-psn0rt99/module.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "opt_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/opt",
+              "-S",
+              "-passes=default<Os>",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-psn0rt99/module.ll",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-psn0rt99/module.Os.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "alive2_result": {
+            "cmd": [
+              "alive2/build-llvm22/alive-tv",
+              "--quiet",
+              "--disable-undef-input",
+              "--disable-poison-input",
+              "--func=main",
+              "--src-unroll=3",
+              "--tgt-unroll=3",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-psn0rt99/module.ll",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-psn0rt99/module.Os.ll"
+            ],
+            "stdout": "ERROR: Timeout\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0008",
+      "problem_id": 4,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 8,
+      "programs": [
+        {
+          "case_id": "goeq-oja-0008",
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0008/source/prog_a/original.py",
+          "translation_ok": true,
+          "ir_ok": true,
+          "status": "failed_to_prove",
+          "headline": "ERROR: Timeout",
+          "correct_count": 0,
+          "incorrect_count": 0,
+          "failed_to_prove_count": 1,
+          "error_count": 0,
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/venv-cython/bin/cython",
+              "--embed",
+              "-3",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-0s86r42u/program.c",
+              "dataset/cases/goeq-oja-0008/source/prog_a/original.py"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "clang_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/clang",
+              "-S",
+              "-emit-llvm",
+              "-O0",
+              "-g0",
+              "-Xclang",
+              "-disable-O0-optnone",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-0s86r42u/program.c",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-0s86r42u/module.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "opt_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/opt",
+              "-S",
+              "-passes=default<Os>",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-0s86r42u/module.ll",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-0s86r42u/module.Os.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "alive2_result": {
+            "cmd": [
+              "alive2/build-llvm22/alive-tv",
+              "--quiet",
+              "--disable-undef-input",
+              "--disable-poison-input",
+              "--func=main",
+              "--src-unroll=3",
+              "--tgt-unroll=3",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-0s86r42u/module.ll",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-0s86r42u/module.Os.ll"
+            ],
+            "stdout": "ERROR: Timeout\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          }
+        },
+        {
+          "case_id": "goeq-oja-0008",
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0008/source/prog_b/original.py",
+          "translation_ok": true,
+          "ir_ok": true,
+          "status": "failed_to_prove",
+          "headline": "ERROR: Timeout",
+          "correct_count": 0,
+          "incorrect_count": 0,
+          "failed_to_prove_count": 1,
+          "error_count": 0,
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/venv-cython/bin/cython",
+              "--embed",
+              "-3",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-o0ap6cr_/program.c",
+              "dataset/cases/goeq-oja-0008/source/prog_b/original.py"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "clang_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/clang",
+              "-S",
+              "-emit-llvm",
+              "-O0",
+              "-g0",
+              "-Xclang",
+              "-disable-O0-optnone",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-o0ap6cr_/program.c",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-o0ap6cr_/module.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "opt_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/opt",
+              "-S",
+              "-passes=default<Os>",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-o0ap6cr_/module.ll",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-o0ap6cr_/module.Os.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "alive2_result": {
+            "cmd": [
+              "alive2/build-llvm22/alive-tv",
+              "--quiet",
+              "--disable-undef-input",
+              "--disable-poison-input",
+              "--func=main",
+              "--src-unroll=3",
+              "--tgt-unroll=3",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-o0ap6cr_/module.ll",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-o0ap6cr_/module.Os.ll"
+            ],
+            "stdout": "ERROR: Timeout\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0009",
+      "problem_id": 4,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 9,
+      "programs": [
+        {
+          "case_id": "goeq-oja-0009",
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0009/source/prog_a/original.py",
+          "translation_ok": true,
+          "ir_ok": true,
+          "status": "failed_to_prove",
+          "headline": "ERROR: Timeout",
+          "correct_count": 0,
+          "incorrect_count": 0,
+          "failed_to_prove_count": 1,
+          "error_count": 0,
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/venv-cython/bin/cython",
+              "--embed",
+              "-3",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-x2004k5i/program.c",
+              "dataset/cases/goeq-oja-0009/source/prog_a/original.py"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "clang_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/clang",
+              "-S",
+              "-emit-llvm",
+              "-O0",
+              "-g0",
+              "-Xclang",
+              "-disable-O0-optnone",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-x2004k5i/program.c",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-x2004k5i/module.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "opt_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/opt",
+              "-S",
+              "-passes=default<Os>",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-x2004k5i/module.ll",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-x2004k5i/module.Os.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "alive2_result": {
+            "cmd": [
+              "alive2/build-llvm22/alive-tv",
+              "--quiet",
+              "--disable-undef-input",
+              "--disable-poison-input",
+              "--func=main",
+              "--src-unroll=3",
+              "--tgt-unroll=3",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-x2004k5i/module.ll",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_a-x2004k5i/module.Os.ll"
+            ],
+            "stdout": "ERROR: Timeout\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          }
+        },
+        {
+          "case_id": "goeq-oja-0009",
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0009/source/prog_b/original.py",
+          "translation_ok": true,
+          "ir_ok": true,
+          "status": "failed_to_prove",
+          "headline": "ERROR: Timeout",
+          "correct_count": 0,
+          "incorrect_count": 0,
+          "failed_to_prove_count": 1,
+          "error_count": 0,
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/venv-cython/bin/cython",
+              "--embed",
+              "-3",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-1rg0m0qj/program.c",
+              "dataset/cases/goeq-oja-0009/source/prog_b/original.py"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "clang_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/clang",
+              "-S",
+              "-emit-llvm",
+              "-O0",
+              "-g0",
+              "-Xclang",
+              "-disable-O0-optnone",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-1rg0m0qj/program.c",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-I/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-1rg0m0qj/module.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "opt_result": {
+            "cmd": [
+              "/opt/homebrew/opt/llvm@20/bin/opt",
+              "-S",
+              "-passes=default<Os>",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-1rg0m0qj/module.ll",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-1rg0m0qj/module.Os.ll"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "alive2_result": {
+            "cmd": [
+              "alive2/build-llvm22/alive-tv",
+              "--quiet",
+              "--disable-undef-input",
+              "--disable-poison-input",
+              "--func=main",
+              "--src-unroll=3",
+              "--tgt-unroll=3",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-1rg0m0qj/module.ll",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/cython-alive2-prog_b-1rg0m0qj/module.Os.ll"
+            ],
+            "stdout": "ERROR: Timeout\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          }
+        }
+      ]
+    }
+  ]
+}

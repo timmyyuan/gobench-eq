@@ -1,0 +1,85 @@
+{
+  "stdin": "7\nbeat\nvet\nbeet\nbed\nvet\nbet\nbeet\n",
+  "source_prog_a": {
+    "stdout": "beet\nvet\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "beet\nvet\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "7\nbeat\nvet\nbeet\nbed\nvet\nbet\nbeet\n",
+      "statement_stdout": "beet\nvet\n",
+      "source_prog_a": {
+        "stdout": "beet\nvet\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "beet\nvet\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "8\nbuffalo\nbuffalo\nbuffalo\nbuffalo\nbuffalo\nbuffalo\nbuffalo\nbuffalo\n",
+      "statement_stdout": "buffalo\n",
+      "source_prog_a": {
+        "stdout": "buffalo\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "buffalo\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "7\nbass\nbass\nkick\nkick\nbass\nkick\nkick\n",
+      "statement_stdout": "kick\n",
+      "source_prog_a": {
+        "stdout": "kick\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "kick\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_04",
+      "stdin": "4\nushi\ntapu\nnichia\nkun\n",
+      "statement_stdout": "kun\nnichia\ntapu\nushi\n",
+      "source_prog_a": {
+        "stdout": "kun\nnichia\ntapu\nushi\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "kun\nnichia\ntapu\nushi\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

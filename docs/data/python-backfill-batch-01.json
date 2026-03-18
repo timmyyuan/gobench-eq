@@ -1,0 +1,5294 @@
+{
+  "batch_path": "docs/data/python-materialization-batch-01.json",
+  "case_root": "dataset/cases",
+  "report_path": "docs/data/python-backfill-batch-01.json",
+  "translator": {
+    "tool": "pytago_adapter",
+    "description": {
+      "binary": "/private/tmp/gobench-eq-pytagoadapt",
+      "pytago_binary": "/tmp/venv-pytago310/bin/pytago",
+      "command_template": [
+        "/private/tmp/gobench-eq-pytagoadapt",
+        "-skip-build",
+        "-pytago",
+        "/tmp/venv-pytago310/bin/pytago",
+        "-input",
+        "<input.py>",
+        "-output",
+        "<output.go>"
+      ]
+    },
+    "setup": {
+      "boot_check": {
+        "cmd": [
+          "/private/tmp/gobench-eq-pytagoadapt",
+          "-h"
+        ],
+        "stdout": "",
+        "stderr": "Usage of /private/tmp/gobench-eq-pytagoadapt:\n  -go string\n    \tGo binary used for validation builds. (default \"go\")\n  -gofmt string\n    \tgofmt binary used to format generated Go code. (default \"gofmt\")\n  -input string\n    \tPath to the source Python file.\n  -keep-work\n    \tKeep the working directory instead of deleting it after the run.\n  -output string\n    \tPath to the adapted Go file.\n  -pytago string\n    \tPytago binary to run. (default \"/tmp/venv-pytago310/bin/pytago\")\n  -skip-build\n    \tSkip go build validation.\n  -work-dir string\n    \tOptional working directory. Defaults to a temporary directory.\n",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    "repo": {
+      "repo": ".",
+      "commit": "3aac07374f2a2ef16263f2be58c1db151dcba111",
+      "commit_date": "2026-03-16 10:17:18 +0800",
+      "subject": "Initial commit"
+    }
+  },
+  "environment": {
+    "python3": "Python 3.14.3",
+    "python3_10": "Python 3.10.20",
+    "go": "go version go1.25.6 darwin/arm64"
+  },
+  "aggregate": {
+    "case_count": 48,
+    "program_count": 96,
+    "backfilled_case_count": 48,
+    "backfilled_program_count": 96,
+    "pair_counts_by_category": {
+      "OJ_A": 16,
+      "OJ_V": 16,
+      "OJ_VA": 16
+    },
+    "pair_counts_by_label": {
+      "equivalent": 24,
+      "inequivalent": 24
+    }
+  },
+  "cases": [
+    {
+      "case_id": "goeq-oja-0004",
+      "problem_id": 2,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 4,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0004/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0004/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-edk50_ui/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-edk50_ui/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-edk50_ui/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-edk50_ui/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0004/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0004/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-hrbcrgeh/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-hrbcrgeh/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-hrbcrgeh/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-hrbcrgeh/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0005",
+      "problem_id": 2,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 5,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0005/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0005/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-2f3iufe4/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-2f3iufe4/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-2f3iufe4/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-2f3iufe4/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0005/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0005/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-hdhcw5hg/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-hdhcw5hg/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-hdhcw5hg/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-hdhcw5hg/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0008",
+      "problem_id": 4,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 8,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0008/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0008/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-1ushsnrg/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-1ushsnrg/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-1ushsnrg/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-1ushsnrg/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0008/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0008/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-lv6tzdzo/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-lv6tzdzo/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-lv6tzdzo/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-lv6tzdzo/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0009",
+      "problem_id": 4,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 9,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0009/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0009/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ku7vy6wm/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ku7vy6wm/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ku7vy6wm/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ku7vy6wm/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0009/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0009/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-mwgq64if/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-mwgq64if/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-mwgq64if/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-mwgq64if/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0066",
+      "problem_id": 33,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 66,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0066/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0066/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-wce5qd4n/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-wce5qd4n/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-wce5qd4n/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-wce5qd4n/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0066/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0066/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-bzdoe1ar/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-bzdoe1ar/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-bzdoe1ar/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-bzdoe1ar/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0067",
+      "problem_id": 33,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 67,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0067/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0067/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-f0v0shjh/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-f0v0shjh/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-f0v0shjh/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-f0v0shjh/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0067/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0067/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9imw15za/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9imw15za/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9imw15za/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9imw15za/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0074",
+      "problem_id": 37,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 74,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0074/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0074/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-mlslhfs4/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-mlslhfs4/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-mlslhfs4/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-mlslhfs4/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0074/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0074/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-fbqy7iv_/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-fbqy7iv_/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-fbqy7iv_/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-fbqy7iv_/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0075",
+      "problem_id": 37,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 75,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0075/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0075/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-x27sprd8/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-x27sprd8/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-x27sprd8/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-x27sprd8/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0075/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0075/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-j_106p5n/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-j_106p5n/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-j_106p5n/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-j_106p5n/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0090",
+      "problem_id": 45,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 90,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0090/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0090/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ghacgzdm/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ghacgzdm/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ghacgzdm/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ghacgzdm/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0090/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0090/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-46ojylhv/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-46ojylhv/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-46ojylhv/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-46ojylhv/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0091",
+      "problem_id": 45,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 91,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0091/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0091/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-sfr_9cet/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-sfr_9cet/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-sfr_9cet/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-sfr_9cet/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0091/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0091/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-zi0zj75a/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-zi0zj75a/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-zi0zj75a/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-zi0zj75a/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0122",
+      "problem_id": 61,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 122,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0122/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0122/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-kej13b0k/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-kej13b0k/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-kej13b0k/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-kej13b0k/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0122/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0122/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9bq175c7/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9bq175c7/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9bq175c7/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9bq175c7/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0123",
+      "problem_id": 61,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 123,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0123/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0123/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-gpky4lrd/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-gpky4lrd/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-gpky4lrd/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-gpky4lrd/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0123/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0123/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-6qevkk2s/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-6qevkk2s/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-6qevkk2s/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-6qevkk2s/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0126",
+      "problem_id": 63,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 126,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0126/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0126/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-5afbexyg/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-5afbexyg/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-5afbexyg/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-5afbexyg/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0126/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0126/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ygp3ecqv/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ygp3ecqv/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ygp3ecqv/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ygp3ecqv/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0127",
+      "problem_id": 63,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 127,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0127/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0127/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6ucxk1ny/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6ucxk1ny/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6ucxk1ny/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6ucxk1ny/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0127/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0127/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-j01tlpr6/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-j01tlpr6/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-j01tlpr6/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-j01tlpr6/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0130",
+      "problem_id": 65,
+      "label": "equivalent",
+      "source_category": "OJ_A",
+      "pair_id": 130,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0130/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0130/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-f9szmqqt/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-f9szmqqt/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-f9szmqqt/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-f9szmqqt/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0130/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0130/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-mjbuk_7a/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-mjbuk_7a/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-mjbuk_7a/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-mjbuk_7a/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-oja-0131",
+      "problem_id": 65,
+      "label": "inequivalent",
+      "source_category": "OJ_A",
+      "pair_id": 131,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-oja-0131/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0131/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-do_2v1ci/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-do_2v1ci/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-do_2v1ci/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-do_2v1ci/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-oja-0131/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-oja-0131/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-vzu29jej/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-vzu29jej/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-vzu29jej/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-vzu29jej/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0004",
+      "problem_id": 2,
+      "label": "equivalent",
+      "source_category": "OJ_V",
+      "pair_id": 4,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0004/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0004/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-28cyc12r/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-28cyc12r/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-28cyc12r/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-28cyc12r/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0004/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0004/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-jni7h2ws/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-jni7h2ws/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-jni7h2ws/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-jni7h2ws/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0005",
+      "problem_id": 2,
+      "label": "inequivalent",
+      "source_category": "OJ_V",
+      "pair_id": 5,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0005/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0005/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-o3nzdt9j/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-o3nzdt9j/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-o3nzdt9j/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-o3nzdt9j/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0005/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0005/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-0z06l0sl/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-0z06l0sl/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-0z06l0sl/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-0z06l0sl/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0008",
+      "problem_id": 4,
+      "label": "equivalent",
+      "source_category": "OJ_V",
+      "pair_id": 8,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0008/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0008/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-gu3jwqp9/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-gu3jwqp9/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-gu3jwqp9/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-gu3jwqp9/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0008/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0008/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-z2373ttb/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-z2373ttb/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-z2373ttb/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-z2373ttb/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0009",
+      "problem_id": 4,
+      "label": "inequivalent",
+      "source_category": "OJ_V",
+      "pair_id": 9,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0009/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0009/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-9ygmbriu/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-9ygmbriu/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-9ygmbriu/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-9ygmbriu/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0009/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0009/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-3sd3sv2j/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-3sd3sv2j/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-3sd3sv2j/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-3sd3sv2j/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0066",
+      "problem_id": 33,
+      "label": "equivalent",
+      "source_category": "OJ_V",
+      "pair_id": 66,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0066/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0066/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7g6qzbp1/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7g6qzbp1/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7g6qzbp1/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7g6qzbp1/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0066/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0066/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ja0tlroy/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ja0tlroy/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ja0tlroy/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ja0tlroy/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0067",
+      "problem_id": 33,
+      "label": "inequivalent",
+      "source_category": "OJ_V",
+      "pair_id": 67,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0067/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0067/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6b0odznq/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6b0odznq/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6b0odznq/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6b0odznq/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0067/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0067/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-6g2cyrw5/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-6g2cyrw5/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-6g2cyrw5/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-6g2cyrw5/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0074",
+      "problem_id": 37,
+      "label": "equivalent",
+      "source_category": "OJ_V",
+      "pair_id": 74,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0074/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0074/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7cxilsu5/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7cxilsu5/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7cxilsu5/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7cxilsu5/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0074/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0074/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ic93hnzx/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ic93hnzx/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ic93hnzx/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-ic93hnzx/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0075",
+      "problem_id": 37,
+      "label": "inequivalent",
+      "source_category": "OJ_V",
+      "pair_id": 75,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0075/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0075/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-bst1d5sk/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-bst1d5sk/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-bst1d5sk/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-bst1d5sk/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0075/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0075/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-urbzv95u/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-urbzv95u/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-urbzv95u/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-urbzv95u/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0090",
+      "problem_id": 45,
+      "label": "equivalent",
+      "source_category": "OJ_V",
+      "pair_id": 90,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0090/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0090/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-rd7uoaxu/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-rd7uoaxu/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-rd7uoaxu/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-rd7uoaxu/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0090/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0090/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-12j28e3w/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-12j28e3w/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-12j28e3w/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-12j28e3w/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0091",
+      "problem_id": 45,
+      "label": "inequivalent",
+      "source_category": "OJ_V",
+      "pair_id": 91,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0091/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0091/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ignvzacf/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ignvzacf/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ignvzacf/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ignvzacf/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0091/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0091/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-cr9mzdyt/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-cr9mzdyt/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-cr9mzdyt/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-cr9mzdyt/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0122",
+      "problem_id": 61,
+      "label": "equivalent",
+      "source_category": "OJ_V",
+      "pair_id": 122,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0122/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0122/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ouk9_8j4/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ouk9_8j4/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ouk9_8j4/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ouk9_8j4/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0122/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0122/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-g98xhbbd/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-g98xhbbd/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-g98xhbbd/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-g98xhbbd/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0123",
+      "problem_id": 61,
+      "label": "inequivalent",
+      "source_category": "OJ_V",
+      "pair_id": 123,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0123/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0123/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-q95nafut/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-q95nafut/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-q95nafut/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-q95nafut/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0123/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0123/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-s_rg4fy1/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-s_rg4fy1/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-s_rg4fy1/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-s_rg4fy1/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0126",
+      "problem_id": 63,
+      "label": "equivalent",
+      "source_category": "OJ_V",
+      "pair_id": 126,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0126/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0126/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-3ut0gnfc/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-3ut0gnfc/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-3ut0gnfc/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-3ut0gnfc/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0126/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0126/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9z4rnosc/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9z4rnosc/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9z4rnosc/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9z4rnosc/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0127",
+      "problem_id": 63,
+      "label": "inequivalent",
+      "source_category": "OJ_V",
+      "pair_id": 127,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0127/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0127/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6pc30_dd/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6pc30_dd/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6pc30_dd/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-6pc30_dd/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0127/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0127/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-kn2byw42/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-kn2byw42/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-kn2byw42/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-kn2byw42/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0130",
+      "problem_id": 65,
+      "label": "equivalent",
+      "source_category": "OJ_V",
+      "pair_id": 130,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0130/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0130/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-kidb9m2s/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-kidb9m2s/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-kidb9m2s/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-kidb9m2s/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0130/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0130/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-viuunqei/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-viuunqei/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-viuunqei/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-viuunqei/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojv-0131",
+      "problem_id": 65,
+      "label": "inequivalent",
+      "source_category": "OJ_V",
+      "pair_id": 131,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojv-0131/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0131/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-me4hvfst/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-me4hvfst/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-me4hvfst/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-me4hvfst/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojv-0131/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojv-0131/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-u5ld065a/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-u5ld065a/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-u5ld065a/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-u5ld065a/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0004",
+      "problem_id": 2,
+      "label": "equivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 4,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0004/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0004/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-17kvew71/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-17kvew71/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-17kvew71/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-17kvew71/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0004/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0004/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-by1r0pde/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-by1r0pde/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-by1r0pde/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-by1r0pde/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0005",
+      "problem_id": 2,
+      "label": "inequivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 5,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0005/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0005/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-x6v8_wwo/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-x6v8_wwo/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-x6v8_wwo/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-x6v8_wwo/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0005/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0005/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-3sv84zga/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-3sv84zga/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-3sv84zga/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-3sv84zga/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0008",
+      "problem_id": 4,
+      "label": "equivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 8,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0008/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0008/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-zyvc5z_o/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-zyvc5z_o/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-zyvc5z_o/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-zyvc5z_o/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0008/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0008/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-lavayott/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-lavayott/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-lavayott/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-lavayott/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0009",
+      "problem_id": 4,
+      "label": "inequivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 9,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0009/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0009/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-nvh0038n/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-nvh0038n/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-nvh0038n/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-nvh0038n/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0009/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0009/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-zfkc5o42/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-zfkc5o42/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-zfkc5o42/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-zfkc5o42/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0066",
+      "problem_id": 33,
+      "label": "equivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 66,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0066/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0066/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-vywk8ink/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-vywk8ink/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-vywk8ink/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-vywk8ink/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0066/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0066/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-kpru_ac1/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-kpru_ac1/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-kpru_ac1/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-kpru_ac1/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0067",
+      "problem_id": 33,
+      "label": "inequivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 67,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0067/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0067/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-_87vdnti/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-_87vdnti/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-_87vdnti/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-_87vdnti/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0067/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0067/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-_8w3jcnu/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-_8w3jcnu/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-_8w3jcnu/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-_8w3jcnu/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0074",
+      "problem_id": 37,
+      "label": "equivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 74,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0074/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0074/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-y0dkbv51/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-y0dkbv51/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-y0dkbv51/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-y0dkbv51/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0074/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0074/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-e_yzuu9j/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-e_yzuu9j/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-e_yzuu9j/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-e_yzuu9j/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0075",
+      "problem_id": 37,
+      "label": "inequivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 75,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0075/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0075/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ume50g0g/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ume50g0g/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ume50g0g/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ume50g0g/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0075/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0075/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-dtjwhpfw/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-dtjwhpfw/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-dtjwhpfw/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-dtjwhpfw/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0090",
+      "problem_id": 45,
+      "label": "equivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 90,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0090/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0090/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ztpa0hid/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ztpa0hid/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ztpa0hid/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-ztpa0hid/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0090/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0090/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-xw2q210a/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-xw2q210a/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-xw2q210a/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-xw2q210a/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0091",
+      "problem_id": 45,
+      "label": "inequivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 91,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0091/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0091/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-r6yyd93d/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-r6yyd93d/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-r6yyd93d/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-r6yyd93d/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0091/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0091/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-z5cyo72l/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-z5cyo72l/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-z5cyo72l/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-z5cyo72l/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0122",
+      "problem_id": 61,
+      "label": "equivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 122,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0122/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0122/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-i02d2z9r/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-i02d2z9r/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-i02d2z9r/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-i02d2z9r/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0122/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0122/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-itrufi4z/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-itrufi4z/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-itrufi4z/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-itrufi4z/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0123",
+      "problem_id": 61,
+      "label": "inequivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 123,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0123/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0123/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-hqqe1vfu/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-hqqe1vfu/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-hqqe1vfu/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-hqqe1vfu/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0123/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0123/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-_by9m1bo/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-_by9m1bo/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-_by9m1bo/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-_by9m1bo/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0126",
+      "problem_id": 63,
+      "label": "equivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 126,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0126/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0126/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7xptk5a4/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7xptk5a4/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7xptk5a4/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-7xptk5a4/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0126/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0126/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-qkk2oce9/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-qkk2oce9/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-qkk2oce9/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-qkk2oce9/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0127",
+      "problem_id": 63,
+      "label": "inequivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 127,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0127/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0127/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-si7abiyf/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-si7abiyf/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-si7abiyf/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-si7abiyf/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0127/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0127/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-izrwbe24/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-izrwbe24/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-izrwbe24/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-izrwbe24/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0130",
+      "problem_id": 65,
+      "label": "equivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 130,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0130/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0130/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-1qj2h2dg/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-1qj2h2dg/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-1qj2h2dg/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-1qj2h2dg/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0130/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0130/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9wsunecs/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9wsunecs/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9wsunecs/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-9wsunecs/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "goeq-ojva-0131",
+      "problem_id": 65,
+      "label": "inequivalent",
+      "source_category": "OJ_VA",
+      "pair_id": 131,
+      "backfilled": true,
+      "copied_program_count": 2,
+      "programs": [
+        {
+          "program_name": "prog_a",
+          "source_path": "dataset/cases/goeq-ojva-0131/source/prog_a/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0131/source/prog_a/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-n0hkzte7/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-n0hkzte7/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-n0hkzte7/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_a-n0hkzte7/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        },
+        {
+          "program_name": "prog_b",
+          "source_path": "dataset/cases/goeq-ojva-0131/source/prog_b/original.py",
+          "transpile_success": true,
+          "transpile_error": "",
+          "build_success": true,
+          "build_error": "",
+          "baseline_match": true,
+          "baseline_error": "",
+          "translation_attempts": 1,
+          "go_file_count": 1,
+          "go_files": [
+            "original.go"
+          ],
+          "translate_result": {
+            "cmd": [
+              "/private/tmp/gobench-eq-pytagoadapt",
+              "-skip-build",
+              "-pytago",
+              "/tmp/venv-pytago310/bin/pytago",
+              "-input",
+              "dataset/cases/goeq-ojva-0131/source/prog_b/original.py",
+              "-output",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-jsslfy3i/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false,
+            "output_path": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-jsslfy3i/original.go"
+          },
+          "build_result": {
+            "cmd": [
+              "go",
+              "build",
+              "-o",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-jsslfy3i/program",
+              "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-backfill-prog_b-jsslfy3i/original.go"
+            ],
+            "stdout": "",
+            "stderr": "",
+            "exit_code": 0,
+            "timed_out": false
+          },
+          "sample_mismatches": [],
+          "copied_files": [
+            "original.go"
+          ]
+        }
+      ]
+    }
+  ]
+}

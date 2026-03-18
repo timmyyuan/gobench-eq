@@ -1,0 +1,25 @@
+# goeq-ojv-0131
+
+- Source benchmark: EquiBench
+- Source category: OJ_V
+- Pair ID: 131
+- Problem ID: 65
+- Problem path: `dataset/organized/OJ/65`
+- Source label: `inequivalent`
+- Source program A path: `dataset/organized/OJ/65/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/65/obfus_wrong_0.py`
+- Stored sample count: `2`
+- Go translations: backfilled for `prog_a/` and `prog_b/` via `pytago_adapter`; stored harness samples currently pass for both programs
+- Witness sample: `sample_01`
+- sample_01 stdin: '2\n'
+- sample_01 statement stdout: '12.566371 12.566371\n'
+- sample_01 source stdout A: '12.566370614359172 12.566370614359172\n'
+- sample_01 source stdout B: '12.566 33.50933333333334\n'
+- sample_01 statement match A: `False`
+- sample_01 statement match B: `False`
+- sample_02 stdin: '3\n'
+- sample_02 statement stdout: '28.274334 18.849556\n'
+- sample_02 source stdout A: '28.274333882308138 18.84955592153876\n'
+- sample_02 source stdout B: '28.273500000000002 113.09400000000001\n'
+- sample_02 statement match A: `False`
+- sample_02 statement match B: `False`

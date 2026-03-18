@@ -1,0 +1,85 @@
+{
+  "stdin": "5 1 5 2 4\n",
+  "source_prog_a": {
+    "stdout": "YES\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "YES\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "5 1 5 2 4\n",
+      "statement_stdout": "YES\n",
+      "source_prog_a": {
+        "stdout": "YES\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "YES\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "4 7 6 4 5\n",
+      "statement_stdout": "NO\n",
+      "source_prog_a": {
+        "stdout": "NO\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "NO\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "48792 105960835 681218449 90629745 90632170\n",
+      "statement_stdout": "NO\n",
+      "source_prog_a": {
+        "stdout": "NO\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "NO\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_04",
+      "stdin": "491995 412925347 825318103 59999126 59999339\n",
+      "statement_stdout": "YES\n",
+      "source_prog_a": {
+        "stdout": "YES\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "YES\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

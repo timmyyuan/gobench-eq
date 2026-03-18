@@ -1,0 +1,19 @@
+Transformation doesn't verify!
+
+Transformation doesn't verify!
+
+ERROR: Couldn't prove the correctness of the transformation
+Alive2 approximated the semantics of the programs and therefore we
+cannot conclude whether the bug found is valid or not.
+
+Approximations done:
+ - Unknown libcall: @printf
+
+
+ERROR: Signature mismatch between src and tgt
+
+Summary:
+  0 correct transformations
+  2 incorrect transformations
+  2 failed-to-prove transformations
+  0 Alive2 errors

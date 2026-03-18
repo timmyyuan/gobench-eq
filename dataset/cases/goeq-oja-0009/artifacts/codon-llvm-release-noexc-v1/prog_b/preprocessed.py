@@ -1,0 +1,6 @@
+string = input()
+print(string)
+string1 = string.replace('peach', 'tmp')
+string2 = string1.replace('apple', 'peach')
+string3 = string2.replace('tmp', 'apple')
+print(string3)

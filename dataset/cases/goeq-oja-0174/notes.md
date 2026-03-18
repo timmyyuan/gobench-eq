@@ -1,0 +1,30 @@
+# goeq-oja-0174
+
+- Source benchmark: EquiBench
+- Source category: OJ_A
+- Pair ID: 174
+- Problem ID: 87
+- Problem path: `dataset/organized/OJ/87`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/87/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/87/accepted_1.py`
+- Stored sample count: `3`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: '7\n500 600\n'
+- sample_01 statement stdout: 'OK\n'
+- sample_01 source stdout A: 'OK\n'
+- sample_01 source stdout B: 'OK\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: '4\n5 7\n'
+- sample_02 statement stdout: 'NG\n'
+- sample_02 source stdout A: 'NG\n'
+- sample_02 source stdout B: 'NG\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: '1\n11 11\n'
+- sample_03 statement stdout: 'OK\n'
+- sample_03 source stdout A: 'OK\n'
+- sample_03 source stdout B: 'OK\n'
+- sample_03 statement match A: `True`
+- sample_03 statement match B: `True`

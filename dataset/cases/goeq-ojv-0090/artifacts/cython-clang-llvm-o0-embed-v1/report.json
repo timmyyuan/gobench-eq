@@ -1,0 +1,74 @@
+{
+  "case_id": "goeq-ojv-0090",
+  "problem_id": 45,
+  "label": "equivalent",
+  "source_category": "OJ_V",
+  "pair_id": 90,
+  "artifact_dir": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1",
+  "preferred_alive2_func": "main",
+  "pair_materialized_ok": true,
+  "prog_a": {
+    "program_name": "prog_a",
+    "source_path": "dataset/cases/goeq-ojv-0090/source/prog_a/original.py",
+    "c_path": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/program.c",
+    "ir_path": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.ll",
+    "debug_ir_path": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.dbg.ll",
+    "optimized_ir_paths": {
+      "Oz": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Oz.ll",
+      "Os": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll"
+    },
+    "translation_ok": true,
+    "ir_ok": true,
+    "debug_ir_ok": true,
+    "opt_ok": true,
+    "translation_timed_out": false,
+    "ir_timed_out": false,
+    "debug_ir_timed_out": false,
+    "translation_exit_code": 0,
+    "ir_exit_code": 0,
+    "debug_ir_exit_code": 0,
+    "translation_error": "",
+    "ir_error": "",
+    "debug_ir_error": "",
+    "opt_pipeline_statuses": {
+      "Oz": true,
+      "Os": true
+    },
+    "opt_pipeline_errors": {
+      "Oz": "",
+      "Os": ""
+    }
+  },
+  "prog_b": {
+    "program_name": "prog_b",
+    "source_path": "dataset/cases/goeq-ojv-0090/source/prog_b/original.py",
+    "c_path": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/program.c",
+    "ir_path": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.ll",
+    "debug_ir_path": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.dbg.ll",
+    "optimized_ir_paths": {
+      "Oz": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Oz.ll",
+      "Os": "dataset/cases/goeq-ojv-0090/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll"
+    },
+    "translation_ok": true,
+    "ir_ok": true,
+    "debug_ir_ok": true,
+    "opt_ok": true,
+    "translation_timed_out": false,
+    "ir_timed_out": false,
+    "debug_ir_timed_out": false,
+    "translation_exit_code": 0,
+    "ir_exit_code": 0,
+    "debug_ir_exit_code": 0,
+    "translation_error": "",
+    "ir_error": "",
+    "debug_ir_error": "",
+    "opt_pipeline_statuses": {
+      "Oz": true,
+      "Os": true
+    },
+    "opt_pipeline_errors": {
+      "Oz": "",
+      "Os": ""
+    }
+  }
+}

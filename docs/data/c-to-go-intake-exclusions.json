@@ -1,0 +1,117 @@
+{
+  "source_dataset": "EquiBench DCE",
+  "published_profile": "c-to-go-intake",
+  "excluded_pairs": [
+    {
+      "pair_id": 106,
+      "case_id": "goeq-dce-0106",
+      "label": "equivalent",
+      "reason": "pair.unsupported_mixed_width_relational"
+    },
+    {
+      "pair_id": 107,
+      "case_id": "goeq-dce-0107",
+      "label": "inequivalent",
+      "reason": "pair.unsupported_mixed_width_relational"
+    },
+    {
+      "pair_id": 132,
+      "case_id": "goeq-dce-0132",
+      "label": "equivalent",
+      "reason": "pair.unsupported_nested_expression_statement_lowering"
+    },
+    {
+      "pair_id": 134,
+      "case_id": "goeq-dce-0134",
+      "label": "equivalent",
+      "reason": "pair.unsupported_bool_int_relational"
+    },
+    {
+      "pair_id": 135,
+      "case_id": "goeq-dce-0135",
+      "label": "inequivalent",
+      "reason": "pair.unsupported_bool_int_relational"
+    },
+    {
+      "pair_id": 178,
+      "case_id": "goeq-dce-0178",
+      "label": "equivalent",
+      "reason": "pair.unsupported_mixed_width_relational"
+    },
+    {
+      "pair_id": 179,
+      "case_id": "goeq-dce-0179",
+      "label": "inequivalent",
+      "reason": "pair.unsupported_mixed_width_relational"
+    },
+    {
+      "pair_id": 288,
+      "case_id": "goeq-dce-0288",
+      "label": "equivalent",
+      "reason": "pair.unsupported_mixed_width_arithmetic"
+    },
+    {
+      "pair_id": 289,
+      "case_id": "goeq-dce-0289",
+      "label": "inequivalent",
+      "reason": "pair.unsupported_mixed_width_arithmetic"
+    },
+    {
+      "pair_id": 336,
+      "case_id": "goeq-dce-0336",
+      "label": "equivalent",
+      "reason": "pair.unsupported_expression_statement_conversion"
+    },
+    {
+      "pair_id": 346,
+      "case_id": "goeq-dce-0346",
+      "label": "equivalent",
+      "reason": "pair.unsupported_bool_int_relational"
+    },
+    {
+      "pair_id": 347,
+      "case_id": "goeq-dce-0347",
+      "label": "inequivalent",
+      "reason": "pair.unsupported_bool_int_relational"
+    },
+    {
+      "pair_id": 374,
+      "case_id": "goeq-dce-0374",
+      "label": "equivalent",
+      "reason": "pair.unsupported_nested_expression_statement_lowering"
+    },
+    {
+      "pair_id": 375,
+      "case_id": "goeq-dce-0375",
+      "label": "inequivalent",
+      "reason": "pair.unsupported_nested_expression_statement_lowering"
+    },
+    {
+      "pair_id": 381,
+      "case_id": "goeq-dce-0381",
+      "label": "inequivalent",
+      "reason": "pair.unsupported_pointer_assignment_or_comparison_lowering"
+    },
+    {
+      "pair_id": 388,
+      "case_id": "goeq-dce-0388",
+      "label": "equivalent",
+      "reason": "pair.unsupported_signed_unsigned_relational"
+    },
+    {
+      "pair_id": 389,
+      "case_id": "goeq-dce-0389",
+      "label": "inequivalent",
+      "reason": "pair.unsupported_signed_unsigned_relational"
+    }
+  ],
+  "reason_counts": {
+    "pair.unsupported_bool_int_relational": 4,
+    "pair.unsupported_mixed_width_relational": 4,
+    "pair.unsupported_nested_expression_statement_lowering": 3,
+    "pair.unsupported_mixed_width_arithmetic": 2,
+    "pair.unsupported_signed_unsigned_relational": 2,
+    "pair.unsupported_expression_statement_conversion": 1,
+    "pair.unsupported_pointer_assignment_or_comparison_lowering": 1
+  }
+}

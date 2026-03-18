@@ -1,0 +1,51 @@
+{
+  "stdin": "2\n",
+  "source_prog_a": {
+    "stdout": "12.566370614359172 12.566370614359172\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "12.566 33.50933333333334\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "2\n",
+      "statement_stdout": "12.566371 12.566371\n",
+      "source_prog_a": {
+        "stdout": "12.566370614359172 12.566370614359172\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "12.566 33.50933333333334\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "3\n",
+      "statement_stdout": "28.274334 18.849556\n",
+      "source_prog_a": {
+        "stdout": "28.274333882308138 18.84955592153876\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "28.273500000000002 113.09400000000001\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

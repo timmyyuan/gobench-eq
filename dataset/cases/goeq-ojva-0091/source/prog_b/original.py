@@ -1,0 +1,1 @@
+['{} {}'.format(max(A),min(A))for A in[[sum(map(int,input().split()))for A in range(int(input()))]]]

@@ -1,0 +1,85 @@
+{
+  "stdin": "4 6\n2 1\n3 4\n4 10\n3 4\n",
+  "source_prog_a": {
+    "stdout": "11\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "11\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "4 6\n2 1\n3 4\n4 10\n3 4\n",
+      "statement_stdout": "11\n",
+      "source_prog_a": {
+        "stdout": "11\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "11\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "4 6\n2 1\n3 7\n4 10\n3 6\n",
+      "statement_stdout": "13\n",
+      "source_prog_a": {
+        "stdout": "13\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "14\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "4 10\n1 100\n1 100\n1 100\n1 100\n",
+      "statement_stdout": "400\n",
+      "source_prog_a": {
+        "stdout": "400\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "400\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_04",
+      "stdin": "4 1\n10 100\n10 100\n10 100\n10 100\n",
+      "statement_stdout": "0\n",
+      "source_prog_a": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "0\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

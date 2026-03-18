@@ -1,0 +1,14 @@
+__codon_parts_1 = input().split()
+n = int(__codon_parts_1[0])
+a = int(__codon_parts_1[1])
+xlst = list(map(int, input().split()))
+dp = [[0 for A in range(5001)] for A in range(n + 1)]
+center = 2500
+dp[0][center] = 1
+for i, x in enumerate(xlst, 1):
+    num = x - a
+    for j in range(5001):
+        dp[i][j] = dp[i - 1][j]
+        if 0 <= j - num <= 5000:
+            dp[i][j] += dp[i - 1][j - num]
+print(dp[-1][center] - 1)

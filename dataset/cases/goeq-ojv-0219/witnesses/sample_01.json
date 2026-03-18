@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-ojv-0219",
+  "name": "sample_01",
+  "stdin": "3200\npink\n",
+  "statement_stdout": "pink\n",
+  "source_prog_a": {
+    "stdout": "pink\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "red\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

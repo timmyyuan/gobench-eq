@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-03-18T03:53:19.601340+00:00",
+  "materialization_report": "docs/data/c-goeq-dce-llvm-materialization.json",
+  "alive_tv_bin": "alive2/build-llvm22/alive-tv",
+  "alive_tv_flags": [
+    "--quiet",
+    "--disable-undef-input",
+    "--disable-poison-input",
+    "--src-unroll=2",
+    "--tgt-unroll=2",
+    "--smt-to=60000"
+  ],
+  "timeout_seconds": 120,
+  "jobs": 2,
+  "total_cases": 3,
+  "summary": {
+    "tested": 3,
+    "successful": 2,
+    "failed": 1,
+    "correct": 2,
+    "incorrect": 0,
+    "resolved_equivalent": 2,
+    "resolved_inequivalent": 0,
+    "accuracy_on_success": 1.0,
+    "end_to_end_accuracy": 0.6666666666666666,
+    "status_counts": {
+      "equivalent": 2,
+      "failed_to_prove": 1
+    }
+  },
+  "by_expected_label": {
+    "equivalent": {
+      "tested": 2,
+      "successful": 2,
+      "failed": 0,
+      "correct": 2,
+      "incorrect": 0,
+      "resolved_equivalent": 2,
+      "resolved_inequivalent": 0,
+      "accuracy_on_success": 1.0,
+      "end_to_end_accuracy": 1.0,
+      "status_counts": {
+        "equivalent": 2
+      }
+    },
+    "inequivalent": {
+      "tested": 1,
+      "successful": 0,
+      "failed": 1,
+      "correct": 0,
+      "incorrect": 0,
+      "resolved_equivalent": 0,
+      "resolved_inequivalent": 0,
+      "accuracy_on_success": 0.0,
+      "end_to_end_accuracy": 0.0,
+      "status_counts": {
+        "failed_to_prove": 1
+      }
+    }
+  },
+  "results": [
+    {
+      "case_id": "goeq-dce-0002",
+      "expected_label": "equivalent",
+      "artifact_dir": "dataset/cases/goeq-dce-0002/artifacts/clang-llvm-o0-novol-v1",
+      "prog_a_ir_path": "dataset/cases/goeq-dce-0002/artifacts/clang-llvm-o0-novol-v1/prog_a/module.ll",
+      "prog_b_ir_path": "dataset/cases/goeq-dce-0002/artifacts/clang-llvm-o0-novol-v1/prog_b/module.ll",
+      "successful": true,
+      "correct": true,
+      "predicted_label": "equivalent",
+      "raw_output": "equivalent",
+      "status": "equivalent",
+      "exit_code": 0,
+      "timed_out": false,
+      "correct_count": 22,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 0,
+      "error_count": 0,
+      "headline": "Transformation seems to be correct! (syntactically equal)",
+      "error": "",
+      "raw_output_path": "dataset/cases/goeq-dce-0002/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.output.txt",
+      "result_path": "dataset/cases/goeq-dce-0002/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.report.json"
+    },
+    {
+      "case_id": "goeq-dce-0003",
+      "expected_label": "inequivalent",
+      "artifact_dir": "dataset/cases/goeq-dce-0003/artifacts/clang-llvm-o0-novol-v1",
+      "prog_a_ir_path": "dataset/cases/goeq-dce-0003/artifacts/clang-llvm-o0-novol-v1/prog_a/module.ll",
+      "prog_b_ir_path": "dataset/cases/goeq-dce-0003/artifacts/clang-llvm-o0-novol-v1/prog_b/module.ll",
+      "successful": false,
+      "correct": false,
+      "predicted_label": "",
+      "raw_output": "failed-to-prove",
+      "status": "failed_to_prove",
+      "exit_code": 0,
+      "timed_out": false,
+      "correct_count": 31,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 3,
+      "error_count": 0,
+      "headline": "ERROR: The source program doesn't reach a return instruction.",
+      "error": "alive2 unresolved: 0 incorrect, 3 failed-to-prove, 0 errors",
+      "raw_output_path": "dataset/cases/goeq-dce-0003/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.output.txt",
+      "result_path": "dataset/cases/goeq-dce-0003/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.report.json"
+    },
+    {
+      "case_id": "goeq-dce-0006",
+      "expected_label": "equivalent",
+      "artifact_dir": "dataset/cases/goeq-dce-0006/artifacts/clang-llvm-o0-novol-v1",
+      "prog_a_ir_path": "dataset/cases/goeq-dce-0006/artifacts/clang-llvm-o0-novol-v1/prog_a/module.ll",
+      "prog_b_ir_path": "dataset/cases/goeq-dce-0006/artifacts/clang-llvm-o0-novol-v1/prog_b/module.ll",
+      "successful": true,
+      "correct": true,
+      "predicted_label": "equivalent",
+      "raw_output": "equivalent",
+      "status": "equivalent",
+      "exit_code": 0,
+      "timed_out": false,
+      "correct_count": 5,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 0,
+      "error_count": 0,
+      "headline": "Transformation seems to be correct! (syntactically equal)",
+      "error": "",
+      "raw_output_path": "dataset/cases/goeq-dce-0006/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.output.txt",
+      "result_path": "dataset/cases/goeq-dce-0006/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.report.json"
+    }
+  ]
+}

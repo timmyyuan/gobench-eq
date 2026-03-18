@@ -1,0 +1,68 @@
+{
+  "stdin": "5 1\nABAAA\n",
+  "source_prog_a": {
+    "stdout": "BBAAA\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "BBAAA\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "5 1\nABAAA\n",
+      "statement_stdout": "BBAAA\n",
+      "source_prog_a": {
+        "stdout": "BBAAA\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "BBAAA\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "5 2\nABAAA\n",
+      "statement_stdout": "ABBBA\n",
+      "source_prog_a": {
+        "stdout": "ABBBA\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "ABBBA\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "4 123456789\nAABB\n",
+      "statement_stdout": "BABA\n",
+      "source_prog_a": {
+        "stdout": "BABA\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "BABA\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

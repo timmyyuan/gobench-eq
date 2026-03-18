@@ -1,0 +1,51 @@
+{
+  "stdin": "2 10 20\n",
+  "source_prog_a": {
+    "stdout": "30\n50\n90\n170\n330\n650\n1290\n2570\n5130\n10250\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "30\n50\n90\n170\n330\n650\n1290\n2570\n5130\n10250\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "2 10 20\n",
+      "statement_stdout": "30\n50\n90\n170\n330\n650\n1290\n2570\n5130\n10250\n",
+      "source_prog_a": {
+        "stdout": "30\n50\n90\n170\n330\n650\n1290\n2570\n5130\n10250\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "30\n50\n90\n170\n330\n650\n1290\n2570\n5130\n10250\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "4 40 60\n",
+      "statement_stdout": "200\n760\n3000\n11960\n47800\n191160\n764600\n3058360\n12233400\n48933560\n",
+      "source_prog_a": {
+        "stdout": "200\n760\n3000\n11960\n47800\n191160\n764600\n3058360\n12233400\n48933560\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "200\n760\n3000\n11960\n47800\n191160\n764600\n3058360\n12233400\n48933560\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

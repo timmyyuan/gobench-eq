@@ -1,0 +1,22 @@
+{
+  "case_id": "goeq-dce-0070",
+  "expected_label": "equivalent",
+  "artifact_dir": "dataset/cases/goeq-dce-0070/artifacts/clang-llvm-o0-novol-v1",
+  "prog_a_ir_path": "dataset/cases/goeq-dce-0070/artifacts/clang-llvm-o0-novol-v1/prog_a/module.ll",
+  "prog_b_ir_path": "dataset/cases/goeq-dce-0070/artifacts/clang-llvm-o0-novol-v1/prog_b/module.ll",
+  "successful": false,
+  "correct": false,
+  "predicted_label": "",
+  "raw_output": "failed-to-prove",
+  "status": "failed_to_prove",
+  "exit_code": 0,
+  "timed_out": false,
+  "correct_count": 20,
+  "incorrect_count": 0,
+  "failed_to_prove_count": 1,
+  "error_count": 0,
+  "headline": "Transformation seems to be correct! (syntactically equal)",
+  "error": "alive2 unresolved: 0 incorrect, 1 failed-to-prove, 0 errors",
+  "raw_output_path": "dataset/cases/goeq-dce-0070/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.output.txt",
+  "result_path": "dataset/cases/goeq-dce-0070/artifacts/clang-llvm-o0-novol-v1/alive2-u2-2-smt60000.report.json"
+}

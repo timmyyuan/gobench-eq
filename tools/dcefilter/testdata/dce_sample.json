@@ -1,0 +1,47 @@
+[
+  {
+    "category": "DCE",
+    "pair_id": 1,
+    "program_1_path": "dataset/organized/DCE/1/target.c",
+    "program_2_path": "dataset/organized/DCE/1/eq.c",
+    "program_1_code": "#include \"csmith.h\"\nvolatile uint64_t csmith_sink_ = 0;\nstatic int add_one(int x) {\n  return x + 1;\n}\nstatic int target(int x) {\n  int out = add_one(x);\n  for (int i = 0; i < 1; ++i) {\n    out += 0;\n  }\n  return out;\n}\n",
+    "program_2_code": "#include \"csmith.h\"\nvolatile uint64_t csmith_sink_ = 0;\nstatic int add_one(int x) {\n  return 1 + x;\n}\nstatic int target(int x) {\n  return add_one(x);\n}\n",
+    "truth_label": true,
+    "problem_id": 1,
+    "problem_path": "dataset/organized/DCE/1",
+    "program_1_length": 12,
+    "program_2_length": 8,
+    "program_1_similarity": 0.88,
+    "program_2_similarity": 0.91
+  },
+  {
+    "category": "DCE",
+    "pair_id": 2,
+    "program_1_path": "dataset/organized/DCE/2/target.c",
+    "program_2_path": "dataset/organized/DCE/2/neq.c",
+    "program_1_code": "#include \"csmith.h\"\nvolatile uint64_t csmith_sink_ = 0;\nunion U0 {\n  unsigned f0 : 3;\n  int f1;\n};\nstatic int (*dispatch)(int);\nstatic int target(int x) {\n  goto done;\ndone:\n  return x;\n}\n",
+    "program_2_code": "#include \"csmith.h\"\nvolatile uint64_t csmith_sink_ = 0;\nunion U0 {\n  unsigned f0 : 3;\n  int f1;\n};\nstatic int target(int x) {\n  goto done;\ndone:\n  return x + 1;\n}\n",
+    "truth_label": false,
+    "problem_id": 2,
+    "problem_path": "dataset/organized/DCE/2",
+    "program_1_length": 10,
+    "program_2_length": 10,
+    "program_1_similarity": 0.55,
+    "program_2_similarity": 0.41
+  },
+  {
+    "category": "DCE",
+    "pair_id": 3,
+    "program_1_path": "dataset/organized/DCE/3/target.c",
+    "program_2_path": "dataset/organized/DCE/3/eq.c",
+    "program_1_code": "#include \"csmith.h\"\nvolatile uint64_t csmith_sink_ = 0;\nstatic int inc(int x) {\n  return x + 1;\n}\nstatic int (*dispatch)(int) = inc;\nstatic int target(int x) {\n  if (x < 0) {\n    goto done;\n  }\n  return dispatch(x);\ndone:\n  return dispatch(x);\n}\n",
+    "program_2_code": "#include \"csmith.h\"\nvolatile uint64_t csmith_sink_ = 0;\nstatic int inc(int x) {\n  return 1 + x;\n}\nstatic int (*dispatch)(int) = inc;\nstatic int target(int x) {\n  if (x < 0) {\n    goto done;\n  }\n  return dispatch(x);\ndone:\n  return dispatch(x);\n}\n",
+    "truth_label": true,
+    "problem_id": 3,
+    "problem_path": "dataset/organized/DCE/3",
+    "program_1_length": 13,
+    "program_2_length": 13,
+    "program_1_similarity": 0.73,
+    "program_2_similarity": 0.73
+  }
+]

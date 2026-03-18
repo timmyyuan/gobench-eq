@@ -1,0 +1,58 @@
+{
+  "tool": "prometeo",
+  "tool_url": "https://github.com/zanellia/prometeo",
+  "tool_commit": "ce8aa66a21bec51581cad0a7a0998b0a86581734",
+  "host": {
+    "os_arch": "Darwin arm64",
+    "system_python": "3.14.3",
+    "probe_python": "3.10.20"
+  },
+  "evaluation_scope": {
+    "goal": "Probe whether Prometeo can act as a practical Python-to-C front-end for EquiBench OJ Python cases.",
+    "case_probe": "dataset/cases/goeq-oja-0004/source/prog_a/original.py"
+  },
+  "attempts": [
+    {
+      "name": "pypi_install_on_system_python",
+      "ok": false,
+      "detail": "pip install prometeo-dsl rejected on Python 3.14.3 because available releases declare Requires-Python <3.10."
+    },
+    {
+      "name": "source_install_on_python_3_10",
+      "ok": true,
+      "detail": "Editable install from the cloned GitHub repository succeeded only after forcing PIP_IGNORE_REQUIRES_PYTHON=1 and installing dependencies manually."
+    },
+    {
+      "name": "build_cpmt_backend_default_target",
+      "ok": false,
+      "detail": "prometeo/cpmt/make install_shared failed because the vendored BLASFEO submodule defaulted to TARGET=X64_INTEL_HASWELL and attempted x86_64 assembly on an arm64 host."
+    },
+    {
+      "name": "build_cpmt_backend_generic_target",
+      "ok": false,
+      "detail": "make TARGET=GENERIC CC=clang install_shared built libblasfeo.so but still failed to link libcpmt.so because required symbols remained unresolved on arm64."
+    },
+    {
+      "name": "boot_cli_help",
+      "ok": false,
+      "detail": "pmt --help failed before argument parsing because prometeo imports its linalg runtime at module import time and immediately tries to dlopen prometeo/lib/blasfeo/libblasfeo.so."
+    },
+    {
+      "name": "official_helloworld_probe",
+      "ok": false,
+      "detail": "pmt helloworld.py --cgen=False failed with the same boot-time missing-libblasfeo.so error, so the official example did not reach parsing or code generation."
+    },
+    {
+      "name": "equibench_case_probe",
+      "ok": false,
+      "detail": "pmt on goeq-oja-0004/source/prog_a/original.py failed with the same boot-time missing-libblasfeo.so error. No EquiBench case reached parsing."
+    }
+  ],
+  "case_results": {
+    "translation_reached": false,
+    "translated_program_count": 0,
+    "translated_case_count": 0,
+    "reason": "Prometeo never reached case-level parsing because the CLI failed during import/runtime boot."
+  },
+  "bottom_line": "Prometeo is not currently a practical Python-to-C front-end for the repository's EquiBench OJ Python intake on this host."
+}

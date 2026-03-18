@@ -1,0 +1,51 @@
+{
+  "stdin": "15 10\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snuke snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\n",
+  "source_prog_a": {
+    "stdout": "H6\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "H6\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "15 10\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snuke snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\n",
+      "statement_stdout": "H6\n",
+      "source_prog_a": {
+        "stdout": "H6\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "H6\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "1 1\nsnuke\n",
+      "statement_stdout": "A1\n",
+      "source_prog_a": {
+        "stdout": "A1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "A1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

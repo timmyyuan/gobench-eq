@@ -1,0 +1,18 @@
+# goeq-ojv-0172
+
+- Source benchmark: EquiBench
+- Source category: OJ_V
+- Pair ID: 172
+- Problem ID: 86
+- Problem path: `dataset/organized/OJ/86`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/86/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/86/obfus_accepted_0.py`
+- Stored sample count: `1`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: 'ABC\n'
+- sample_01 statement stdout: 'ARC\n'
+- sample_01 source stdout A: 'ARC\n'
+- sample_01 source stdout B: 'ARC\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`

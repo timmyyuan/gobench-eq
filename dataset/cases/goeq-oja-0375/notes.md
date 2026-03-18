@@ -1,0 +1,25 @@
+# goeq-oja-0375
+
+- Source benchmark: EquiBench
+- Source category: OJ_A
+- Pair ID: 375
+- Problem ID: 187
+- Problem path: `dataset/organized/OJ/187`
+- Source label: `inequivalent`
+- Source program A path: `dataset/organized/OJ/187/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/187/wrong_0.py`
+- Stored sample count: `2`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- Witness sample: `sample_01`
+- sample_01 stdin: '15 10\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snuke snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\nsnake snake snake snake snake snake snake snake snake snake\n'
+- sample_01 statement stdout: 'H6\n'
+- sample_01 source stdout A: 'H6\n'
+- sample_01 source stdout B: ''
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `False`
+- sample_02 stdin: '1 1\nsnuke\n'
+- sample_02 statement stdout: 'A1\n'
+- sample_02 source stdout A: 'A1\n'
+- sample_02 source stdout B: ''
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `False`

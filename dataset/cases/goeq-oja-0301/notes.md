@@ -1,0 +1,25 @@
+# goeq-oja-0301
+
+- Source benchmark: EquiBench
+- Source category: OJ_A
+- Pair ID: 301
+- Problem ID: 150
+- Problem path: `dataset/organized/OJ/150`
+- Source label: `inequivalent`
+- Source program A path: `dataset/organized/OJ/150/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/150/wrong_0.py`
+- Stored sample count: `2`
+- Go translations: backfilled for `prog_a/` and `prog_b/` via `pytago_adapter`; stored harness samples currently pass for both programs
+- Witness sample: `sample_01`
+- sample_01 stdin: '21\n'
+- sample_01 statement stdout: '27\n'
+- sample_01 source stdout A: '27\n'
+- sample_01 source stdout B: '45\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `False`
+- sample_02 stdin: '12\n'
+- sample_02 statement stdout: '36\n'
+- sample_02 source stdout A: '36\n'
+- sample_02 source stdout B: '36\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`

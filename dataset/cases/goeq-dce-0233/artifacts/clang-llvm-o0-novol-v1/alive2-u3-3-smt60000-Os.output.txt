@@ -1,0 +1,25 @@
+Transformation doesn't verify!
+
+Transformation doesn't verify!
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+Transformation doesn't verify!
+
+ERROR: Signature mismatch between src and tgt
+
+Transformation seems to be correct! (syntactically equal)
+
+ERROR: Signature mismatch between src and tgt
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+Summary:
+  3 correct transformations
+  5 incorrect transformations
+  2 failed-to-prove transformations
+  0 Alive2 errors

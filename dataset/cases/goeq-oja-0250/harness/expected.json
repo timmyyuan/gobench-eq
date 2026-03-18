@@ -1,0 +1,51 @@
+{
+  "stdin": "3 1\n1 2\n1 3\n2 3\n",
+  "source_prog_a": {
+    "stdout": "0 1 2\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "0\n1\n2\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "3 1\n1 2\n1 3\n2 3\n",
+      "statement_stdout": "0\n1\n2\n",
+      "source_prog_a": {
+        "stdout": "0 1 2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "0\n1\n2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "6 3\n2 1\n2 3\n4 1\n4 2\n6 1\n2 6\n4 6\n6 5\n",
+      "statement_stdout": "6\n4\n2\n0\n6\n2\n",
+      "source_prog_a": {
+        "stdout": "6 4 2 0 6 2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "6\n4\n2\n0\n6\n2\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

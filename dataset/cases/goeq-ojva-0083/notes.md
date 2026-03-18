@@ -1,0 +1,49 @@
+# goeq-ojva-0083
+
+- Source benchmark: EquiBench
+- Source category: OJ_VA
+- Pair ID: 83
+- Problem ID: 41
+- Problem path: `dataset/organized/OJ/41`
+- Source label: `inequivalent`
+- Source program A path: `dataset/organized/OJ/41/obfus_accepted_0.py`
+- Source program B path: `dataset/organized/OJ/41/obfus_wrong_0.py`
+- Stored sample count: `6`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- Witness sample: `sample_04`
+- sample_01 stdin: '3\n3 0 1\n'
+- sample_01 statement stdout: '2\n'
+- sample_01 source stdout A: '2\n'
+- sample_01 source stdout B: '2\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: '11\n9 8 7 6 5 4 3 2 1 1 0\n'
+- sample_02 statement stdout: '12\n'
+- sample_02 source stdout A: '12\n'
+- sample_02 source stdout B: '12\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: '10\n9 0 8 7 6 5 4 3 2 1\n'
+- sample_03 statement stdout: '10\n'
+- sample_03 source stdout A: '10\n'
+- sample_03 source stdout B: '10\n'
+- sample_03 statement match A: `True`
+- sample_03 statement match B: `True`
+- sample_04 stdin: '100\n3 6 7 5 3 5 6 2 9 1 2 7 0 9 3 6 0 6 2\n6 1 8 7 9 2 0 2 3 7 5 9 2 2 8 9 7 3 6\n1 2 9 3 1 9 4 7 8 4 5 0 3 6 1 0 6 3 2\n0 6 1 5 5 4 7 6 5 6 9 3 7 4 5 2 5 4 7\n4 4 3 0 7 8 6 8 8 4 3 1 4 9 2 0 6 8 9\n2 6 6 4 9\n'
+- sample_04 statement stdout: '11\n'
+- sample_04 source stdout A: '11\n'
+- sample_04 source stdout B: '4\n'
+- sample_04 statement match A: `True`
+- sample_04 statement match B: `False`
+- sample_05 stdin: '100\n7 2 7 5 4 7 4 4 5 8 1 5 7 7 0 5 6 2 0\n4 3 4 1 1 0 6 1 6 6 2 1 7 9 2 4 6 9 3\n6 2 8 0 5 9 7 6 3 1 4 9 1 9 1 2 6 4 2\n9 7 8 3 9 5 5 2 3 3 8 4 0 6 8 2 5 5 0\n6 7 1 8 5 1 4 8 1 3 7 3 3 5 3 0 6 0 6\n5 3 2 2 2\n'
+- sample_05 statement stdout: '86\n'
+- sample_05 source stdout A: '86\n'
+- sample_05 source stdout B: '3\n'
+- sample_05 statement match A: `True`
+- sample_05 statement match B: `False`
+- sample_06 stdin: '1\n3\n'
+- sample_06 statement stdout: '0\n'
+- sample_06 source stdout A: '0\n'
+- sample_06 source stdout B: '0\n'
+- sample_06 statement match A: `True`
+- sample_06 statement match B: `True`

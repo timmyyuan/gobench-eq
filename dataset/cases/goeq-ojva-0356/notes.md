@@ -1,0 +1,24 @@
+# goeq-ojva-0356
+
+- Source benchmark: EquiBench
+- Source category: OJ_VA
+- Pair ID: 356
+- Problem ID: 178
+- Problem path: `dataset/organized/OJ/178`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/178/obfus_accepted_0.py`
+- Source program B path: `dataset/organized/OJ/178/obfus_accepted_1.py`
+- Stored sample count: `2`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: 'xyz\nabc\n'
+- sample_01 statement stdout: 'xaybzc\n'
+- sample_01 source stdout A: 'xaybzc\n'
+- sample_01 source stdout B: 'xaybzc\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: 'atcoderbeginnercontest\natcoderregularcontest\n'
+- sample_02 statement stdout: 'aattccooddeerrbreeggiunlnaerrccoonntteesstt\n'
+- sample_02 source stdout A: 'aattccooddeerrbreeggiunlnaerrccoonntteesstt\n'
+- sample_02 source stdout B: 'aattccooddeerrbreeggiunlnaerrccoonntteesstt\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`

@@ -1,0 +1,51 @@
+{
+  "stdin": "7\nnikoandsolstice\n",
+  "source_prog_a": {
+    "stdout": "nikoand...\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "nikoand...\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "7\nnikoandsolstice\n",
+      "statement_stdout": "nikoand...\n",
+      "source_prog_a": {
+        "stdout": "nikoand...\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "nikoand...\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "40\nferelibenterhominesidquodvoluntcredunt\n",
+      "statement_stdout": "ferelibenterhominesidquodvoluntcredunt\n",
+      "source_prog_a": {
+        "stdout": "ferelibenterhominesidquodvoluntcredunt\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "ferelibenterhominesidquodvoluntcredunt\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "case_id": "goeq-dce-0213",
+  "artifact_dir": "dataset/cases/goeq-dce-0213/artifacts/clang-llvm-o0-novol-v1",
+  "normalization": "novol",
+  "pair_compile_ok": true,
+  "prog_a": {
+    "program_name": "prog_a",
+    "source_path": "dataset/cases/goeq-dce-0213/source/prog_a/original.c",
+    "normalized_path": "dataset/cases/goeq-dce-0213/artifacts/clang-llvm-o0-novol-v1/prog_a/normalized.novol.c",
+    "ir_path": "dataset/cases/goeq-dce-0213/artifacts/clang-llvm-o0-novol-v1/prog_a/module.ll",
+    "normalization": "novol",
+    "normalization_changed": true,
+    "compile_ok": true,
+    "timed_out": false,
+    "exit_code": 0,
+    "error": ""
+  },
+  "prog_b": {
+    "program_name": "prog_b",
+    "source_path": "dataset/cases/goeq-dce-0213/source/prog_b/original.c",
+    "normalized_path": "dataset/cases/goeq-dce-0213/artifacts/clang-llvm-o0-novol-v1/prog_b/normalized.novol.c",
+    "ir_path": "dataset/cases/goeq-dce-0213/artifacts/clang-llvm-o0-novol-v1/prog_b/module.ll",
+    "normalization": "novol",
+    "normalization_changed": true,
+    "compile_ok": true,
+    "timed_out": false,
+    "exit_code": 0,
+    "error": ""
+  }
+}

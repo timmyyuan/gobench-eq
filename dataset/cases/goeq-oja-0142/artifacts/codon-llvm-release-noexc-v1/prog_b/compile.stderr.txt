@@ -1,0 +1,2 @@
+[1mpreprocessed.py:12 (9-13): [1;31merror:[0m[1m name 'exit' is not defined[0m
+╰─ [1mpreprocessed.py:25 (5-9): [1;31merror:[0m[1m during the realization of main()[0m

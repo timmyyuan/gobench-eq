@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-oja-0303",
+  "name": "sample_01",
+  "stdin": "3 4\n269-6650\n",
+  "statement_stdout": "Yes\n",
+  "source_prog_a": {
+    "stdout": "Yes\n",
+    "stderr": "/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-swexs16r/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n/var/folders/mz/gtnqg9zj77l_6v_k9v7vbsrm0000gn/T/gobench-eq-py-swexs16r/program.py:6: SyntaxWarning: \"\\d\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\d\"? A raw string is also an option.\n  p = '\\d{' + str(A) + '}-\\d{' + str(B) + '}'\n",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "Yes\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

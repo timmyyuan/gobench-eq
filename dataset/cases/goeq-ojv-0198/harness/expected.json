@@ -1,0 +1,51 @@
+{
+  "stdin": "6\n",
+  "source_prog_a": {
+    "stdout": "aabc..\nddbc..\n..aabc\n..ddbc\nbc..aa\nbc..dd\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "aabc..\nddbc..\n..aabc\n..ddbc\nbc..aa\nbc..dd\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "6\n",
+      "statement_stdout": "aabb..\nb..zz.\nba....\n.a..aa\n..a..b\n..a..b\n",
+      "source_prog_a": {
+        "stdout": "aabc..\nddbc..\n..aabc\n..ddbc\nbc..aa\nbc..dd\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "aabc..\nddbc..\n..aabc\n..ddbc\nbc..aa\nbc..dd\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "2\n",
+      "statement_stdout": "-1\n",
+      "source_prog_a": {
+        "stdout": "-1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "-1\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

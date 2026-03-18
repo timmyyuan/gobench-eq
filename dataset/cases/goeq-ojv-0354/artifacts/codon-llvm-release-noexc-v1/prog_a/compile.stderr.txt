@@ -1,0 +1,3 @@
+[1mpreprocessed.py:10 (17-36): [1;31merror:[0m[1m 'float' does not match expected type 'int'[0m
+├─ [1mpreprocessed.py:55 (5-9): [1;31merror:[0m[1m during the realization of dfs1(topo: List[int], par: List[int], G: List[List[int]], EV: List[int])[0m
+╰─ [1mpreprocessed.py:60 (5-12): [1;31merror:[0m[1m during the realization of resolve()[0m

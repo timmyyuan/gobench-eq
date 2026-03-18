@@ -1,0 +1,295 @@
+{
+  "report_path": "docs/data/python-cython-pair-alive2-extract.json",
+  "tool": {
+    "case_root": "dataset/cases",
+    "artifact_subdir": "artifacts/cython-clang-llvm-o0-embed-v1",
+    "llvm_extract_bin": "/opt/homebrew/opt/llvm@20/bin/llvm-extract",
+    "alive_tv_bin": "alive2/build-llvm22/alive-tv",
+    "compare_func": "__pyx_pymod_exec_original",
+    "module_tag": "Os",
+    "modes": [
+      "none",
+      "mstate_4096",
+      "globals_4096",
+      "paired_globals_4096"
+    ],
+    "timeout_seconds": 30
+  },
+  "aggregate": {
+    "case_count": 2,
+    "row_count": 8,
+    "mode_status_counts": {
+      "none": {
+        "failed_to_prove": 2
+      },
+      "mstate_4096": {
+        "alive2_timeout": 1,
+        "failed_to_prove": 1
+      },
+      "globals_4096": {
+        "alive2_timeout": 2
+      },
+      "paired_globals_4096": {
+        "alive2_timeout": 2
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "goeq-oja-0005",
+      "mode": "none",
+      "compare_func": "__pyx_pymod_exec_original",
+      "prog_a_input": "dataset/cases/goeq-oja-0005/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll",
+      "prog_b_input": "dataset/cases/goeq-oja-0005/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll",
+      "extract_ok": true,
+      "status": "failed_to_prove",
+      "headline": "ERROR: Unsupported interprocedural transformation: global variable @__pyx_mstate_global_static has different size in source and target (200 vs 216 bytes)",
+      "correct_count": 0,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 1,
+      "error_count": 0,
+      "prog_a_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "prog_b_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "alive2_result": {
+        "stdout": "ERROR: Unsupported interprocedural transformation: global variable @__pyx_mstate_global_static has different size in source and target (200 vs 216 bytes)\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "case_id": "goeq-oja-0005",
+      "mode": "mstate_4096",
+      "compare_func": "__pyx_pymod_exec_original",
+      "prog_a_input": "dataset/cases/goeq-oja-0005/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll",
+      "prog_b_input": "dataset/cases/goeq-oja-0005/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll",
+      "extract_ok": true,
+      "status": "failed_to_prove",
+      "headline": "ERROR: Unsupported interprocedural transformation: global variable @.str.18 has different size in source and target (14 vs 10 bytes)",
+      "correct_count": 0,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 1,
+      "error_count": 0,
+      "prog_a_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "prog_b_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "alive2_result": {
+        "stdout": "ERROR: Unsupported interprocedural transformation: global variable @.str.18 has different size in source and target (14 vs 10 bytes)\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "case_id": "goeq-oja-0005",
+      "mode": "globals_4096",
+      "compare_func": "__pyx_pymod_exec_original",
+      "prog_a_input": "dataset/cases/goeq-oja-0005/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll",
+      "prog_b_input": "dataset/cases/goeq-oja-0005/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll",
+      "extract_ok": true,
+      "status": "alive2_timeout",
+      "headline": "Alive2 process timed out",
+      "correct_count": 0,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 0,
+      "error_count": 0,
+      "prog_a_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "prog_b_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "alive2_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": null,
+        "timed_out": true
+      }
+    },
+    {
+      "case_id": "goeq-oja-0005",
+      "mode": "paired_globals_4096",
+      "compare_func": "__pyx_pymod_exec_original",
+      "prog_a_input": "dataset/cases/goeq-oja-0005/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll",
+      "prog_b_input": "dataset/cases/goeq-oja-0005/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll",
+      "extract_ok": true,
+      "status": "alive2_timeout",
+      "headline": "Alive2 process timed out",
+      "correct_count": 0,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 0,
+      "error_count": 0,
+      "prog_a_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "prog_b_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "alive2_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": null,
+        "timed_out": true
+      }
+    },
+    {
+      "case_id": "goeq-oja-0008",
+      "mode": "none",
+      "compare_func": "__pyx_pymod_exec_original",
+      "prog_a_input": "dataset/cases/goeq-oja-0008/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll",
+      "prog_b_input": "dataset/cases/goeq-oja-0008/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll",
+      "extract_ok": true,
+      "status": "failed_to_prove",
+      "headline": "ERROR: Unsupported interprocedural transformation: global variable @__pyx_mstate_global_static has different size in source and target (272 vs 200 bytes)",
+      "correct_count": 0,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 1,
+      "error_count": 0,
+      "prog_a_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "prog_b_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "alive2_result": {
+        "stdout": "ERROR: Unsupported interprocedural transformation: global variable @__pyx_mstate_global_static has different size in source and target (272 vs 200 bytes)\n\nSummary:\n  0 correct transformations\n  0 incorrect transformations\n  1 failed-to-prove transformations\n  0 Alive2 errors\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "case_id": "goeq-oja-0008",
+      "mode": "mstate_4096",
+      "compare_func": "__pyx_pymod_exec_original",
+      "prog_a_input": "dataset/cases/goeq-oja-0008/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll",
+      "prog_b_input": "dataset/cases/goeq-oja-0008/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll",
+      "extract_ok": true,
+      "status": "alive2_timeout",
+      "headline": "Alive2 process timed out",
+      "correct_count": 0,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 0,
+      "error_count": 0,
+      "prog_a_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "prog_b_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "alive2_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": null,
+        "timed_out": true
+      }
+    },
+    {
+      "case_id": "goeq-oja-0008",
+      "mode": "globals_4096",
+      "compare_func": "__pyx_pymod_exec_original",
+      "prog_a_input": "dataset/cases/goeq-oja-0008/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll",
+      "prog_b_input": "dataset/cases/goeq-oja-0008/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll",
+      "extract_ok": true,
+      "status": "alive2_timeout",
+      "headline": "Alive2 process timed out",
+      "correct_count": 0,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 0,
+      "error_count": 0,
+      "prog_a_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "prog_b_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "alive2_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": null,
+        "timed_out": true
+      }
+    },
+    {
+      "case_id": "goeq-oja-0008",
+      "mode": "paired_globals_4096",
+      "compare_func": "__pyx_pymod_exec_original",
+      "prog_a_input": "dataset/cases/goeq-oja-0008/artifacts/cython-clang-llvm-o0-embed-v1/prog_a/module.Os.ll",
+      "prog_b_input": "dataset/cases/goeq-oja-0008/artifacts/cython-clang-llvm-o0-embed-v1/prog_b/module.Os.ll",
+      "extract_ok": true,
+      "status": "alive2_timeout",
+      "headline": "Alive2 process timed out",
+      "correct_count": 0,
+      "incorrect_count": 0,
+      "failed_to_prove_count": 0,
+      "error_count": 0,
+      "prog_a_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "prog_b_extract_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "alive2_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": null,
+        "timed_out": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# goeq-ojv-0230
+
+- Source benchmark: EquiBench
+- Source category: OJ_V
+- Pair ID: 230
+- Problem ID: 115
+- Problem path: `dataset/organized/OJ/115`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/115/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/115/obfus_accepted_0.py`
+- Stored sample count: `4`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- sample_01 stdin: '1 25 25 50\n'
+- sample_01 statement stdout: '2\n'
+- sample_01 source stdout A: '2\n'
+- sample_01 source stdout B: '2\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: '4 50 50 0\n'
+- sample_02 statement stdout: '312500008\n'
+- sample_02 source stdout A: '312500008\n'
+- sample_02 source stdout B: '312500008\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: '1 100 0 0\n'
+- sample_03 statement stdout: '1\n'
+- sample_03 source stdout A: '1\n'
+- sample_03 source stdout B: '1\n'
+- sample_03 statement match A: `True`
+- sample_03 statement match B: `True`
+- sample_04 stdin: '100000 31 41 28\n'
+- sample_04 statement stdout: '104136146\n'
+- sample_04 source stdout A: '104136146\n'
+- sample_04 source stdout B: '104136146\n'
+- sample_04 statement match A: `True`
+- sample_04 statement match B: `True`

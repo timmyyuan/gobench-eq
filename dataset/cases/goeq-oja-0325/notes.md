@@ -1,0 +1,37 @@
+# goeq-oja-0325
+
+- Source benchmark: EquiBench
+- Source category: OJ_A
+- Pair ID: 325
+- Problem ID: 162
+- Problem path: `dataset/organized/OJ/162`
+- Source label: `inequivalent`
+- Source program A path: `dataset/organized/OJ/162/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/162/wrong_0.py`
+- Stored sample count: `4`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- Witness sample: `sample_03`
+- sample_01 stdin: '4\n2 3 4 1\n'
+- sample_01 statement stdout: 'POSSIBLE\n'
+- sample_01 source stdout A: 'POSSIBLE\n'
+- sample_01 source stdout B: 'POSSIBLE\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: '3\n2 3 1\n'
+- sample_02 statement stdout: 'IMPOSSIBLE\n'
+- sample_02 source stdout A: 'IMPOSSIBLE\n'
+- sample_02 source stdout B: 'IMPOSSIBLE\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: '4\n2 3 1 1\n'
+- sample_03 statement stdout: 'POSSIBLE\n'
+- sample_03 source stdout A: 'POSSIBLE\n'
+- sample_03 source stdout B: 'IMPOSSIBLE\n'
+- sample_03 statement match A: `True`
+- sample_03 statement match B: `False`
+- sample_04 stdin: '6\n4 5 6 5 6 4\n'
+- sample_04 statement stdout: 'IMPOSSIBLE\n'
+- sample_04 source stdout A: 'IMPOSSIBLE\n'
+- sample_04 source stdout B: 'IMPOSSIBLE\n'
+- sample_04 statement match A: `True`
+- sample_04 statement match B: `True`

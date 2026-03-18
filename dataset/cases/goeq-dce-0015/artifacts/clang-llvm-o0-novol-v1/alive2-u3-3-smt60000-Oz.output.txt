@@ -1,0 +1,45 @@
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+
+Assertion failed: (src_val_I != src_state->values.end()), function copyUBFrom, file state.cpp, line 746.
+ #0 0x000000010f1019a0 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) (/opt/homebrew/Cellar/llvm/22.1.1/lib/libLLVM.dylib+0x409d9a0)
+ #1 0x000000010f10216c SignalHandler(int, __siginfo*, void*) (/opt/homebrew/Cellar/llvm/22.1.1/lib/libLLVM.dylib+0x409e16c)
+ #2 0x000000019fbd3584 (/usr/lib/system/libsystem_platform.dylib+0x18047b584)
+ #3 0x000000019fba2c20 (/usr/lib/system/libsystem_pthread.dylib+0x18044ac20)
+ #4 0x000000019faafa30 (/usr/lib/system/libsystem_c.dylib+0x180357a30)
+ #5 0x000000019faaed20 (/usr/lib/system/libsystem_c.dylib+0x180356d20)
+ #6 0x0000000100dd4f48 IR::State::copyUBFromBB(std::__1::unordered_map<IR::BasicBlock const*, IR::State::BasicBlockInfo, std::__1::hash<IR::BasicBlock const*>, std::__1::equal_to<IR::BasicBlock const*>, std::__1::allocator<std::__1::pair<IR::BasicBlock const* const, IR::State::BasicBlockInfo>>> const&) (alive2/build-llvm22/alive-tv+0x1000a4f48)
+ #7 0x0000000100dd4fe4 IR::State::copyUBFromBB(std::__1::unordered_map<IR::BasicBlock const*, IR::State::BasicBlockInfo, std::__1::hash<IR::BasicBlock const*>, std::__1::equal_to<IR::BasicBlock const*>, std::__1::allocator<std::__1::pair<IR::BasicBlock const* const, IR::State::BasicBlockInfo>>> const&) (alive2/build-llvm22/alive-tv+0x1000a4fe4)
+ #8 0x0000000100dd5538 IR::State::startBB(IR::BasicBlock const&) (alive2/build-llvm22/alive-tv+0x1000a5538)
+ #9 0x0000000100e32288 util::sym_exec(IR::State&) (alive2/build-llvm22/alive-tv+0x100102288)
+#10 0x0000000100e1de2c tools::TransformVerify::exec() const (alive2/build-llvm22/alive-tv+0x1000ede2c)
+#11 0x0000000100e20f38 tools::TransformVerify::verify() const (alive2/build-llvm22/alive-tv+0x1000f0f38)
+#12 0x0000000100d3acf4 (anonymous namespace)::verify(llvm::Function&, llvm::Function&, llvm::TargetLibraryInfoWrapperPass&, smt::smt_initializer&, std::__1::basic_ostream<char, std::__1::char_traits<char>>&, bool, bool) (alive2/build-llvm22/alive-tv+0x10000acf4)
+#13 0x0000000100d39e74 llvm_util::Verifier::compareFunctions(llvm::Function&, llvm::Function&) (alive2/build-llvm22/alive-tv+0x100009e74)
+#14 0x0000000100d34a44 main (alive2/build-llvm22/alive-tv+0x100004a44)
+#15 0x000000019f817154
+PLEASE submit a bug report to https://github.com/Homebrew/homebrew-core/issues and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: alive2/build-llvm22/alive-tv --quiet --disable-undef-input --disable-poison-input --src-unroll=3 --tgt-unroll=3 --smt-to=60000 dataset/cases/goeq-dce-0015/artifacts/clang-llvm-o0-novol-v1/prog_a/module.Oz.ll dataset/cases/goeq-dce-0015/artifacts/clang-llvm-o0-novol-v1/prog_b/module.Oz.ll
+ #0 0x000000010f1019a0 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) (/opt/homebrew/Cellar/llvm/22.1.1/lib/libLLVM.dylib+0x409d9a0)
+ #1 0x000000010f1021fc SignalHandler(int, __siginfo*, void*) (/opt/homebrew/Cellar/llvm/22.1.1/lib/libLLVM.dylib+0x409e1fc)
+ #2 0x000000019fbd3584 (/usr/lib/system/libsystem_platform.dylib+0x18047b584)
+ #3 0x000000019fba2c20 (/usr/lib/system/libsystem_pthread.dylib+0x18044ac20)
+ #4 0x000000019faafa30 (/usr/lib/system/libsystem_c.dylib+0x180357a30)
+ #5 0x000000019faaed20 (/usr/lib/system/libsystem_c.dylib+0x180356d20)
+ #6 0x0000000100dd4f48 IR::State::copyUBFromBB(std::__1::unordered_map<IR::BasicBlock const*, IR::State::BasicBlockInfo, std::__1::hash<IR::BasicBlock const*>, std::__1::equal_to<IR::BasicBlock const*>, std::__1::allocator<std::__1::pair<IR::BasicBlock const* const, IR::State::BasicBlockInfo>>> const&) (alive2/build-llvm22/alive-tv+0x1000a4f48)
+ #7 0x0000000100dd4fe4 IR::State::copyUBFromBB(std::__1::unordered_map<IR::BasicBlock const*, IR::State::BasicBlockInfo, std::__1::hash<IR::BasicBlock const*>, std::__1::equal_to<IR::BasicBlock const*>, std::__1::allocator<std::__1::pair<IR::BasicBlock const* const, IR::State::BasicBlockInfo>>> const&) (alive2/build-llvm22/alive-tv+0x1000a4fe4)
+ #8 0x0000000100dd5538 IR::State::startBB(IR::BasicBlock const&) (alive2/build-llvm22/alive-tv+0x1000a5538)
+ #9 0x0000000100e32288 util::sym_exec(IR::State&) (alive2/build-llvm22/alive-tv+0x100102288)
+#10 0x0000000100e1de2c tools::TransformVerify::exec() const (alive2/build-llvm22/alive-tv+0x1000ede2c)
+#11 0x0000000100e20f38 tools::TransformVerify::verify() const (alive2/build-llvm22/alive-tv+0x1000f0f38)
+#12 0x0000000100d3acf4 (anonymous namespace)::verify(llvm::Function&, llvm::Function&, llvm::TargetLibraryInfoWrapperPass&, smt::smt_initializer&, std::__1::basic_ostream<char, std::__1::char_traits<char>>&, bool, bool) (alive2/build-llvm22/alive-tv+0x10000acf4)
+#13 0x0000000100d39e74 llvm_util::Verifier::compareFunctions(llvm::Function&, llvm::Function&) (alive2/build-llvm22/alive-tv+0x100009e74)
+#14 0x0000000100d34a44 main (alive2/build-llvm22/alive-tv+0x100004a44)
+#15 0x000000019f817154

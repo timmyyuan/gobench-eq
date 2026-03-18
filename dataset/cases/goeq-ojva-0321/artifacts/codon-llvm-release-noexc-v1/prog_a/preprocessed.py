@@ -1,0 +1,21 @@
+__codon_parts_1 = input().split()
+H = int(__codon_parts_1[0])
+W = int(__codon_parts_1[1])
+N = int(input())
+A = list(map(int, input().split()))
+ans = [[0] * W for A in range(H)]
+h = 0
+w = 0
+for i, a in enumerate(A):
+    for _ in range(a):
+        if w == W:
+            h += 1
+            w = 0
+        if h % 2 != 0:
+            ind = W - w - 1
+        else:
+            ind = w
+        ans[h][ind] = i + 1
+        w += 1
+for _ in range(H):
+    print(*ans[_])

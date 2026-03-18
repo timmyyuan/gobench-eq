@@ -1,0 +1,24 @@
+# goeq-ojv-0314
+
+- Source benchmark: EquiBench
+- Source category: OJ_V
+- Pair ID: 314
+- Problem ID: 157
+- Problem path: `dataset/organized/OJ/157`
+- Source label: `equivalent`
+- Source program A path: `dataset/organized/OJ/157/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/157/obfus_accepted_0.py`
+- Stored sample count: `2`
+- Go translations: backfilled for `prog_a/` and `prog_b/` via `pytago_adapter`; stored harness samples currently pass for both programs
+- sample_01 stdin: '1\n24 30\n'
+- sample_01 statement stdout: '7\n'
+- sample_01 source stdout A: '7\n'
+- sample_01 source stdout B: '7\n'
+- sample_01 statement match A: `True`
+- sample_01 statement match B: `True`
+- sample_02 stdin: '2\n6 8\n3 3\n'
+- sample_02 statement stdout: '4\n'
+- sample_02 source stdout A: '4\n'
+- sample_02 source stdout B: '4\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`

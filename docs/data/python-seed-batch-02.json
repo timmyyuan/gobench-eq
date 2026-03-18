@@ -1,0 +1,955 @@
+{
+  "generated_from": "testdata/EquiBench/data",
+  "report_path": "docs/data/python-intake-report.json",
+  "selection_name": "python-seed-batch-02",
+  "selection_policy": {
+    "problem_limit": 8,
+    "input_root": "testdata/EquiBench/data",
+    "excluded_problem_ids": [
+      2,
+      4,
+      33,
+      37,
+      45,
+      61,
+      63,
+      65
+    ],
+    "required_tier": "tier1_now",
+    "required_pairs_per_problem": 6,
+    "require_non_empty_title": true,
+    "require_input_output_sample_signals": true,
+    "require_statement_sample_pairs": true,
+    "require_sample_witness_for_inequivalent_pairs": true,
+    "sort_key": [
+      "max_program_lines",
+      "total_program_lines",
+      "distinct_import_count",
+      "problem_id"
+    ],
+    "automated_exclusion_rules": {
+      "PY-EXCL-001": "direct three-or-more target tuple unpack from one map(int, input().split()) expression",
+      "PY-EXCL-002": "eager integer-list materialization via list(map(int, input().split()))"
+    },
+    "note": "This seed batch prefers whole-problem bundles whose six EquiBench OJ pairs all remain in tier1_now. The bundle unit is cheaper to materialize because one problem statement and one harness family can serve all six pairs. Repository-local automated exclusion rules prune problem bundles whose current Python-to-Go path is still blocked by stable raw-pytago codegen failures. When refill-after-exclusions is enabled, the selector keeps scanning until it collects the requested number of valid unseen bundles.",
+    "refill_after_exclusions": true
+  },
+  "summary": {
+    "selected_problem_count": 6,
+    "selected_pair_count": 36,
+    "excluded_problem_count": 3,
+    "excluded_pair_count": 18,
+    "previously_selected_problem_count": 8,
+    "pair_counts_by_category": {
+      "OJ_A": 12,
+      "OJ_V": 12,
+      "OJ_VA": 12
+    },
+    "pair_counts_by_label": {
+      "equivalent": 18,
+      "inequivalent": 18
+    },
+    "excluded_pair_counts_by_category": {
+      "OJ_A": 6,
+      "OJ_V": 6,
+      "OJ_VA": 6
+    },
+    "pair_counts_by_category_and_label": {
+      "OJ_A:equivalent": 6,
+      "OJ_A:inequivalent": 6,
+      "OJ_V:equivalent": 6,
+      "OJ_V:inequivalent": 6,
+      "OJ_VA:equivalent": 6,
+      "OJ_VA:inequivalent": 6
+    }
+  },
+  "excluded_problems": [
+    {
+      "problem_id": 26,
+      "title": "Shopping",
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "pair_ids": [
+        52,
+        53
+      ]
+    },
+    {
+      "problem_id": 57,
+      "title": "Coin Changing Problem",
+      "automated_exclusion_rules": [
+        "PY-EXCL-002"
+      ],
+      "pair_ids": [
+        114,
+        115
+      ]
+    },
+    {
+      "problem_id": 62,
+      "title": "Circle in a Rectangle",
+      "automated_exclusion_rules": [
+        "PY-EXCL-001"
+      ],
+      "pair_ids": [
+        124,
+        125
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": 1,
+      "title": "Drawing Lots",
+      "pair_count": 6,
+      "categories": {
+        "OJ_A": 2,
+        "OJ_V": 2,
+        "OJ_VA": 2
+      },
+      "labels": {
+        "equivalent": 3,
+        "inequivalent": 3
+      },
+      "all_have_input_desc": true,
+      "all_have_output_desc": true,
+      "all_have_sample": true,
+      "statement_sample_count": 1,
+      "inequivalent_sample_witness_ready": true,
+      "distinct_imports": [
+        "math",
+        "sys"
+      ],
+      "distinct_import_count": 2,
+      "max_program_lines": 22,
+      "total_program_lines": 130,
+      "automated_exclusion_rules": [],
+      "pairs": [
+        {
+          "category": "OJ_A",
+          "pair_id": 2,
+          "problem_id": 1,
+          "title": "Drawing Lots",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/1/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/1/accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 13,
+          "program_2_line_count": 16,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_A",
+          "pair_id": 3,
+          "problem_id": 1,
+          "title": "Drawing Lots",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/1/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/1/wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [
+            "math",
+            "sys"
+          ],
+          "program_1_line_count": 13,
+          "program_2_line_count": 22,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 2,
+          "problem_id": 1,
+          "title": "Drawing Lots",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/1/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/1/obfus_accepted_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 13,
+          "program_2_line_count": 5,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 3,
+          "problem_id": 1,
+          "title": "Drawing Lots",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/1/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/1/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [
+            "math",
+            "sys"
+          ],
+          "program_1_line_count": 13,
+          "program_2_line_count": 10,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 2,
+          "problem_id": 1,
+          "title": "Drawing Lots",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/1/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/1/obfus_accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 5,
+          "program_2_line_count": 5,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 3,
+          "problem_id": 1,
+          "title": "Drawing Lots",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/1/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/1/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [
+            "math",
+            "sys"
+          ],
+          "program_1_line_count": 5,
+          "program_2_line_count": 10,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        }
+      ]
+    },
+    {
+      "problem_id": 46,
+      "title": "かけざん",
+      "pair_count": 6,
+      "categories": {
+        "OJ_A": 2,
+        "OJ_V": 2,
+        "OJ_VA": 2
+      },
+      "labels": {
+        "equivalent": 3,
+        "inequivalent": 3
+      },
+      "all_have_input_desc": true,
+      "all_have_output_desc": true,
+      "all_have_sample": true,
+      "statement_sample_count": 2,
+      "inequivalent_sample_witness_ready": true,
+      "distinct_imports": [
+        "math",
+        "sys"
+      ],
+      "distinct_import_count": 2,
+      "max_program_lines": 23,
+      "total_program_lines": 174,
+      "automated_exclusion_rules": [],
+      "pairs": [
+        {
+          "category": "OJ_A",
+          "pair_id": 92,
+          "problem_id": 46,
+          "title": "かけざん",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/46/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/46/accepted_1.py",
+          "program_1_imports": [
+            "math",
+            "sys"
+          ],
+          "program_2_imports": [],
+          "program_1_line_count": 23,
+          "program_2_line_count": 15,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_A",
+          "pair_id": 93,
+          "problem_id": 46,
+          "title": "かけざん",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/46/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/46/wrong_0.py",
+          "program_1_imports": [
+            "math",
+            "sys"
+          ],
+          "program_2_imports": [
+            "math"
+          ],
+          "program_1_line_count": 23,
+          "program_2_line_count": 10,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 92,
+          "problem_id": 46,
+          "title": "かけざん",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/46/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/46/obfus_accepted_0.py",
+          "program_1_imports": [
+            "math",
+            "sys"
+          ],
+          "program_2_imports": [
+            "math",
+            "sys"
+          ],
+          "program_1_line_count": 23,
+          "program_2_line_count": 13,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 93,
+          "problem_id": 46,
+          "title": "かけざん",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/46/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/46/obfus_wrong_0.py",
+          "program_1_imports": [
+            "math",
+            "sys"
+          ],
+          "program_2_imports": [
+            "math"
+          ],
+          "program_1_line_count": 23,
+          "program_2_line_count": 5,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 92,
+          "problem_id": 46,
+          "title": "かけざん",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/46/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/46/obfus_accepted_1.py",
+          "program_1_imports": [
+            "math",
+            "sys"
+          ],
+          "program_2_imports": [],
+          "program_1_line_count": 13,
+          "program_2_line_count": 8,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 93,
+          "problem_id": 46,
+          "title": "かけざん",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/46/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/46/obfus_wrong_0.py",
+          "program_1_imports": [
+            "math",
+            "sys"
+          ],
+          "program_2_imports": [
+            "math"
+          ],
+          "program_1_line_count": 13,
+          "program_2_line_count": 5,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        }
+      ]
+    },
+    {
+      "problem_id": 35,
+      "title": "問題 4",
+      "pair_count": 6,
+      "categories": {
+        "OJ_A": 2,
+        "OJ_V": 2,
+        "OJ_VA": 2
+      },
+      "labels": {
+        "equivalent": 3,
+        "inequivalent": 3
+      },
+      "all_have_input_desc": true,
+      "all_have_output_desc": true,
+      "all_have_sample": true,
+      "statement_sample_count": 1,
+      "inequivalent_sample_witness_ready": true,
+      "distinct_imports": [],
+      "distinct_import_count": 0,
+      "max_program_lines": 36,
+      "total_program_lines": 234,
+      "automated_exclusion_rules": [],
+      "pairs": [
+        {
+          "category": "OJ_A",
+          "pair_id": 70,
+          "problem_id": 35,
+          "title": "問題 4",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/35/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/35/accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 36,
+          "program_2_line_count": 7,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_A",
+          "pair_id": 71,
+          "problem_id": 35,
+          "title": "問題 4",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/35/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/35/wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 36,
+          "program_2_line_count": 5,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 70,
+          "problem_id": 35,
+          "title": "問題 4",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/35/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/35/obfus_accepted_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 36,
+          "program_2_line_count": 21,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 71,
+          "problem_id": 35,
+          "title": "問題 4",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/35/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/35/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 36,
+          "program_2_line_count": 4,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 70,
+          "problem_id": 35,
+          "title": "問題 4",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/35/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/35/obfus_accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 21,
+          "program_2_line_count": 7,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 71,
+          "problem_id": 35,
+          "title": "問題 4",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/35/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/35/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 21,
+          "program_2_line_count": 4,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        }
+      ]
+    },
+    {
+      "problem_id": 42,
+      "title": "Problem A: Keitai Message",
+      "pair_count": 6,
+      "categories": {
+        "OJ_A": 2,
+        "OJ_V": 2,
+        "OJ_VA": 2
+      },
+      "labels": {
+        "equivalent": 3,
+        "inequivalent": 3
+      },
+      "all_have_input_desc": true,
+      "all_have_output_desc": true,
+      "all_have_sample": true,
+      "statement_sample_count": 1,
+      "inequivalent_sample_witness_ready": true,
+      "distinct_imports": [],
+      "distinct_import_count": 0,
+      "max_program_lines": 37,
+      "total_program_lines": 236,
+      "automated_exclusion_rules": [],
+      "pairs": [
+        {
+          "category": "OJ_A",
+          "pair_id": 84,
+          "problem_id": 42,
+          "title": "Problem A: Keitai Message",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/42/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/42/accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 28,
+          "program_2_line_count": 37,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_A",
+          "pair_id": 85,
+          "problem_id": 42,
+          "title": "Problem A: Keitai Message",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/42/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/42/wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 28,
+          "program_2_line_count": 31,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 84,
+          "problem_id": 42,
+          "title": "Problem A: Keitai Message",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/42/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/42/obfus_accepted_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 28,
+          "program_2_line_count": 8,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 85,
+          "problem_id": 42,
+          "title": "Problem A: Keitai Message",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/42/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/42/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 28,
+          "program_2_line_count": 10,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 84,
+          "problem_id": 42,
+          "title": "Problem A: Keitai Message",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/42/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/42/obfus_accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 8,
+          "program_2_line_count": 12,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 85,
+          "problem_id": 42,
+          "title": "Problem A: Keitai Message",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/42/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/42/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 8,
+          "program_2_line_count": 10,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        }
+      ]
+    },
+    {
+      "problem_id": 38,
+      "title": "Problem B: Red and Black",
+      "pair_count": 6,
+      "categories": {
+        "OJ_A": 2,
+        "OJ_V": 2,
+        "OJ_VA": 2
+      },
+      "labels": {
+        "equivalent": 3,
+        "inequivalent": 3
+      },
+      "all_have_input_desc": true,
+      "all_have_output_desc": true,
+      "all_have_sample": true,
+      "statement_sample_count": 1,
+      "inequivalent_sample_witness_ready": true,
+      "distinct_imports": [
+        "queue"
+      ],
+      "distinct_import_count": 1,
+      "max_program_lines": 53,
+      "total_program_lines": 420,
+      "automated_exclusion_rules": [],
+      "pairs": [
+        {
+          "category": "OJ_A",
+          "pair_id": 76,
+          "problem_id": 38,
+          "title": "Problem B: Red and Black",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/38/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/38/accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [
+            "queue"
+          ],
+          "program_1_line_count": 53,
+          "program_2_line_count": 46,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_A",
+          "pair_id": 77,
+          "problem_id": 38,
+          "title": "Problem B: Red and Black",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/38/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/38/wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 53,
+          "program_2_line_count": 26,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 76,
+          "problem_id": 38,
+          "title": "Problem B: Red and Black",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/38/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/38/obfus_accepted_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 53,
+          "program_2_line_count": 27,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 77,
+          "problem_id": 38,
+          "title": "Problem B: Red and Black",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/38/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/38/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 53,
+          "program_2_line_count": 16,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 76,
+          "problem_id": 38,
+          "title": "Problem B: Red and Black",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/38/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/38/obfus_accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [
+            "queue"
+          ],
+          "program_1_line_count": 27,
+          "program_2_line_count": 23,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 77,
+          "problem_id": 38,
+          "title": "Problem B: Red and Black",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/38/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/38/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 27,
+          "program_2_line_count": 16,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        }
+      ]
+    },
+    {
+      "problem_id": 39,
+      "title": "Problem C: Numeral System",
+      "pair_count": 6,
+      "categories": {
+        "OJ_A": 2,
+        "OJ_V": 2,
+        "OJ_VA": 2
+      },
+      "labels": {
+        "equivalent": 3,
+        "inequivalent": 3
+      },
+      "all_have_input_desc": true,
+      "all_have_output_desc": true,
+      "all_have_sample": true,
+      "statement_sample_count": 1,
+      "inequivalent_sample_witness_ready": true,
+      "distinct_imports": [],
+      "distinct_import_count": 0,
+      "max_program_lines": 63,
+      "total_program_lines": 537,
+      "automated_exclusion_rules": [],
+      "pairs": [
+        {
+          "category": "OJ_A",
+          "pair_id": 78,
+          "problem_id": 39,
+          "title": "Problem C: Numeral System",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/39/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/39/accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 63,
+          "program_2_line_count": 51,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_A",
+          "pair_id": 79,
+          "problem_id": 39,
+          "title": "Problem C: Numeral System",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/39/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/39/wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 63,
+          "program_2_line_count": 61,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 78,
+          "problem_id": 39,
+          "title": "Problem C: Numeral System",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/39/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/39/obfus_accepted_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 63,
+          "program_2_line_count": 29,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_V",
+          "pair_id": 79,
+          "problem_id": 39,
+          "title": "Problem C: Numeral System",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/39/accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/39/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 63,
+          "program_2_line_count": 29,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 78,
+          "problem_id": 39,
+          "title": "Problem C: Numeral System",
+          "truth_label": "equivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/39/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/39/obfus_accepted_1.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 29,
+          "program_2_line_count": 28,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        },
+        {
+          "category": "OJ_VA",
+          "pair_id": 79,
+          "problem_id": 39,
+          "title": "Problem C: Numeral System",
+          "truth_label": "inequivalent",
+          "tier": "tier1_now",
+          "reasons": [],
+          "program_1_path": "dataset/organized/OJ/39/obfus_accepted_0.py",
+          "program_2_path": "dataset/organized/OJ/39/obfus_wrong_0.py",
+          "program_1_imports": [],
+          "program_2_imports": [],
+          "program_1_line_count": 29,
+          "program_2_line_count": 29,
+          "has_input_desc": true,
+          "has_output_desc": true,
+          "has_sample": true
+        }
+      ]
+    }
+  ]
+}

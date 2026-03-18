@@ -1,0 +1,334 @@
+{
+  "batch_path": "docs/data/python-seed-batch-02.json",
+  "input_root": "testdata/EquiBench/data",
+  "output_root": "dataset/cases",
+  "materialized_case_count": 36,
+  "excluded_case_count": 0,
+  "excluded_cases": [],
+  "cases": [
+    {
+      "case_id": "goeq-oja-0002",
+      "label": "equivalent",
+      "problem_id": 1,
+      "source_category": "OJ_A",
+      "pair_id": 2,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0003",
+      "label": "inequivalent",
+      "problem_id": 1,
+      "source_category": "OJ_A",
+      "pair_id": 3,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0002",
+      "label": "equivalent",
+      "problem_id": 1,
+      "source_category": "OJ_V",
+      "pair_id": 2,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0003",
+      "label": "inequivalent",
+      "problem_id": 1,
+      "source_category": "OJ_V",
+      "pair_id": 3,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0002",
+      "label": "equivalent",
+      "problem_id": 1,
+      "source_category": "OJ_VA",
+      "pair_id": 2,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0003",
+      "label": "inequivalent",
+      "problem_id": 1,
+      "source_category": "OJ_VA",
+      "pair_id": 3,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0092",
+      "label": "equivalent",
+      "problem_id": 46,
+      "source_category": "OJ_A",
+      "pair_id": 92,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0093",
+      "label": "inequivalent",
+      "problem_id": 46,
+      "source_category": "OJ_A",
+      "pair_id": 93,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0092",
+      "label": "equivalent",
+      "problem_id": 46,
+      "source_category": "OJ_V",
+      "pair_id": 92,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0093",
+      "label": "inequivalent",
+      "problem_id": 46,
+      "source_category": "OJ_V",
+      "pair_id": 93,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0092",
+      "label": "equivalent",
+      "problem_id": 46,
+      "source_category": "OJ_VA",
+      "pair_id": 92,
+      "sample_count": 2,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0093",
+      "label": "inequivalent",
+      "problem_id": 46,
+      "source_category": "OJ_VA",
+      "pair_id": 93,
+      "sample_count": 2,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0070",
+      "label": "equivalent",
+      "problem_id": 35,
+      "source_category": "OJ_A",
+      "pair_id": 70,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0071",
+      "label": "inequivalent",
+      "problem_id": 35,
+      "source_category": "OJ_A",
+      "pair_id": 71,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0070",
+      "label": "equivalent",
+      "problem_id": 35,
+      "source_category": "OJ_V",
+      "pair_id": 70,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0071",
+      "label": "inequivalent",
+      "problem_id": 35,
+      "source_category": "OJ_V",
+      "pair_id": 71,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0070",
+      "label": "equivalent",
+      "problem_id": 35,
+      "source_category": "OJ_VA",
+      "pair_id": 70,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0071",
+      "label": "inequivalent",
+      "problem_id": 35,
+      "source_category": "OJ_VA",
+      "pair_id": 71,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0084",
+      "label": "equivalent",
+      "problem_id": 42,
+      "source_category": "OJ_A",
+      "pair_id": 84,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0085",
+      "label": "inequivalent",
+      "problem_id": 42,
+      "source_category": "OJ_A",
+      "pair_id": 85,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0084",
+      "label": "equivalent",
+      "problem_id": 42,
+      "source_category": "OJ_V",
+      "pair_id": 84,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0085",
+      "label": "inequivalent",
+      "problem_id": 42,
+      "source_category": "OJ_V",
+      "pair_id": 85,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0084",
+      "label": "equivalent",
+      "problem_id": 42,
+      "source_category": "OJ_VA",
+      "pair_id": 84,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0085",
+      "label": "inequivalent",
+      "problem_id": 42,
+      "source_category": "OJ_VA",
+      "pair_id": 85,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0076",
+      "label": "equivalent",
+      "problem_id": 38,
+      "source_category": "OJ_A",
+      "pair_id": 76,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0077",
+      "label": "inequivalent",
+      "problem_id": 38,
+      "source_category": "OJ_A",
+      "pair_id": 77,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0076",
+      "label": "equivalent",
+      "problem_id": 38,
+      "source_category": "OJ_V",
+      "pair_id": 76,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0077",
+      "label": "inequivalent",
+      "problem_id": 38,
+      "source_category": "OJ_V",
+      "pair_id": 77,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0076",
+      "label": "equivalent",
+      "problem_id": 38,
+      "source_category": "OJ_VA",
+      "pair_id": 76,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0077",
+      "label": "inequivalent",
+      "problem_id": 38,
+      "source_category": "OJ_VA",
+      "pair_id": 77,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-oja-0078",
+      "label": "equivalent",
+      "problem_id": 39,
+      "source_category": "OJ_A",
+      "pair_id": 78,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-oja-0079",
+      "label": "inequivalent",
+      "problem_id": 39,
+      "source_category": "OJ_A",
+      "pair_id": 79,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojv-0078",
+      "label": "equivalent",
+      "problem_id": 39,
+      "source_category": "OJ_V",
+      "pair_id": 78,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojv-0079",
+      "label": "inequivalent",
+      "problem_id": 39,
+      "source_category": "OJ_V",
+      "pair_id": 79,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    },
+    {
+      "case_id": "goeq-ojva-0078",
+      "label": "equivalent",
+      "problem_id": 39,
+      "source_category": "OJ_VA",
+      "pair_id": 78,
+      "sample_count": 1,
+      "witness_sample": ""
+    },
+    {
+      "case_id": "goeq-ojva-0079",
+      "label": "inequivalent",
+      "problem_id": 39,
+      "source_category": "OJ_VA",
+      "pair_id": 79,
+      "sample_count": 1,
+      "witness_sample": "sample_01"
+    }
+  ]
+}

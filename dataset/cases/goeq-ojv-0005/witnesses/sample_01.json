@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-ojv-0005",
+  "name": "sample_01",
+  "stdin": "7\n-5\n-1\n6\n4\n9\n-6\n-7\n13\n1\n2\n3\n2\n-2\n-1\n1\n2\n3\n2\n1\n-2\n1\n3\n1000\n-200\n201\n0\n",
+  "statement_stdout": "19\n14\n1001\n",
+  "source_prog_a": {
+    "stdout": "19\n14\n1001\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "19\n18\n1201\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

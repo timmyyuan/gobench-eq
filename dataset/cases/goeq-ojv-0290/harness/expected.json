@@ -1,0 +1,68 @@
+{
+  "stdin": "3 2\n1 3\n3 4\n4 2\n",
+  "source_prog_a": {
+    "stdout": "4\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "4\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "3 2\n1 3\n3 4\n4 2\n",
+      "statement_stdout": "4\n",
+      "source_prog_a": {
+        "stdout": "4\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "4\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "6 4\n1 10\n2 1000\n3 100000\n5 1000000\n6 10000\n7 100\n",
+      "statement_stdout": "21\n",
+      "source_prog_a": {
+        "stdout": "21\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "21\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "15 409904902\n94198000 15017\n117995501 7656764\n275583856 313263626\n284496300 356635175\n324233841 607\n360631781 148\n472103717 5224\n497641071 34695\n522945827 816241\n554305668 32\n623788284 22832\n667409501 124410641\n876731548 12078\n904557302 291749534\n918215789 5\n",
+      "statement_stdout": "2397671583\n",
+      "source_prog_a": {
+        "stdout": "2397671583\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "2397671583\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

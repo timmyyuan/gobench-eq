@@ -1,0 +1,8 @@
+N,a,b,c,d=map(int,input().split())
+N-=1
+a,b=0,abs(b-a)
+if d*N<b:print('No');exit()
+for i in range(N//2+1):
+	e=b-(N-i*2)*d;f=b-(N-i*2)*c
+	if e<=(d-c)*i and(c-d)*i<=f:print('Yes');exit()
+print('No')

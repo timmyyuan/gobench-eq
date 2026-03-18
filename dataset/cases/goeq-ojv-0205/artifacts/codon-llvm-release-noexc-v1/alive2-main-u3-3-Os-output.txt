@@ -1,0 +1,7 @@
+ERROR: Unsupported interprocedural transformation: global variable @.str.101 has different size in source and target (4 vs 3 bytes)
+
+Summary:
+  0 correct transformations
+  0 incorrect transformations
+  1 failed-to-prove transformations
+  0 Alive2 errors

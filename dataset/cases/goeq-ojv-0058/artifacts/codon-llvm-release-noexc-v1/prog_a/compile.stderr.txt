@@ -1,0 +1,2 @@
+[1mpreprocessed.py:5 (36-46): [1;31merror:[0m[1m 'str' does not match expected type 'int'[0m
+╰─ [1mpreprocessed.py:21 (27-35): [1;31merror:[0m[1m during the realization of compress(digits: str)[0m

@@ -1,0 +1,5 @@
+__codon_parts_1 = input().split()
+N = int(__codon_parts_1[0])
+A = int(__codon_parts_1[1])
+B = int(__codon_parts_1[2])
+print(min(A, B), max(A + B - N, 0))

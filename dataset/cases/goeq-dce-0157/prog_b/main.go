@@ -1,0 +1,391 @@
+package main
+
+import (
+	"github.com/gotranspile/cxgo/runtime/stdio"
+	"github.com/timmyyuan/gobench-eq/internal/cruntime"
+	"os"
+	"unsafe"
+)
+
+func platform_main_begin() {
+}
+func crc32_gentab() {
+}
+
+var crc32_context uint64
+
+func transparent_crc(val uint64, vname *byte, flag int) {
+	if flag != 0 {
+		stdio.Printf("%s %d\n", vname, val)
+	}
+	crc32_context += val
+}
+func transparent_crc_bytes(ptr *byte, nbytes int, vname *byte, flag int) {
+	var i int
+	for i = 0; i < nbytes; i++ {
+		crc32_context += uint64(*(*byte)(unsafe.Add(unsafe.Pointer(ptr), i)))
+	}
+	if flag != 0 {
+		stdio.Printf("...checksum after hashing %s : %lX\n", vname, crc32_context^0xFFFFFFFF)
+	}
+}
+func platform_main_end(x uint64, flag int) {
+	if flag == 0 {
+		stdio.Printf("checksum = %llx\n", x)
+	}
+}
+
+var csmith_sink_ uint64 = 0
+var __undefined int
+var g_7 int = int(-1)
+var g_12 uint16 = 65535
+var g_30 int = 1
+var g_29 *int = &g_30
+var g_50 [1]uint64 = [1]uint64{18446744073709551608}
+var g_58 uint64 = 0x267A5E2B1956A74A
+var g_76 int64 = 9
+var g_78 uint = 0x8B99485C
+var g_95 [5][6]int = [5][6]int{{0x8D17825F, 0xB54DF119, 0x8D17825F, 0xB1179EF6, 0xA357BB50, 0xA357BB50}, {1, 0x8D17825F, 0x8D17825F, 1, 0xB54DF119, 0xAEA54463}, {0xAEA54463, 1, 0xA357BB50, 1, 0xAEA54463, 0xB1179EF6}, {1, 0xAEA54463, 0xB1179EF6, 0xB1179EF6, 0xAEA54463, 1}, {0x8D17825F, 1, 0xB54DF119, 0xAEA54463, 0xB54DF119, 1}}
+var g_94 *int = &g_95[0][0]
+var g_93 **int = &g_94
+var g_92 [8]***int = [8]***int{&g_93, &g_93, &g_93, &g_93, &g_93, &g_93, &g_93, &g_93}
+var g_100 *int8 = nil
+var g_111 uint = 8
+var g_115 int8 = (-3)
+var g_116 uint = 0x8E49B9DB
+var g_121 *int = nil
+var g_150 int16 = (-1)
+var g_153 [7]**int = [7]**int{&g_121, &g_121, &g_121, &g_121, &g_121, &g_121, &g_121}
+var g_185 int8 = 0
+var g_193 [5][2]**int = [5][2]**int{{&g_121, &g_121}, {&g_121, &g_121}, {&g_121, &g_121}, {&g_121, &g_121}, {&g_121, &g_121}}
+var g_194 **int = nil
+var g_197 [1][4]*int = [1][4]*int{}
+
+func func_1() uint16 {
+	var (
+		l_8   [10][7]uint8 = [10][7]uint8{{255, 255, 255, 255, 255, 255, 255}, {0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C}, {255, 255, 255, 255, 255, 255, 255}, {0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C}, {255, 255, 255, 255, 255, 255, 255}, {0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C}, {255, 255, 255, 255, 255, 255, 255}, {0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C}, {255, 255, 255, 255, 255, 255, 255}, {0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C, 0x6C}}
+		l_11  *uint16      = &g_12
+		l_31  *int         = &g_30
+		l_120 **uint16     = &l_11
+		l_183 [3][7]uint64 = [3][7]uint64{{0, 0x22332E9621522EE6, 18446744073709551615, 0x7825D7338BB7738A, 18446744073709551615, 0x22332E9621522EE6, 0}, {0, 0x22332E9621522EE6, 18446744073709551615, 0x7825D7338BB7738A, 18446744073709551615, 0x22332E9621522EE6, 0}, {0, 0x22332E9621522EE6, 18446744073709551615, 0x7825D7338BB7738A, 18446744073709551615, 0x22332E9621522EE6, 0}}
+		l_184 *int8        = &g_185
+		l_186 *int8        = &g_115
+		l_187 [10]**int    = [10]**int{&g_121, &g_121, &g_121, &g_121, &g_121, &g_121, &g_121, &g_121, &g_121, &g_121}
+	)
+	_ = l_187
+	var l_188 *int = &g_30
+	var l_198 *int = &g_30
+	_ = l_198
+	var i int
+	_ = i
+	var j int
+	_ = j
+	l_198 = func_2(func() int {
+		_ = g_7
+		return (int(l_8[7][3]) & (int(l_8[7][3]) | (int(cruntime.SafeAddFuncInt16SS(1, int16(cruntime.Truthy((func() *int {
+			l_188 = (*int)(func() unsafe.Pointer {
+				*l_186 = func() int8 {
+					p_ := l_184
+					*p_ |= int8(cruntime.Truthy(int(func() uint16 {
+						p_ := l_11
+						*p_ ^= uint16(int16(g_7))
+						return *p_
+					}()) != 0 || uint64(cruntime.SafeDivFuncInt64SS(func_15(uint(g_7), int8(uint8(cruntime.SafeSubFuncUint64UU(uint64(l_8[8][1]&uint8(int8(cruntime.Truthy((func() *uint16 {
+						p_ := l_120
+						*p_ = func_23(int(cruntime.Truthy(int(g_12) > 0x7D))^249, int(l_8[0][2]), g_29, l_31, uint64(*l_31))
+						return *p_
+					}()) != nil)))), uint64(g_12)))), g_121, int16(g_12), uint(g_12)), int64(l_8[1][0]))) < l_183[1][0]))
+					return *p_
+				}()
+				_ = g_95[1][0]
+				return nil
+			}())
+			return l_188
+		}()) == nil)))) | 0x1E0C8585))) | int(g_58)
+	}(), int8(uint8(g_58)), int(g_58), int(g_58))
+	return uint16(g_50[0])
+}
+func func_2(p_3 int, p_4 int8, p_5 int, p_6 int) *int {
+	var (
+		l_189 [3][6]*int = [3][6]*int{{&g_30, &g_30, &g_30, &g_30, &g_30, &g_30}, {&g_30, &g_30, &g_30, &g_30, &g_30, &g_30}, {&g_30, &g_30, &g_30, &g_30, &g_30, &g_30}}
+		l_190 uint       = 0x3386D861
+		l_195 **int      = &l_189[1][2]
+	)
+	_ = l_195
+	var l_196 *uint = &l_190
+	var i int
+	_ = i
+	var j int
+	_ = j
+	l_190++
+	*l_195 = l_189[0][5]
+	*g_94 = int(cruntime.Truthy(unsafe.Pointer(func() *uint {
+		*l_196 ^= uint(p_4)
+		return &g_116
+	}()) != unsafe.Pointer(l_189[0][5])))
+	return g_197[0][3]
+}
+func func_15(p_16 uint, p_17 int8, p_18 *int, p_19 int16, p_20 uint) int64 {
+	var (
+		l_129 int = 8
+		l_160 int = int(-2)
+	)
+	_ = l_160
+	var l_161 int = 0xCF75C71E
+	_ = l_161
+	var l_162 int = 0xABF0990B
+	_ = l_162
+	var l_163 int = 0x68D3076A
+	_ = l_163
+	var l_164 int = 0
+	_ = l_164
+	var l_165 int = 0x54A1D4D8
+	_ = l_165
+	var l_166 int = 0xA0D05BA9
+	_ = l_166
+	var l_167 int = 0xB2DEDBDE
+	_ = l_167
+	var l_168 [1]int
+	_ = l_168
+	var l_169 int = 0
+	_ = l_169
+	var l_170 int = int(-7)
+	_ = l_170
+	var l_172 int = 0x56C5408E
+	_ = l_172
+	var l_174 uint16 = 65528
+	var l_179 int64 = 0x496E669EC0A325B1
+	_ = l_179
+	var i int
+	for i = 0; i < 1; i++ {
+		l_168[i] = 0x60C70B84
+	}
+	for g_78 = 0; g_78 <= 7; g_78 += 1 {
+	}
+	if l_129 != 0 {
+	} else {
+		var l_154 *int = &l_129
+		_ = l_154
+		var l_155 *int = &g_30
+		_ = l_155
+		var l_156 *int = &l_129
+		_ = l_156
+		var l_157 *int = &l_129
+		_ = l_157
+		var l_158 *int = &g_30
+		_ = l_158
+		var l_159 [9]*int = [9]*int{nil, &l_129, nil, &l_129, nil, &l_129, nil, &l_129, nil}
+		_ = l_159
+		var l_171 int = int(-4)
+		_ = l_171
+		var l_173 int8 = 0x2D
+		_ = l_173
+		var l_180 uint8 = 0x3F
+		var i int
+		_ = i
+		l_174--
+		for g_12 = 0; int(g_12) > 28; g_12 = uint16(int16(cruntime.SafeAddFuncInt32SS(int(g_12), 1))) {
+			*g_93 = *g_93
+		}
+		*l_154 |= 0x92985AA
+		l_180--
+	}
+	return int64(g_150)
+}
+func func_23(p_24 int, p_25 int, p_26 *int, p_27 *int, p_28 uint64) *uint16 {
+	var (
+		l_38  [2]uint8
+		l_49  int     = 2
+		l_59  int     = 1
+		l_119 *uint16 = nil
+		i     int
+	)
+	for i = 0; i < 2; i++ {
+		l_38[i] = 1
+	}
+	for p_25 = 11; p_25 != 11; p_25 = cruntime.SafeAddFuncInt32SS(p_25, 5) {
+		var (
+			l_56 int8        = 0x7F
+			l_57 [10]*uint64 = [10]*uint64{&g_58, &g_58, &g_58, &g_58, &g_58, &g_58, &g_58, &g_58, &g_58, &g_58}
+			i    int
+		)
+		_ = i
+		if (func() int {
+			cruntime.SafeAddFuncUint16UU(uint16(int16(cruntime.SafeModFuncInt32SS(int(l_38[0]), int(cruntime.Truthy((func() int {
+				l_59 &= int(func() int8 {
+					cruntime.SafeMulFuncUint16UU(0x5088, uint16(int16(cruntime.Truthy(uint64(func_41((*uint16)(func() unsafe.Pointer {
+						_ = g_30 & int(cruntime.Truthy(int(cruntime.SafeSubFuncUint16UU(uint16(cruntime.SafeModFuncInt8SS(int8(uint8(g_12)), int8(p_25))), 0x27EE)) >= (func() int {
+							_ = uint16(int16(cruntime.Truthy(0x13 < (func() uint64 {
+								p_ := &g_50[0]
+								*p_ = uint64(cruntime.Truthy(-2 <= (func() int {
+									l_49 = int(cruntime.Truthy(((p_28 & 0xAF2C67A9) & 0xF5) != uint64(*p_26)))
+									return l_49
+								}())))
+								return *p_
+							}())))) == g_12
+							return *p_26
+						}())))
+						return nil
+					}()), uint8(g_12), int(l_38[1]))) <= p_28))))
+					return l_56
+				}())
+				return l_59
+			}()) != 0 && int(l_56) != 0 && 0x634C5D19E77F5592 != 0))))), uint16(g_58))
+			return *g_29
+		}()) != 0 {
+			var l_60 uint8 = 0x59
+			*p_27 &= int(l_56)
+			l_60--
+		} else {
+			var (
+				l_63 uint64 = 1
+				l_66 *int8  = nil
+			)
+			_ = l_66
+			var l_67 *int8 = nil
+			_ = l_67
+			var l_68 *int8 = &l_56
+			var l_75 *int64 = &g_76
+			var l_77 *uint = &g_78
+			var l_86 *int = &g_30
+			var l_85 **int = &l_86
+			var l_88 **int = &g_29
+			if uint8(int8(cruntime.Truthy(0x151854E46196C9A5 < (l_63&uint64(cruntime.SafeRshiftFuncInt8SS(func() int8 {
+				p_ := l_68
+				*p_ = 0x63
+				return *p_
+			}(), 4)))))) > (func() uint8 {
+				cruntime.SafeDivFuncUint16UU(uint16(int16(cruntime.Truthy((func() int {
+					_ = (func() uint {
+						p_ := l_77
+						*p_ = uint(cruntime.Truthy((int(cruntime.Truthy(p_24 != int(func() int64 {
+							p_ := l_75
+							*p_ = int64(cruntime.SafeModFuncUint8UU(uint8(int8(cruntime.Truthy(int(cruntime.Truthy(cruntime.SafeSubFuncInt32SS(l_59, int(cruntime.Truthy(&p_28 != &l_63))) <= int(g_58))) != (*g_29)))), uint8(int8(p_24))))
+							return *p_
+						}()))) ^ 0x13C509C0) == int(g_50[0])))
+						return *p_
+					}()) | uint(l_38[0])
+					return 65533
+				}()) != 0 || g_50[0] != 0))), 0x60F4)
+				return l_38[1]
+			}()) {
+				if (*g_29) != 0 {
+					break
+				}
+			} else {
+				for p_24 = 27; p_24 == int(-3); p_24 = int(cruntime.SafeSubFuncUint8UU(uint8(int8(p_24)), 1)) {
+					var l_87 ***int = &l_85
+					*g_29 &= int(cruntime.Truthy((func() unsafe.Pointer {
+						_ = (func() uint64 {
+							_ = cruntime.Truthy(g_50) == 0
+							return func() uint64 {
+								_ = int(cruntime.Truthy((func() int64 {
+									g_76 = int64(cruntime.SafeMulFuncInt16SS(int16(uint16(g_78)), int16(p_25)))
+									return g_76
+								}()) == cruntime.SafeDivFuncInt64SS(int64(cruntime.Truthy((func() **int {
+									p_ := l_87
+									*p_ = l_85
+									return *p_
+								}()) != l_88 && int(cruntime.SafeLshiftFuncUint8UU(uint8(cruntime.SafeUnaryMinusFuncUint64U(uint64(l_59))), uint(cruntime.Truthy(cruntime.Truthy(g_92[2]) != 0)))) != 0)), int64(p_24)))) <= p_24
+								_ = l_59
+								return g_50[0]
+							}()
+						}()) ^ 0x61C72179
+						return nil
+					}()) != unsafe.Pointer(&p_28)))
+				}
+			}
+			*l_85 = p_27
+		}
+		for l_56 = 0; int(l_56) < int(-14); l_56 = int8(cruntime.SafeSubFuncUint8UU(uint8(l_56), 5)) {
+			var (
+				l_101 uint16     = 0xC3AA
+				l_109 int        = 0
+				l_114 [4][9]*int = [4][9]*int{{&l_49, nil, nil, &l_49, &l_49, &g_30, &l_59, nil, &l_59}, {&l_59, &l_109, &l_49, &l_49, &l_109, &l_59, &g_30, &l_59, &l_109}, {nil, &l_59, &l_59, nil, nil, nil, nil, nil, &l_59}, {&l_109, &l_109, &g_30, &l_109, nil, &l_109, &g_30, &l_109, &l_109}}
+			)
+			_ = l_114
+			var i int
+			_ = i
+			var j int
+			_ = j
+			if (*p_26) != 0 {
+				var (
+					l_98 *uint64 = nil
+					l_99 *uint64 = &g_50[0]
+				)
+				*g_29 ^= int(cruntime.Truthy((func() *uint64 {
+					l_98 = func() *uint64 {
+						_ = g_58 == 18446744073709551615
+						return l_57[9]
+					}()
+					return l_98
+				}()) == l_99 || g_100 != g_100))
+				l_101++
+			} else {
+				var l_104 *int = &l_49
+				_ = l_104
+				var l_105 [8]uint64 = [8]uint64{0xBDE86D3611A59CB3, 0xBDE86D3611A59CB3, 0xBDE86D3611A59CB3, 0xBDE86D3611A59CB3, 0xBDE86D3611A59CB3, 0xBDE86D3611A59CB3, 0xBDE86D3611A59CB3, 0xBDE86D3611A59CB3}
+				var l_108 *int = &l_59
+				_ = l_108
+				var l_110 [10]*int = [10]*int{&l_49, &l_49, &l_49, &l_49, &l_49, &l_49, &l_49, &l_49, &l_49, &l_49}
+				_ = l_110
+				var i int
+				_ = i
+				l_105[4]++
+				g_111--
+			}
+			g_116--
+		}
+	}
+	return l_119
+}
+func func_41(p_42 *uint16, p_43 uint8, p_44 int) uint16 {
+	var l_51 [1][4]**int
+	_ = l_51
+	var l_52 uint64 = 0x852071694A98A1BD
+	var l_55 [6][9]int16 = [6][9]int16{{0x62B3, (-6), 0x62B3, 1, 7, 7, 1, 0x62B3, (-6)}, {(-6), 0x62B3, 1, 7, 7, 1, 0x62B3, (-6), 0x62B3}, {0, -10901, 1, 1, -10901, 0, 7, 0, -10901}, {0, 0x62B3, 0x62B3, 0, (-6), -10901, (-6), 0, 0x62B3}, {(-6), (-6), 7, -10901, -8190, -10901, 7, (-6), (-6)}, {0x62B3, 0, (-6), -10901, (-6), 0, 0x62B3, 0x62B3, 0}}
+	var i int
+	var j int
+	for i = 0; i < 1; i++ {
+		for j = 0; j < 4; j++ {
+			l_51[i][j] = &g_29
+		}
+	}
+	g_29 = &g_30
+	l_52--
+	return uint16(l_55[3][2])
+}
+func main() {
+	var (
+		argc             int      = len(os.Args)
+		argv             []string = os.Args
+		i                int
+		j                int
+		print_hash_value int = 0
+	)
+	_ = print_hash_value
+	if argc == 2 && argv[1] == "1" {
+		print_hash_value = 1
+	}
+	platform_main_begin()
+	func_1()
+	csmith_sink_ = uint64(g_7)
+	csmith_sink_ = uint64(g_12)
+	csmith_sink_ = uint64(g_30)
+	for i = 0; i < 1; i++ {
+	}
+	csmith_sink_ = g_58
+	csmith_sink_ = uint64(g_76)
+	csmith_sink_ = uint64(g_78)
+	for i = 0; i < 5; i++ {
+		for j = 0; j < 6; j++ {
+		}
+	}
+	csmith_sink_ = uint64(g_111)
+	csmith_sink_ = uint64(g_115)
+	csmith_sink_ = uint64(g_116)
+	csmith_sink_ = uint64(g_150)
+	csmith_sink_ = uint64(g_185)
+	platform_main_end(0, 0)
+	os.Exit(0)
+}

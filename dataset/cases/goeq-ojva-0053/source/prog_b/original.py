@@ -1,0 +1,6 @@
+m,f,b=map(int,input().split())
+ans=0
+if m>b:ans=0
+elif m<b:ans=b-m
+elif ans>f:ans='NA'
+print(ans)

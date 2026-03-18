@@ -1,0 +1,13 @@
+Transformation doesn't verify!
+
+Transformation doesn't verify!
+
+Transformation seems to be correct! (syntactically equal)
+
+ERROR: Unsupported interprocedural transformation: non-constant global variable @g_37.1 is introduced in target
+
+Summary:
+  1 correct transformations
+  2 incorrect transformations
+  1 failed-to-prove transformations
+  0 Alive2 errors

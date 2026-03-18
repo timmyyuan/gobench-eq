@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-ojva-0143",
+  "name": "sample_01",
+  "stdin": "6\n1 1 1 2 2 3\n1 1 1 2 2 3\n",
+  "statement_stdout": "Yes\n2 2 3 1 1 1\n",
+  "source_prog_a": {
+    "stdout": "Yes\n3 2 2 1 1 1\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "Yes\n2 2 3 1 1 1\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "stdin": "5\n11\n5\n11\n0\n",
+  "source_prog_a": {
+    "stdout": "13112221\n13112221\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "13112221\n13112221\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "5\n11\n5\n11\n0\n",
+      "statement_stdout": "13112221\n13112221\n",
+      "source_prog_a": {
+        "stdout": "13112221\n13112221\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "13112221\n13112221\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

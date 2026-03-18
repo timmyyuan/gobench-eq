@@ -1,0 +1,35 @@
+{
+  "case_id": "goeq-oja-0104",
+  "prefix": "goeq-oja-",
+  "artifact_dir": "dataset/cases/goeq-oja-0104/artifacts/codon-llvm-release-noexc-v1",
+  "preferred_alive2_func": "main",
+  "pair_compile_ok": false,
+  "prog_a": {
+    "program_name": "prog_a",
+    "source_path": "dataset/cases/goeq-oja-0104/source/prog_a/original.py",
+    "preprocessed_path": "dataset/cases/goeq-oja-0104/artifacts/codon-llvm-release-noexc-v1/prog_a/preprocessed.py",
+    "ir_path": "dataset/cases/goeq-oja-0104/artifacts/codon-llvm-release-noexc-v1/prog_a/module.ll",
+    "preprocess_changed": true,
+    "top_level_functions": [
+      "dfs"
+    ],
+    "compile_ok": false,
+    "timed_out": false,
+    "exit_code": 1,
+    "error": "\u001b[1mpreprocessed.py:7 (1-31): \u001b[1;31merror:\u001b[0m\u001b[1m cannot import name 'setrecursionlimit' from 'sys'\u001b[0m"
+  },
+  "prog_b": {
+    "program_name": "prog_b",
+    "source_path": "dataset/cases/goeq-oja-0104/source/prog_b/original.py",
+    "preprocessed_path": "dataset/cases/goeq-oja-0104/artifacts/codon-llvm-release-noexc-v1/prog_b/preprocessed.py",
+    "ir_path": "dataset/cases/goeq-oja-0104/artifacts/codon-llvm-release-noexc-v1/prog_b/module.ll",
+    "preprocess_changed": true,
+    "top_level_functions": [
+      "dfs"
+    ],
+    "compile_ok": true,
+    "timed_out": false,
+    "exit_code": 0,
+    "error": ""
+  }
+}

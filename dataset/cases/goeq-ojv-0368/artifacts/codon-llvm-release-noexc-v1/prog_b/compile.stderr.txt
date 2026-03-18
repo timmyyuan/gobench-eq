@@ -1,0 +1,2 @@
+[1mpreprocessed.py:15 (13-22): [1;31merror:[0m[1m 'deque[int]' object has no attribute '__setitem__'[0m
+╰─ [1mpreprocessed.py:29 (5-10): [1;31merror:[0m[1m during the realization of solve()[0m

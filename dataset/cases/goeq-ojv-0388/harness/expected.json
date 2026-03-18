@@ -1,0 +1,68 @@
+{
+  "stdin": "xyz\n4\n",
+  "source_prog_a": {
+    "stdout": "aya\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "aya\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "xyz\n4\n",
+      "statement_stdout": "aya\n",
+      "source_prog_a": {
+        "stdout": "aya\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "aya\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "a\n25\n",
+      "statement_stdout": "z\n",
+      "source_prog_a": {
+        "stdout": "z\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "z\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_03",
+      "stdin": "codefestival\n100\n",
+      "statement_stdout": "aaaafeaaivap\n",
+      "source_prog_a": {
+        "stdout": "aaaafeaaivap\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "aaaafeaaivap\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

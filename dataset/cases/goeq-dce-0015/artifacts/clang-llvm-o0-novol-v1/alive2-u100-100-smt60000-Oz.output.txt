@@ -1,0 +1,24 @@
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+WARNING: slow vcgen! Took 60.13 s
+ERROR: Out of memory; skipping function.
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct!
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Summary:
+  8 correct transformations
+  0 incorrect transformations
+  1 failed-to-prove transformations
+  0 Alive2 errors

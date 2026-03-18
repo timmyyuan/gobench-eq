@@ -1,0 +1,136 @@
+{
+  "source_dataset": "EquiBench DCE",
+  "published_profile": "c-to-go-intake",
+  "execution_bound": "30s",
+  "stage_1_syntax_only": {
+    "input_pairs": 400,
+    "accepted_pairs": 194,
+    "rejected_pairs": 206,
+    "accepted_labels": {
+      "equivalent": 97,
+      "inequivalent": 97
+    },
+    "rejected_labels": {
+      "equivalent": 103,
+      "inequivalent": 103
+    },
+    "rejection_reasons": {
+      "program_1.has_bitfield": 146,
+      "program_2.has_bitfield": 146,
+      "program_1.has_union": 140,
+      "program_2.has_union": 140
+    }
+  },
+  "stage_2_translation_subset": {
+    "input_candidates": 194,
+    "removed_pairs": 17,
+    "removed_labels": {
+      "equivalent": 9,
+      "inequivalent": 8
+    },
+    "accepted_candidates": 177,
+    "accepted_labels": {
+      "equivalent": 88,
+      "inequivalent": 89
+    },
+    "rejection_reasons": {
+      "pair.unsupported_bool_int_relational": 4,
+      "pair.unsupported_mixed_width_relational": 4,
+      "pair.unsupported_nested_expression_statement_lowering": 3,
+      "pair.unsupported_mixed_width_arithmetic": 2,
+      "pair.unsupported_signed_unsigned_relational": 2,
+      "pair.unsupported_expression_statement_conversion": 1,
+      "pair.unsupported_pointer_assignment_or_comparison_lowering": 1
+    }
+  },
+  "stage_3_timeout_pruning": {
+    "input_candidates": 177,
+    "removed_timeout_cases": 12,
+    "removed_timeout_labels": {
+      "equivalent": 5,
+      "inequivalent": 7
+    },
+    "removed_cases": [
+      {
+        "case_id": "goeq-dce-0202",
+        "label": "equivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": true
+      },
+      {
+        "case_id": "goeq-dce-0203",
+        "label": "inequivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": false
+      },
+      {
+        "case_id": "goeq-dce-0205",
+        "label": "inequivalent",
+        "source_prog_a_timed_out": false,
+        "source_prog_b_timed_out": true
+      },
+      {
+        "case_id": "goeq-dce-0218",
+        "label": "equivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": true
+      },
+      {
+        "case_id": "goeq-dce-0219",
+        "label": "inequivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": false
+      },
+      {
+        "case_id": "goeq-dce-0240",
+        "label": "equivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": true
+      },
+      {
+        "case_id": "goeq-dce-0241",
+        "label": "inequivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": true
+      },
+      {
+        "case_id": "goeq-dce-0282",
+        "label": "equivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": true
+      },
+      {
+        "case_id": "goeq-dce-0283",
+        "label": "inequivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": false
+      },
+      {
+        "case_id": "goeq-dce-0320",
+        "label": "equivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": true
+      },
+      {
+        "case_id": "goeq-dce-0321",
+        "label": "inequivalent",
+        "source_prog_a_timed_out": true,
+        "source_prog_b_timed_out": true
+      },
+      {
+        "case_id": "goeq-dce-0337",
+        "label": "inequivalent",
+        "source_prog_a_timed_out": false,
+        "source_prog_b_timed_out": true
+      }
+    ]
+  },
+  "final_dataset": {
+    "materialized_cases": 165,
+    "labels": {
+      "equivalent": 83,
+      "inequivalent": 82
+    },
+    "timeout_cases": 0
+  }
+}

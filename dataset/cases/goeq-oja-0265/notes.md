@@ -1,0 +1,37 @@
+# goeq-oja-0265
+
+- Source benchmark: EquiBench
+- Source category: OJ_A
+- Pair ID: 265
+- Problem ID: 132
+- Problem path: `dataset/organized/OJ/132`
+- Source label: `inequivalent`
+- Source program A path: `dataset/organized/OJ/132/accepted_0.py`
+- Source program B path: `dataset/organized/OJ/132/wrong_0.py`
+- Stored sample count: `4`
+- Go translations: pending for `prog_a/` and `prog_b/`
+- Witness sample: `sample_01`
+- sample_01 stdin: '3\n-1 0\n0 3\n2 -1\n'
+- sample_01 statement stdout: '2\n1 2\nRL\nUU\nDR\n'
+- sample_01 source stdout A: '39\n274877906944 137438953472 68719476736 34359738368 17179869184 8589934592 4294967296 2147483648 1073741824 536870912 268435456 134217728 67108864 33554432 16777216 8388608 4194304 2097152 1048576 524288 262144 131072 65536 32768 16384 8192 4096 2048 1024 512 256 128 64 32 16 8 4 2 1 \nLRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\nUDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDU\nRLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLD\n'
+- sample_01 source stdout B: '1 1 1\nLRL\nUUU\nRRD\n'
+- sample_01 statement match A: `False`
+- sample_01 statement match B: `False`
+- sample_02 stdin: '5\n0 0\n1 0\n2 0\n3 0\n4 0\n'
+- sample_02 statement stdout: '-1\n'
+- sample_02 source stdout A: '-1\n'
+- sample_02 source stdout B: '-1\n'
+- sample_02 statement match A: `True`
+- sample_02 statement match B: `True`
+- sample_03 stdin: '2\n1 1\n1 1\n'
+- sample_03 statement stdout: '2\n1 1\nRU\nUR\n'
+- sample_03 source stdout A: '40\n274877906944 137438953472 68719476736 34359738368 17179869184 8589934592 4294967296 2147483648 1073741824 536870912 268435456 134217728 67108864 33554432 16777216 8388608 4194304 2097152 1048576 524288 262144 131072 65536 32768 16384 8192 4096 2048 1024 512 256 128 64 32 16 8 4 2 1 1 \nUDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDR\nUDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDR\n'
+- sample_03 source stdout B: '1 1\nRU\nRU\n'
+- sample_03 statement match A: `False`
+- sample_03 statement match B: `False`
+- sample_04 stdin: '3\n-7 -3\n7 3\n-3 -7\n'
+- sample_04 statement stdout: '5\n3 1 4 1 5\nLRDUL\nRDULR\nDULRD\n'
+- sample_04 source stdout A: '40\n274877906944 137438953472 68719476736 34359738368 17179869184 8589934592 4294967296 2147483648 1073741824 536870912 268435456 134217728 67108864 33554432 16777216 8388608 4194304 2097152 1048576 524288 262144 131072 65536 32768 16384 8192 4096 2048 1024 512 256 128 64 32 16 8 4 2 1 1 \nLRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRDUDR\nRLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLULDR\nDUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUULUDR\n'
+- sample_04 source stdout B: '1 1 1 1 1 1 1 1 1 1\nLLLLLLLDDD\nRRRRRRRUUU\nLLLDDDDDDD\n'
+- sample_04 statement match A: `False`
+- sample_04 statement match B: `False`

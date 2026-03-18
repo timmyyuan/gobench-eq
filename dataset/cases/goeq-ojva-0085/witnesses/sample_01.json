@@ -1,0 +1,18 @@
+{
+  "case_id": "goeq-ojva-0085",
+  "name": "sample_01",
+  "stdin": "5\n20\n220\n222220\n44033055505550666011011111090666077705550301110\n000555555550000330000444000080000200004440000\n",
+  "statement_stdout": "a\nb\nb\nhello, world!\nkeitai\n",
+  "source_prog_a": {
+    "stdout": "a\nb\nb\nhello, world!\nkeitai\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "a\nb\nb\nhello,.world!\nkeitai\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  }
+}

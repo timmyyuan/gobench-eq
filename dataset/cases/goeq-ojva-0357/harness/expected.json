@@ -1,0 +1,51 @@
+{
+  "stdin": "xyz\nabc\n",
+  "source_prog_a": {
+    "stdout": "xaybzc\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "source_prog_b": {
+    "stdout": "xaybzc\n",
+    "stderr": "",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "samples": [
+    {
+      "name": "sample_01",
+      "stdin": "xyz\nabc\n",
+      "statement_stdout": "xaybzc\n",
+      "source_prog_a": {
+        "stdout": "xaybzc\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "xaybzc\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    },
+    {
+      "name": "sample_02",
+      "stdin": "atcoderbeginnercontest\natcoderregularcontest\n",
+      "statement_stdout": "aattccooddeerrbreeggiunlnaerrccoonntteesstt\n",
+      "source_prog_a": {
+        "stdout": "aattccooddeerrbreeggiunlnaerrccoonntteesstt\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      },
+      "source_prog_b": {
+        "stdout": "aattccooddeerrbreeggiunlnaerrccoonntteesst\n",
+        "stderr": "",
+        "exit_code": 0,
+        "timed_out": false
+      }
+    }
+  ]
+}

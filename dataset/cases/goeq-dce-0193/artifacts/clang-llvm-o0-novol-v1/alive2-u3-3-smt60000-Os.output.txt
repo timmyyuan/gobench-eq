@@ -1,0 +1,19 @@
+Transformation seems to be correct! (syntactically equal)
+
+ERROR: SMT Error: smt tactic failed to show goal to be sat/unsat (incomplete quantifiers)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation seems to be correct! (syntactically equal)
+
+Transformation doesn't verify!
+
+Transformation seems to be correct! (syntactically equal)
+
+Summary:
+  5 correct transformations
+  1 incorrect transformations
+  1 failed-to-prove transformations
+  0 Alive2 errors
