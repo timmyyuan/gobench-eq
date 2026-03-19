@@ -562,6 +562,65 @@ func init() {
 	}
 }
 
+func TestAdaptSourceRewritesNegativeStringIndexComparison(t *testing.T) {
+	output := adaptAndParse(t, `package main
+
+func init() {
+	s := "abc"
+	if s[-1] == "c" {
+	}
+}
+`)
+
+	if strings.Contains(output, `s[-1] == "c"`) {
+		t.Fatalf("expected negative string index rewrite in output:\n%s", output)
+	}
+	if !strings.Contains(output, `if string(s[len(s)+(-1)]) == "c"`) {
+		t.Fatalf("expected string-wrapped negative string index comparison in output:\n%s", output)
+	}
+}
+
+func TestAdaptSourceRewritesStoredStringIndexComparison(t *testing.T) {
+	output := adaptAndParse(t, `package main
+
+func init() {
+	s := "abc"
+	last := s[-1]
+	if last == "c" {
+	}
+}
+`)
+
+	if strings.Contains(output, `if last == "c"`) {
+		t.Fatalf("expected stored string-index comparison rewrite in output:\n%s", output)
+	}
+	if !strings.Contains(output, `if string(last) == "c"`) {
+		t.Fatalf("expected stored string-index comparison to wrap last in string(...):\n%s", output)
+	}
+}
+
+func TestAdaptSourceRewritesRangeStringCharComparison(t *testing.T) {
+	output := adaptAndParse(t, `package main
+
+import "strings"
+
+func init() {
+	parts := strings.Split("A#B", "#")
+	for _, v := range parts[0] {
+		if v != "=" {
+		}
+	}
+}
+`)
+
+	if strings.Contains(output, `if v != "="`) {
+		t.Fatalf("expected range string-char comparison rewrite in output:\n%s", output)
+	}
+	if !strings.Contains(output, `if string(v) != "="`) {
+		t.Fatalf("expected range string-char comparison to wrap v in string(...):\n%s", output)
+	}
+}
+
 func TestAdaptSourceRewritesFmtPrintlnOnIntSlice(t *testing.T) {
 	output := adaptAndParse(t, `package main
 

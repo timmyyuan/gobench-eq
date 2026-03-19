@@ -51,6 +51,7 @@ Current rewrites include:
 - restore a narrow lost-`[::-1]` reverse-slice pattern via `reverseInts(...)` when the original Python source still contains the reverse-slice signal
 - recover named `[]interface{}` builders that only append integers back to `[]int`, and rewrite slice-level `max/min` patterns to `maxIntSlice(...)` and `minIntSlice(...)`
 - rewrite invalid `byte("a")` literals to Go rune literals
+- preserve Python one-character string comparisons when raw `pytago` lowers string indexing or `for ch in text` iteration to Go byte/rune values
 
 Inference: this is still a patch layer over `pytago`, not an independent translator.
 

@@ -36,6 +36,11 @@ type rewriteState struct {
 	needMustAtoi       bool
 	needMustParseF64   bool
 	needFmtImport      bool
+	needMathImport     bool
+	needSortImport     bool
+	needOSImport       bool
+	needStdinLines     bool
+	needBisectRight    bool
 	needFormatIntSlice bool
 	needMaxIntSlice    bool
 	needMinIntSlice    bool
@@ -61,12 +66,20 @@ type declScope struct {
 }
 
 type charSliceScope struct {
-	parent *charSliceScope
-	vars   map[string]bool
+	parent       *charSliceScope
+	charSlices   map[string]bool
+	stringSlices map[string]bool
+	stringVars   map[string]bool
+	charVars     map[string]bool
 }
 
 type intSliceScope struct {
 	parent *intSliceScope
+	vars   map[string]bool
+}
+
+type boolScope struct {
+	parent *boolScope
 	vars   map[string]bool
 }
 
@@ -219,6 +232,7 @@ func adaptSourceWithPython(source []byte, pythonSource []byte) ([]byte, error) {
 	rewriteIntSliceAggregates(file, state)
 	rewriteStringCharSliceOps(file, state)
 	rewriteIntSlicePrints(file, state)
+	rewriteBoolBitOps(file)
 
 	ensureImports(fset, file, state)
 	appendHelperDecls(file, state)
@@ -297,6 +311,7 @@ func rewriteStringTokenIntCalls(file *ast.File, state *rewriteState) {
 					valueSpec.Values[i] = lowerExprIntConversions(value, state, scope)
 				}
 				trackValueSpecStringSlices(valueSpec, scope)
+				trackValueSpecStringVars(valueSpec, scope)
 			}
 		}
 	}
@@ -1692,6 +1707,226 @@ func rewriteIntSlicePrintExpr(expr ast.Expr, state *rewriteState, scope *intSlic
 	}
 }
 
+func rewriteBoolBitOps(file *ast.File) {
+	for _, decl := range file.Decls {
+		switch node := decl.(type) {
+		case *ast.FuncDecl:
+			if node.Body != nil {
+				rewriteBoolBlock(node.Body, newBoolScope(nil))
+			}
+		case *ast.GenDecl:
+			for _, spec := range node.Specs {
+				valueSpec, ok := spec.(*ast.ValueSpec)
+				if !ok {
+					continue
+				}
+				scope := newBoolScope(nil)
+				for i, value := range valueSpec.Values {
+					valueSpec.Values[i] = rewriteBoolExpr(value, scope)
+					if i < len(valueSpec.Names) && valueSpec.Names[i] != nil && isLikelyBoolExpr(valueSpec.Values[i], scope) {
+						scope.add(valueSpec.Names[i].Name)
+					}
+				}
+			}
+		}
+	}
+}
+
+func rewriteBoolBlock(block *ast.BlockStmt, scope *boolScope) {
+	if block == nil {
+		return
+	}
+	for _, stmt := range block.List {
+		rewriteBoolStmt(stmt, scope)
+	}
+}
+
+func rewriteBoolStmt(stmt ast.Stmt, scope *boolScope) {
+	switch node := stmt.(type) {
+	case *ast.AssignStmt:
+		for i, expr := range node.Rhs {
+			node.Rhs[i] = rewriteBoolExpr(expr, scope)
+		}
+		for i, lhs := range node.Lhs {
+			ident, ok := lhs.(*ast.Ident)
+			if !ok || i >= len(node.Rhs) {
+				continue
+			}
+			if isLikelyBoolExpr(node.Rhs[i], scope) {
+				scope.add(ident.Name)
+			}
+		}
+	case *ast.BlockStmt:
+		rewriteBoolBlock(node, newBoolScope(scope))
+	case *ast.CaseClause:
+		child := newBoolScope(scope)
+		for i, expr := range node.List {
+			node.List[i] = rewriteBoolExpr(expr, child)
+		}
+		for _, bodyStmt := range node.Body {
+			rewriteBoolStmt(bodyStmt, child)
+		}
+	case *ast.DeclStmt:
+		genDecl, ok := node.Decl.(*ast.GenDecl)
+		if !ok {
+			return
+		}
+		for _, spec := range genDecl.Specs {
+			valueSpec, ok := spec.(*ast.ValueSpec)
+			if !ok {
+				continue
+			}
+			for i, value := range valueSpec.Values {
+				valueSpec.Values[i] = rewriteBoolExpr(value, scope)
+				if i < len(valueSpec.Names) && valueSpec.Names[i] != nil && isLikelyBoolExpr(valueSpec.Values[i], scope) {
+					scope.add(valueSpec.Names[i].Name)
+				}
+			}
+		}
+	case *ast.ExprStmt:
+		node.X = rewriteBoolExpr(node.X, scope)
+	case *ast.ForStmt:
+		child := newBoolScope(scope)
+		if node.Init != nil {
+			rewriteBoolStmt(node.Init, child)
+		}
+		if node.Cond != nil {
+			node.Cond = rewriteBoolExpr(node.Cond, child)
+		}
+		if node.Post != nil {
+			rewriteBoolStmt(node.Post, child)
+		}
+		rewriteBoolBlock(node.Body, child)
+	case *ast.IfStmt:
+		child := newBoolScope(scope)
+		if node.Init != nil {
+			rewriteBoolStmt(node.Init, child)
+		}
+		node.Cond = rewriteBoolExpr(node.Cond, child)
+		rewriteBoolBlock(node.Body, child)
+		if node.Else != nil {
+			rewriteBoolStmt(node.Else, child)
+		}
+	case *ast.LabeledStmt:
+		rewriteBoolStmt(node.Stmt, scope)
+	case *ast.RangeStmt:
+		node.X = rewriteBoolExpr(node.X, scope)
+		rewriteBoolBlock(node.Body, newBoolScope(scope))
+	case *ast.ReturnStmt:
+		for i, expr := range node.Results {
+			node.Results[i] = rewriteBoolExpr(expr, scope)
+		}
+	case *ast.SendStmt:
+		node.Chan = rewriteBoolExpr(node.Chan, scope)
+		node.Value = rewriteBoolExpr(node.Value, scope)
+	case *ast.SwitchStmt:
+		child := newBoolScope(scope)
+		if node.Init != nil {
+			rewriteBoolStmt(node.Init, child)
+		}
+		if node.Tag != nil {
+			node.Tag = rewriteBoolExpr(node.Tag, child)
+		}
+		rewriteBoolBlock(node.Body, child)
+	case *ast.TypeSwitchStmt:
+		child := newBoolScope(scope)
+		if node.Init != nil {
+			rewriteBoolStmt(node.Init, child)
+		}
+		rewriteBoolStmt(node.Assign, child)
+		rewriteBoolBlock(node.Body, child)
+	}
+}
+
+func rewriteBoolExpr(expr ast.Expr, scope *boolScope) ast.Expr {
+	switch node := expr.(type) {
+	case *ast.BinaryExpr:
+		node.X = rewriteBoolExpr(node.X, scope)
+		node.Y = rewriteBoolExpr(node.Y, scope)
+		if (node.Op == token.AND || node.Op == token.OR) && isLikelyBoolExpr(node.X, scope) && isLikelyBoolExpr(node.Y, scope) {
+			if node.Op == token.AND {
+				node.Op = token.LAND
+			} else {
+				node.Op = token.LOR
+			}
+		}
+		return node
+	case *ast.CallExpr:
+		node.Fun = rewriteBoolExpr(node.Fun, scope)
+		for i, arg := range node.Args {
+			node.Args[i] = rewriteBoolExpr(arg, scope)
+		}
+		return node
+	case *ast.CompositeLit:
+		for i, elt := range node.Elts {
+			node.Elts[i] = rewriteBoolExpr(elt, scope)
+		}
+		return node
+	case *ast.FuncLit:
+		rewriteBoolBlock(node.Body, newBoolScope(scope))
+		return node
+	case *ast.IndexExpr:
+		node.X = rewriteBoolExpr(node.X, scope)
+		node.Index = rewriteBoolExpr(node.Index, scope)
+		return node
+	case *ast.KeyValueExpr:
+		node.Key = rewriteBoolExpr(node.Key, scope)
+		node.Value = rewriteBoolExpr(node.Value, scope)
+		return node
+	case *ast.ParenExpr:
+		node.X = rewriteBoolExpr(node.X, scope)
+		return node
+	case *ast.SelectorExpr:
+		node.X = rewriteBoolExpr(node.X, scope)
+		return node
+	case *ast.SliceExpr:
+		node.X = rewriteBoolExpr(node.X, scope)
+		if node.Low != nil {
+			node.Low = rewriteBoolExpr(node.Low, scope)
+		}
+		if node.High != nil {
+			node.High = rewriteBoolExpr(node.High, scope)
+		}
+		if node.Max != nil {
+			node.Max = rewriteBoolExpr(node.Max, scope)
+		}
+		return node
+	case *ast.StarExpr:
+		node.X = rewriteBoolExpr(node.X, scope)
+		return node
+	case *ast.TypeAssertExpr:
+		node.X = rewriteBoolExpr(node.X, scope)
+		return node
+	case *ast.UnaryExpr:
+		node.X = rewriteBoolExpr(node.X, scope)
+		return node
+	default:
+		return node
+	}
+}
+
+func isLikelyBoolExpr(expr ast.Expr, scope *boolScope) bool {
+	switch node := unwrapParens(expr).(type) {
+	case *ast.BinaryExpr:
+		switch node.Op {
+		case token.LAND, token.LOR, token.AND, token.OR:
+			return isLikelyBoolExpr(node.X, scope) && isLikelyBoolExpr(node.Y, scope)
+		case token.EQL, token.NEQ, token.LSS, token.GTR, token.LEQ, token.GEQ:
+			return true
+		default:
+			return false
+		}
+	case *ast.CallExpr:
+		return isReflectDeepEqualCall(node)
+	case *ast.Ident:
+		return node.Name == "true" || node.Name == "false" || scope.has(node.Name)
+	case *ast.UnaryExpr:
+		return node.Op == token.NOT && isLikelyBoolExpr(node.X, scope)
+	default:
+		return false
+	}
+}
+
 func rewriteStringCharSliceOps(file *ast.File, state *rewriteState) {
 	for _, decl := range file.Decls {
 		fn, ok := decl.(*ast.FuncDecl)
@@ -1731,6 +1966,15 @@ func rewriteStringCharSliceStmt(stmt ast.Stmt, state *rewriteState, scope *charS
 			if isStringsSplitCharsCall(node.Rhs[i]) {
 				scope.add(ident.Name)
 			}
+			if isStringSliceExpr(node.Rhs[i], scope) {
+				scope.addStringSlice(ident.Name)
+			}
+			if isKnownStringExprForChars(node.Rhs[i], scope) {
+				scope.addStringVar(ident.Name)
+			}
+			if isPythonStringCharExpr(node.Rhs[i], scope) {
+				scope.addCharVar(ident.Name)
+			}
 		}
 	case *ast.BlockStmt:
 		rewriteStringCharSliceBlock(node, state, newCharSliceScope(scope))
@@ -1762,6 +2006,15 @@ func rewriteStringCharSliceStmt(stmt ast.Stmt, state *rewriteState, scope *charS
 				if isStringsSplitCharsCall(valueSpec.Values[i]) {
 					scope.add(name.Name)
 				}
+				if isStringSliceExpr(valueSpec.Values[i], scope) {
+					scope.addStringSlice(name.Name)
+				}
+				if isKnownStringExprForChars(valueSpec.Values[i], scope) {
+					scope.addStringVar(name.Name)
+				}
+				if isPythonStringCharExpr(valueSpec.Values[i], scope) {
+					scope.addCharVar(name.Name)
+				}
 			}
 		}
 	case *ast.ExprStmt:
@@ -1792,7 +2045,16 @@ func rewriteStringCharSliceStmt(stmt ast.Stmt, state *rewriteState, scope *charS
 		rewriteStringCharSliceStmt(node.Stmt, state, scope)
 	case *ast.RangeStmt:
 		node.X = rewriteStringCharSliceExpr(node.X, state, scope)
-		rewriteStringCharSliceBlock(node.Body, state, newCharSliceScope(scope))
+		child := newCharSliceScope(scope)
+		if ident, ok := unwrapParens(node.Value).(*ast.Ident); ok {
+			switch {
+			case isKnownStringExprForChars(node.X, scope):
+				child.addCharVar(ident.Name)
+			case isStringSliceExpr(node.X, scope):
+				child.addStringVar(ident.Name)
+			}
+		}
+		rewriteStringCharSliceBlock(node.Body, state, child)
 	case *ast.ReturnStmt:
 		for i, expr := range node.Results {
 			node.Results[i] = rewriteStringCharSliceExpr(expr, state, scope)
@@ -1849,6 +2111,7 @@ func rewriteStringCharSliceExpr(expr ast.Expr, state *rewriteState, scope *charS
 	case *ast.BinaryExpr:
 		node.X = rewriteStringCharSliceExpr(node.X, state, scope)
 		node.Y = rewriteStringCharSliceExpr(node.Y, state, scope)
+		rewriteStringCharComparison(node, scope)
 		return node
 	case *ast.CallExpr:
 		node.Fun = rewriteStringCharSliceExpr(node.Fun, state, scope)
@@ -1856,7 +2119,7 @@ func rewriteStringCharSliceExpr(expr ast.Expr, state *rewriteState, scope *charS
 			node.Args[i] = rewriteStringCharSliceExpr(arg, state, scope)
 		}
 		if ident, ok := unwrapParens(node.Fun).(*ast.Ident); ok && ident.Name == "append" && len(node.Args) == 2 {
-			if dst, ok := unwrapParens(node.Args[0]).(*ast.Ident); ok && scope.has(dst.Name) && isStringIndexExpr(node.Args[1]) {
+			if dst, ok := unwrapParens(node.Args[0]).(*ast.Ident); ok && scope.has(dst.Name) && isStringIndexExpr(node.Args[1], scope) {
 				node.Args[1] = &ast.CallExpr{
 					Fun:  ast.NewIdent("string"),
 					Args: []ast.Expr{node.Args[1]},
@@ -1929,13 +2192,23 @@ func newDeclScope(parent *declScope) *declScope {
 
 func newCharSliceScope(parent *charSliceScope) *charSliceScope {
 	return &charSliceScope{
-		parent: parent,
-		vars:   map[string]bool{},
+		parent:       parent,
+		charSlices:   map[string]bool{},
+		stringSlices: map[string]bool{},
+		stringVars:   map[string]bool{},
+		charVars:     map[string]bool{},
 	}
 }
 
 func newIntSliceScope(parent *intSliceScope) *intSliceScope {
 	return &intSliceScope{
+		parent: parent,
+		vars:   map[string]bool{},
+	}
+}
+
+func newBoolScope(parent *boolScope) *boolScope {
+	return &boolScope{
 		parent: parent,
 		vars:   map[string]bool{},
 	}
@@ -1968,12 +2241,60 @@ func (scope *charSliceScope) add(name string) {
 	if scope == nil || name == "" || name == "_" {
 		return
 	}
-	scope.vars[name] = true
+	scope.charSlices[name] = true
 }
 
 func (scope *charSliceScope) has(name string) bool {
 	for current := scope; current != nil; current = current.parent {
-		if current.vars[name] {
+		if current.charSlices[name] {
+			return true
+		}
+	}
+	return false
+}
+
+func (scope *charSliceScope) addStringSlice(name string) {
+	if scope == nil || name == "" || name == "_" {
+		return
+	}
+	scope.stringSlices[name] = true
+}
+
+func (scope *charSliceScope) hasStringSlice(name string) bool {
+	for current := scope; current != nil; current = current.parent {
+		if current.stringSlices[name] || current.charSlices[name] {
+			return true
+		}
+	}
+	return false
+}
+
+func (scope *charSliceScope) addStringVar(name string) {
+	if scope == nil || name == "" || name == "_" {
+		return
+	}
+	scope.stringVars[name] = true
+}
+
+func (scope *charSliceScope) hasStringVar(name string) bool {
+	for current := scope; current != nil; current = current.parent {
+		if current.stringVars[name] {
+			return true
+		}
+	}
+	return false
+}
+
+func (scope *charSliceScope) addCharVar(name string) {
+	if scope == nil || name == "" || name == "_" {
+		return
+	}
+	scope.charVars[name] = true
+}
+
+func (scope *charSliceScope) hasCharVar(name string) bool {
+	for current := scope; current != nil; current = current.parent {
+		if current.charVars[name] {
 			return true
 		}
 	}
@@ -1988,6 +2309,22 @@ func (scope *intSliceScope) add(name string) {
 }
 
 func (scope *intSliceScope) has(name string) bool {
+	for current := scope; current != nil; current = current.parent {
+		if current.vars[name] {
+			return true
+		}
+	}
+	return false
+}
+
+func (scope *boolScope) add(name string) {
+	if scope == nil || name == "" || name == "_" {
+		return
+	}
+	scope.vars[name] = true
+}
+
+func (scope *boolScope) has(name string) bool {
 	for current := scope; current != nil; current = current.parent {
 		if current.vars[name] {
 			return true
@@ -2374,6 +2711,7 @@ func lowerStmtIntConversions(stmt ast.Stmt, state *rewriteState, scope *lowering
 			node.Rhs[i] = lowerExprIntConversions(expr, state, scope)
 		}
 		trackAssignStringSlices(node, scope)
+		trackAssignStringVars(node, scope)
 	case *ast.BlockStmt:
 		lowerBlockIntConversions(node, state, newLoweringScope(scope))
 	case *ast.CaseClause:
@@ -2398,6 +2736,7 @@ func lowerStmtIntConversions(stmt ast.Stmt, state *rewriteState, scope *lowering
 				valueSpec.Values[i] = lowerExprIntConversions(value, state, scope)
 			}
 			trackValueSpecStringSlices(valueSpec, scope)
+			trackValueSpecStringVars(valueSpec, scope)
 		}
 	case *ast.DeferStmt:
 		node.Call = lowerCallIntConversions(node.Call, state, scope)
@@ -2616,6 +2955,24 @@ func trackAssignStringSlices(assign *ast.AssignStmt, scope *loweringScope) {
 	}
 }
 
+func trackAssignStringVars(assign *ast.AssignStmt, scope *loweringScope) {
+	if scope == nil {
+		return
+	}
+	for index, lhs := range assign.Lhs {
+		if index >= len(assign.Rhs) {
+			break
+		}
+		ident, ok := lhs.(*ast.Ident)
+		if !ok {
+			continue
+		}
+		if isKnownStringExpr(assign.Rhs[index], scope) {
+			scope.addStringVar(ident.Name)
+		}
+	}
+}
+
 func trackValueSpecStringSlices(spec *ast.ValueSpec, scope *loweringScope) {
 	if scope == nil {
 		return
@@ -2630,6 +2987,20 @@ func trackValueSpecStringSlices(spec *ast.ValueSpec, scope *loweringScope) {
 	}
 }
 
+func trackValueSpecStringVars(spec *ast.ValueSpec, scope *loweringScope) {
+	if scope == nil {
+		return
+	}
+	for index, name := range spec.Names {
+		if index >= len(spec.Values) {
+			break
+		}
+		if isKnownStringExpr(spec.Values[index], scope) {
+			scope.addStringVar(name.Name)
+		}
+	}
+}
+
 func rangeProducesStringTokens(expr ast.Expr, scope *loweringScope) bool {
 	return isStringTokenSlice(expr, scope)
 }
@@ -2639,7 +3010,23 @@ func isStringTokenSlice(expr ast.Expr, scope *loweringScope) bool {
 	case *ast.Ident:
 		return scope.hasStringSlice(node.Name)
 	case *ast.CallExpr:
+		if ident, ok := unwrapParens(node.Fun).(*ast.Ident); ok && ident.Name == "stdinLines" {
+			return true
+		}
 		return isStringsTokenCall(node)
+	default:
+		return false
+	}
+}
+
+func isKnownStringExpr(expr ast.Expr, scope *loweringScope) bool {
+	switch node := unwrapParens(expr).(type) {
+	case *ast.BasicLit:
+		return node.Kind == token.STRING
+	case *ast.Ident:
+		return scope.hasStringVar(node.Name)
+	case *ast.CallExpr:
+		return callReturnsString(node, nil)
 	default:
 		return false
 	}
@@ -2888,6 +3275,9 @@ func rewriteExpr(expr ast.Expr, state *rewriteState) ast.Expr {
 	case *ast.IndexExpr:
 		node.X = rewriteExpr(node.X, state)
 		node.Index = rewriteExpr(node.Index, state)
+		if rewritten := rewriteNegativeOffset(node.X, node.Index); rewritten != nil {
+			node.Index = rewritten
+		}
 		return node
 	case *ast.KeyValueExpr:
 		node.Key = rewriteExpr(node.Key, state)
@@ -2897,18 +3287,30 @@ func rewriteExpr(expr ast.Expr, state *rewriteState) ast.Expr {
 		node.X = rewriteExpr(node.X, state)
 		return node
 	case *ast.SelectorExpr:
+		if expr := rewriteSelectorExpr(node, state); expr != nil {
+			return expr
+		}
 		node.X = rewriteExpr(node.X, state)
 		return node
 	case *ast.SliceExpr:
 		node.X = rewriteExpr(node.X, state)
 		if node.Low != nil {
 			node.Low = rewriteExpr(node.Low, state)
+			if rewritten := rewriteNegativeOffset(node.X, node.Low); rewritten != nil {
+				node.Low = rewritten
+			}
 		}
 		if node.High != nil {
 			node.High = rewriteExpr(node.High, state)
+			if rewritten := rewriteNegativeOffset(node.X, node.High); rewritten != nil {
+				node.High = rewritten
+			}
 		}
 		if node.Max != nil {
 			node.Max = rewriteExpr(node.Max, state)
+			if rewritten := rewriteNegativeOffset(node.X, node.Max); rewritten != nil {
+				node.Max = rewritten
+			}
 		}
 		if expr := rewriteLostReverseSlice(node, state); expr != nil {
 			return expr
@@ -2940,6 +3342,34 @@ func rewriteCall(call *ast.CallExpr, state *rewriteState) ast.Expr {
 		return expr
 	}
 	return call
+}
+
+func rewriteNegativeOffset(base ast.Expr, expr ast.Expr) ast.Expr {
+	if !isNegativeRelativeExpr(expr) {
+		return nil
+	}
+	return &ast.BinaryExpr{
+		X: &ast.CallExpr{
+			Fun:  ast.NewIdent("len"),
+			Args: []ast.Expr{base},
+		},
+		Op: token.ADD,
+		Y:  &ast.ParenExpr{X: expr},
+	}
+}
+
+func isNegativeRelativeExpr(expr ast.Expr) bool {
+	switch node := unwrapParens(expr).(type) {
+	case *ast.UnaryExpr:
+		return node.Op == token.SUB
+	case *ast.BinaryExpr:
+		if node.Op != token.ADD && node.Op != token.SUB {
+			return false
+		}
+		return isNegativeRelativeExpr(node.X)
+	default:
+		return false
+	}
 }
 
 func rewriteNoValueCollectionBuilderCall(call *ast.CallExpr, state *rewriteState) ast.Expr {
@@ -3266,13 +3696,105 @@ func isStringsSplitCharsCall(expr ast.Expr) bool {
 	return err == nil && value == ""
 }
 
-func isStringIndexExpr(expr ast.Expr) bool {
+func isStringsStringSliceCall(expr ast.Expr) bool {
+	call, ok := unwrapParens(expr).(*ast.CallExpr)
+	if !ok {
+		return false
+	}
+	selector, ok := unwrapParens(call.Fun).(*ast.SelectorExpr)
+	if !ok || selector.Sel == nil {
+		return false
+	}
+	root, ok := unwrapParens(selector.X).(*ast.Ident)
+	if !ok || root.Name != "strings" {
+		return false
+	}
+	switch selector.Sel.Name {
+	case "Split", "Fields":
+		return true
+	default:
+		return false
+	}
+}
+
+func isStringIndexExpr(expr ast.Expr, scope *charSliceScope) bool {
 	index, ok := unwrapParens(expr).(*ast.IndexExpr)
 	if !ok {
 		return false
 	}
-	_, ok = unwrapParens(index.X).(*ast.Ident)
-	return ok
+	return isKnownStringExprForChars(index.X, scope)
+}
+
+func isStringSliceExpr(expr ast.Expr, scope *charSliceScope) bool {
+	switch node := unwrapParens(expr).(type) {
+	case *ast.Ident:
+		return scope.hasStringSlice(node.Name)
+	case *ast.CallExpr:
+		return isStringsStringSliceCall(node)
+	default:
+		return false
+	}
+}
+
+func isKnownStringExprForChars(expr ast.Expr, scope *charSliceScope) bool {
+	switch node := unwrapParens(expr).(type) {
+	case *ast.BasicLit:
+		return node.Kind == token.STRING
+	case *ast.BinaryExpr:
+		return node.Op == token.ADD && isKnownStringExprForChars(node.X, scope) && isKnownStringExprForChars(node.Y, scope)
+	case *ast.CallExpr:
+		return callReturnsString(node, nil)
+	case *ast.Ident:
+		return scope.hasStringVar(node.Name)
+	case *ast.IndexExpr:
+		return isStringSliceExpr(node.X, scope)
+	case *ast.SliceExpr:
+		return isKnownStringExprForChars(node.X, scope)
+	default:
+		return false
+	}
+}
+
+func isPythonStringCharExpr(expr ast.Expr, scope *charSliceScope) bool {
+	switch node := unwrapParens(expr).(type) {
+	case *ast.Ident:
+		return scope.hasCharVar(node.Name)
+	case *ast.IndexExpr:
+		return isStringIndexExpr(node, scope)
+	default:
+		return false
+	}
+}
+
+func rewriteStringCharComparison(expr *ast.BinaryExpr, scope *charSliceScope) {
+	if expr == nil {
+		return
+	}
+	switch expr.Op {
+	case token.EQL, token.NEQ, token.LSS, token.GTR, token.LEQ, token.GEQ:
+	default:
+		return
+	}
+	switch {
+	case isPythonStringCharExpr(expr.X, scope) && isKnownStringExprForChars(expr.Y, scope):
+		expr.X = wrapStringCharExpr(expr.X)
+	case isPythonStringCharExpr(expr.Y, scope) && isKnownStringExprForChars(expr.X, scope):
+		expr.Y = wrapStringCharExpr(expr.Y)
+	}
+}
+
+func wrapStringCharExpr(expr ast.Expr) ast.Expr {
+	call, ok := unwrapParens(expr).(*ast.CallExpr)
+	if ok {
+		ident, ok := unwrapParens(call.Fun).(*ast.Ident)
+		if ok && ident.Name == "string" && len(call.Args) == 1 {
+			return expr
+		}
+	}
+	return &ast.CallExpr{
+		Fun:  ast.NewIdent("string"),
+		Args: []ast.Expr{expr},
+	}
 }
 
 func isIntSliceExpr(expr ast.Expr, scope *intSliceScope) bool {
@@ -3410,11 +3932,53 @@ func rewriteBlankCountedLoopStmts(loop *ast.ForStmt, state *rewriteState) []ast.
 }
 
 func rewriteCallExpr(call *ast.CallExpr, state *rewriteState) ast.Expr {
+	if ident, ok := call.Fun.(*ast.Ident); ok && ident.Name == "bisect_right" && len(call.Args) == 2 {
+		state.needBisectRight = true
+		state.needSortImport = true
+		return &ast.CallExpr{
+			Fun:  ast.NewIdent("bisectRightInts"),
+			Args: call.Args,
+		}
+	}
+
 	if ident, ok := call.Fun.(*ast.Ident); ok && len(call.Args) == 1 {
 		switch ident.Name {
 		case "sum":
 			state.needSumHelper = true
 			return call
+		case "sqrt":
+			state.needMathImport = true
+			return &ast.CallExpr{
+				Fun: &ast.SelectorExpr{
+					X:   ast.NewIdent("math"),
+					Sel: ast.NewIdent("Sqrt"),
+				},
+				Args: []ast.Expr{
+					&ast.CallExpr{
+						Fun:  ast.NewIdent("float64"),
+						Args: []ast.Expr{call.Args[0]},
+					},
+				},
+			}
+		case "floor":
+			state.needMathImport = true
+			return &ast.CallExpr{
+				Fun: ast.NewIdent("int"),
+				Args: []ast.Expr{
+					&ast.CallExpr{
+						Fun: &ast.SelectorExpr{
+							X:   ast.NewIdent("math"),
+							Sel: ast.NewIdent("Floor"),
+						},
+						Args: []ast.Expr{
+							&ast.CallExpr{
+								Fun:  ast.NewIdent("float64"),
+								Args: []ast.Expr{call.Args[0]},
+							},
+						},
+					},
+				},
+			}
 		case "byte":
 			if literal := singleByteLiteral(call.Args[0]); literal != nil {
 				return literal
@@ -3422,7 +3986,22 @@ func rewriteCallExpr(call *ast.CallExpr, state *rewriteState) ast.Expr {
 		}
 	}
 
-	if len(call.Args) == 1 && isSysReadLine(call.Args[0]) {
+	if isSysExitCall(call) {
+		state.needOSImport = true
+		args := call.Args
+		if len(args) == 0 {
+			args = []ast.Expr{&ast.BasicLit{Kind: token.INT, Value: "0"}}
+		}
+		return &ast.CallExpr{
+			Fun: &ast.SelectorExpr{
+				X:   ast.NewIdent("os"),
+				Sel: ast.NewIdent("Exit"),
+			},
+			Args: args,
+		}
+	}
+
+	if len(call.Args) == 1 && (isSysReadLine(call.Args[0]) || isReadLineCall(call.Args[0])) {
 		if ident, ok := call.Fun.(*ast.Ident); ok {
 			switch ident.Name {
 			case "int":
@@ -3479,19 +4058,43 @@ func rewriteCallExpr(call *ast.CallExpr, state *rewriteState) ast.Expr {
 	}
 }
 
+func rewriteSelectorExpr(selector *ast.SelectorExpr, state *rewriteState) ast.Expr {
+	if isSysStdinReadlineSelector(selector) {
+		state.needReadLine = true
+		state.needSharedReader = true
+		return ast.NewIdent("readLine")
+	}
+	if isSysStdinSelector(selector) {
+		state.needStdinLines = true
+		state.needSharedReader = true
+		state.needStringsImport = true
+		return &ast.CallExpr{Fun: ast.NewIdent("stdinLines")}
+	}
+	return nil
+}
+
 func ensureImports(_ *token.FileSet, file *ast.File, state *rewriteState) {
 	if state.needFmtImport || state.needFormatIntSlice {
 		addImport(file, "fmt")
 	}
-	if state.needReadLine || state.needSharedReader {
+	if state.needReadLine || state.needSharedReader || state.needStdinLines {
 		addImport(file, "bufio")
 		addImport(file, "os")
 	}
-	if state.needReadLine || state.needStringsImport || state.needFormatIntSlice {
+	if state.needOSImport {
+		addImport(file, "os")
+	}
+	if state.needReadLine || state.needStringsImport || state.needFormatIntSlice || state.needStdinLines {
 		addImport(file, "strings")
 	}
 	if state.needMustAtoi || state.needMustParseF64 {
 		addImport(file, "strconv")
+	}
+	if state.needMathImport {
+		addImport(file, "math")
+	}
+	if state.needSortImport {
+		addImport(file, "sort")
 	}
 }
 
@@ -3530,6 +4133,9 @@ func appendHelperDecls(file *ast.File, state *rewriteState) {
 	if state.needReadLine && !hasFunc(file, "readLine") {
 		file.Decls = append(file.Decls, helperDecl(readLineHelper))
 	}
+	if state.needStdinLines && !hasFunc(file, "stdinLines") {
+		file.Decls = append(file.Decls, helperDecl(stdinLinesHelper))
+	}
 	if state.needMustAtoi && !hasFunc(file, "mustAtoi") {
 		file.Decls = append(file.Decls, helperDecl(mustAtoiHelper))
 	}
@@ -3556,6 +4162,9 @@ func appendHelperDecls(file *ast.File, state *rewriteState) {
 	}
 	if state.needMinIntSlice && !hasFunc(file, "minIntSlice") {
 		file.Decls = append(file.Decls, helperDecl(minIntSliceHelper))
+	}
+	if state.needBisectRight && !hasFunc(file, "bisectRightInts") {
+		file.Decls = append(file.Decls, helperDecl(bisectRightIntsHelper))
 	}
 }
 
@@ -3614,15 +4223,41 @@ func isSysReadLine(expr ast.Expr) bool {
 	if !ok || len(call.Args) != 0 {
 		return false
 	}
-	readline, ok := call.Fun.(*ast.SelectorExpr)
+	return isSysStdinReadlineSelector(call.Fun)
+}
+
+func isReadLineCall(expr ast.Expr) bool {
+	call, ok := unwrapParens(expr).(*ast.CallExpr)
+	if !ok || len(call.Args) != 0 {
+		return false
+	}
+	ident, ok := unwrapParens(call.Fun).(*ast.Ident)
+	return ok && ident.Name == "readLine"
+}
+
+func isSysExitCall(call *ast.CallExpr) bool {
+	selector, ok := unwrapParens(call.Fun).(*ast.SelectorExpr)
+	if !ok || selector.Sel == nil || selector.Sel.Name != "exit" {
+		return false
+	}
+	root, ok := unwrapParens(selector.X).(*ast.Ident)
+	return ok && root.Name == "sys"
+}
+
+func isSysStdinReadlineSelector(expr ast.Expr) bool {
+	readline, ok := unwrapParens(expr).(*ast.SelectorExpr)
 	if !ok || readline.Sel == nil || readline.Sel.Name != "readline" {
 		return false
 	}
-	stdin, ok := readline.X.(*ast.SelectorExpr)
+	return isSysStdinSelector(readline.X)
+}
+
+func isSysStdinSelector(expr ast.Expr) bool {
+	stdin, ok := unwrapParens(expr).(*ast.SelectorExpr)
 	if !ok || stdin.Sel == nil || stdin.Sel.Name != "stdin" {
 		return false
 	}
-	root, ok := stdin.X.(*ast.Ident)
+	root, ok := unwrapParens(stdin.X).(*ast.Ident)
 	return ok && root.Name == "sys"
 }
 
@@ -3976,6 +4611,22 @@ func readLine() string {
 }
 `
 
+const stdinLinesHelper = `
+func stdinLines() []string {
+	lines := []string{}
+	for {
+		text, err := sharedStdinReader.ReadString('\n')
+		text = strings.TrimRight(text, "\n")
+		if err == nil || text != "" {
+			lines = append(lines, text)
+		}
+		if err != nil {
+			return lines
+		}
+	}
+}
+`
+
 const mustAtoiHelper = `
 func mustAtoi(text string) int {
 	value, err := strconv.Atoi(text)
@@ -4131,5 +4782,17 @@ func minIntSlice(values []int) int {
 		}
 	}
 	return best
+}
+`
+
+const bisectRightIntsHelper = `
+func bisectRightInts(values []int, target any) int {
+	value, ok := target.(int)
+	if !ok {
+		panic("bisectRightInts target is not int")
+	}
+	return sort.Search(len(values), func(i int) bool {
+		return values[i] > value
+	})
 }
 `
