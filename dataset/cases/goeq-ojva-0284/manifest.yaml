@@ -19,9 +19,9 @@ provenance:
   license: Apache-2.0
 translation:
   kind: python-to-go
-  translator: pending
-  translator_version: "unassigned"
-  status: pending
+  translator: pytago_adapter
+  translator_version: "git:171e15535a85"
+  status: auto
 environment:
   go_version: "1.24.0"
   goos: linux
@@ -45,4 +45,4 @@ validation:
   level: source-baseline
   witness_type: statement-sample-baseline
 evidence:
-  summary: Captured source-program outputs for both Python programs on fixed problem-statement sample inputs; Go translations pending.
+  summary: Captured source-program outputs on fixed statement samples and backfilled auto-generated Go translations via pytago_adapter; stored harness samples currently replay successfully for both sides.

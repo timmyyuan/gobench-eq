@@ -9,7 +9,7 @@
 - Source program A path: `dataset/organized/OJ/0/accepted_0.py`
 - Source program B path: `dataset/organized/OJ/0/obfus_wrong_0.py`
 - Stored sample count: `1`
-- Go translations: pending for `prog_a/` and `prog_b/`
+- Go translations: backfilled for `prog_a/` and `prog_b/` via `pytago_adapter`; stored harness samples currently pass for both programs
 - Witness sample: `sample_01`
 - sample_01 stdin: '10\n3\n11\n'
 - sample_01 statement stdout: '4\n2\n5\n'
