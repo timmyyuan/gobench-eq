@@ -242,6 +242,50 @@ func init() {
 	}
 }
 
+func TestAdaptSourceRewritesSysStdinAliasReadlineAndRange(t *testing.T) {
+	output := adaptAndParse(t, `package main
+
+var (
+	f = stdinLines()
+	q = int(f.readline())
+)
+
+func init() {
+	for _, line := range f {
+		_, _ = q, line
+	}
+}
+`)
+
+	if strings.Contains(output, "f.readline()") {
+		t.Fatalf("expected stdin alias readline rewrite in output:\n%s", output)
+	}
+	if !strings.Contains(output, "q = mustAtoi(popLine(&f))") {
+		t.Fatalf("expected stdin alias readline to become mustAtoi(popLine(&f)):\n%s", output)
+	}
+	if !strings.Contains(output, "func popLine(lines *[]string) string") {
+		t.Fatalf("expected popLine helper in output:\n%s", output)
+	}
+}
+
+func TestAdaptSourceRewritesReadLineAliasCall(t *testing.T) {
+	output := adaptAndParse(t, `package main
+
+var input = readLine
+
+func init() {
+	_ = int(input())
+}
+`)
+
+	if strings.Contains(output, "int(input())") {
+		t.Fatalf("expected readLine alias rewrite in output:\n%s", output)
+	}
+	if !strings.Contains(output, "mustAtoi(readLine())") {
+		t.Fatalf("expected readLine alias call to become direct mustAtoi(readLine()) use:\n%s", output)
+	}
+}
+
 func TestAdaptSourceRenamesRunToMainWhenPythonHasMainGuard(t *testing.T) {
 	output := adaptAndParseWithPython(t, `package main
 

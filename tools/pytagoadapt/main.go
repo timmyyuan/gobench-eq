@@ -40,6 +40,7 @@ type rewriteState struct {
 	needSortImport     bool
 	needOSImport       bool
 	needStdinLines     bool
+	needPopLine        bool
 	needBisectRight    bool
 	needFormatIntSlice bool
 	needMaxIntSlice    bool
@@ -71,6 +72,12 @@ type charSliceScope struct {
 	stringSlices map[string]bool
 	stringVars   map[string]bool
 	charVars     map[string]bool
+}
+
+type stdinAliasScope struct {
+	parent       *stdinAliasScope
+	stdinVars    map[string]bool
+	readLineVars map[string]bool
 }
 
 type intSliceScope struct {
@@ -231,6 +238,8 @@ func adaptSourceWithPython(source []byte, pythonSource []byte) ([]byte, error) {
 	rewriteStringValueFlows(file)
 	rewriteIntSliceAggregates(file, state)
 	rewriteStringCharSliceOps(file, state)
+	rewriteStdinAliases(file, state)
+	rewriteStringTokenIntCalls(file, state)
 	rewriteIntSlicePrints(file, state)
 	rewriteBoolBitOps(file)
 
@@ -2925,12 +2934,30 @@ func lowerCallIntConversions(call *ast.CallExpr, state *rewriteState, scope *low
 	for i, arg := range call.Args {
 		call.Args[i] = lowerExprIntConversions(arg, state, scope)
 	}
-	if ident, ok := call.Fun.(*ast.Ident); ok && ident.Name == "int" && len(call.Args) == 1 {
-		if arg, ok := unwrapParens(call.Args[0]).(*ast.Ident); ok && scope.hasStringVar(arg.Name) {
-			state.needMustAtoi = true
-			return &ast.CallExpr{
-				Fun:  ast.NewIdent("mustAtoi"),
-				Args: []ast.Expr{ast.NewIdent(arg.Name)},
+	if ident, ok := call.Fun.(*ast.Ident); ok && len(call.Args) == 1 {
+		switch ident.Name {
+		case "int":
+			if arg, ok := unwrapParens(call.Args[0]).(*ast.Ident); ok && scope.hasStringVar(arg.Name) {
+				state.needMustAtoi = true
+				return &ast.CallExpr{
+					Fun:  ast.NewIdent("mustAtoi"),
+					Args: []ast.Expr{ast.NewIdent(arg.Name)},
+				}
+			}
+			if isReadLineCall(call.Args[0]) || isPopLineCall(call.Args[0]) {
+				state.needMustAtoi = true
+				return &ast.CallExpr{
+					Fun:  ast.NewIdent("mustAtoi"),
+					Args: []ast.Expr{call.Args[0]},
+				}
+			}
+		case "float64":
+			if isReadLineCall(call.Args[0]) || isPopLineCall(call.Args[0]) {
+				state.needMustParseF64 = true
+				return &ast.CallExpr{
+					Fun:  ast.NewIdent("mustParseFloat64"),
+					Args: []ast.Expr{call.Args[0]},
+				}
 			}
 		}
 	}
@@ -4073,6 +4100,280 @@ func rewriteSelectorExpr(selector *ast.SelectorExpr, state *rewriteState) ast.Ex
 	return nil
 }
 
+func rewriteStdinAliases(file *ast.File, state *rewriteState) {
+	scope := newStdinAliasScope(nil)
+	for _, decl := range file.Decls {
+		switch node := decl.(type) {
+		case *ast.FuncDecl:
+			if node.Body != nil {
+				rewriteStdinAliasBlock(node.Body, state, newStdinAliasScope(scope))
+			}
+		case *ast.GenDecl:
+			for _, spec := range node.Specs {
+				valueSpec, ok := spec.(*ast.ValueSpec)
+				if !ok {
+					continue
+				}
+				for i, value := range valueSpec.Values {
+					valueSpec.Values[i] = rewriteStdinAliasExpr(value, state, scope)
+				}
+				trackValueSpecStdinAliases(valueSpec, scope)
+			}
+		}
+	}
+}
+
+func rewriteStdinAliasBlock(block *ast.BlockStmt, state *rewriteState, scope *stdinAliasScope) {
+	if block == nil {
+		return
+	}
+	for _, stmt := range block.List {
+		rewriteStdinAliasStmt(stmt, state, scope)
+	}
+}
+
+func rewriteStdinAliasStmt(stmt ast.Stmt, state *rewriteState, scope *stdinAliasScope) {
+	switch node := stmt.(type) {
+	case *ast.AssignStmt:
+		for i, expr := range node.Lhs {
+			node.Lhs[i] = rewriteStdinAliasExpr(expr, state, scope)
+		}
+		for i, expr := range node.Rhs {
+			node.Rhs[i] = rewriteStdinAliasExpr(expr, state, scope)
+		}
+		trackAssignStdinAliases(node, scope)
+	case *ast.BlockStmt:
+		rewriteStdinAliasBlock(node, state, newStdinAliasScope(scope))
+	case *ast.DeclStmt:
+		genDecl, ok := node.Decl.(*ast.GenDecl)
+		if !ok {
+			return
+		}
+		for _, spec := range genDecl.Specs {
+			valueSpec, ok := spec.(*ast.ValueSpec)
+			if !ok {
+				continue
+			}
+			for i, value := range valueSpec.Values {
+				valueSpec.Values[i] = rewriteStdinAliasExpr(value, state, scope)
+			}
+			trackValueSpecStdinAliases(valueSpec, scope)
+		}
+	case *ast.ExprStmt:
+		node.X = rewriteStdinAliasExpr(node.X, state, scope)
+	case *ast.ForStmt:
+		if node.Init != nil {
+			rewriteStdinAliasStmt(node.Init, state, scope)
+		}
+		if node.Cond != nil {
+			node.Cond = rewriteStdinAliasExpr(node.Cond, state, scope)
+		}
+		if node.Post != nil {
+			rewriteStdinAliasStmt(node.Post, state, scope)
+		}
+		rewriteStdinAliasBlock(node.Body, state, newStdinAliasScope(scope))
+	case *ast.IfStmt:
+		if node.Init != nil {
+			rewriteStdinAliasStmt(node.Init, state, scope)
+		}
+		node.Cond = rewriteStdinAliasExpr(node.Cond, state, scope)
+		child := newStdinAliasScope(scope)
+		rewriteStdinAliasBlock(node.Body, state, child)
+		if node.Else != nil {
+			rewriteStdinAliasStmt(node.Else, state, newStdinAliasScope(scope))
+		}
+	case *ast.RangeStmt:
+		if node.Key != nil {
+			node.Key = rewriteStdinAliasExpr(node.Key, state, scope)
+		}
+		if node.Value != nil {
+			node.Value = rewriteStdinAliasExpr(node.Value, state, scope)
+		}
+		node.X = rewriteStdinAliasExpr(node.X, state, scope)
+		rewriteStdinAliasBlock(node.Body, state, newStdinAliasScope(scope))
+	case *ast.ReturnStmt:
+		for i, expr := range node.Results {
+			node.Results[i] = rewriteStdinAliasExpr(expr, state, scope)
+		}
+	case *ast.SwitchStmt:
+		if node.Init != nil {
+			rewriteStdinAliasStmt(node.Init, state, scope)
+		}
+		if node.Tag != nil {
+			node.Tag = rewriteStdinAliasExpr(node.Tag, state, scope)
+		}
+		rewriteStdinAliasBlock(node.Body, state, newStdinAliasScope(scope))
+	case *ast.TypeSwitchStmt:
+		if node.Init != nil {
+			rewriteStdinAliasStmt(node.Init, state, scope)
+		}
+		if node.Assign != nil {
+			rewriteStdinAliasStmt(node.Assign, state, scope)
+		}
+		rewriteStdinAliasBlock(node.Body, state, newStdinAliasScope(scope))
+	}
+}
+
+func rewriteStdinAliasExpr(expr ast.Expr, state *rewriteState, scope *stdinAliasScope) ast.Expr {
+	switch node := expr.(type) {
+	case *ast.BinaryExpr:
+		node.X = rewriteStdinAliasExpr(node.X, state, scope)
+		node.Y = rewriteStdinAliasExpr(node.Y, state, scope)
+		return node
+	case *ast.CallExpr:
+		node.Fun = rewriteStdinAliasExpr(node.Fun, state, scope)
+		for i, arg := range node.Args {
+			node.Args[i] = rewriteStdinAliasExpr(arg, state, scope)
+		}
+		if ident, ok := unwrapParens(node.Fun).(*ast.Ident); ok && scope.hasReadLineVar(ident.Name) && len(node.Args) == 0 {
+			state.needReadLine = true
+			state.needSharedReader = true
+			return &ast.CallExpr{Fun: ast.NewIdent("readLine")}
+		}
+		if selector, ok := unwrapParens(node.Fun).(*ast.SelectorExpr); ok && selector.Sel != nil && selector.Sel.Name == "readline" {
+			if ident, ok := unwrapParens(selector.X).(*ast.Ident); ok && scope.hasStdinVar(ident.Name) && len(node.Args) == 0 {
+				state.needPopLine = true
+				state.needStdinLines = true
+				state.needSharedReader = true
+				state.needStringsImport = true
+				return &ast.CallExpr{
+					Fun:  ast.NewIdent("popLine"),
+					Args: []ast.Expr{&ast.UnaryExpr{Op: token.AND, X: ast.NewIdent(ident.Name)}},
+				}
+			}
+		}
+		return node
+	case *ast.CompositeLit:
+		for i, elt := range node.Elts {
+			node.Elts[i] = rewriteStdinAliasExpr(elt, state, scope)
+		}
+		return node
+	case *ast.FuncLit:
+		rewriteStdinAliasBlock(node.Body, state, newStdinAliasScope(scope))
+		return node
+	case *ast.IndexExpr:
+		node.X = rewriteStdinAliasExpr(node.X, state, scope)
+		node.Index = rewriteStdinAliasExpr(node.Index, state, scope)
+		return node
+	case *ast.KeyValueExpr:
+		node.Key = rewriteStdinAliasExpr(node.Key, state, scope)
+		node.Value = rewriteStdinAliasExpr(node.Value, state, scope)
+		return node
+	case *ast.ParenExpr:
+		node.X = rewriteStdinAliasExpr(node.X, state, scope)
+		return node
+	case *ast.SelectorExpr:
+		node.X = rewriteStdinAliasExpr(node.X, state, scope)
+		return node
+	case *ast.SliceExpr:
+		node.X = rewriteStdinAliasExpr(node.X, state, scope)
+		if node.Low != nil {
+			node.Low = rewriteStdinAliasExpr(node.Low, state, scope)
+		}
+		if node.High != nil {
+			node.High = rewriteStdinAliasExpr(node.High, state, scope)
+		}
+		if node.Max != nil {
+			node.Max = rewriteStdinAliasExpr(node.Max, state, scope)
+		}
+		return node
+	case *ast.UnaryExpr:
+		node.X = rewriteStdinAliasExpr(node.X, state, scope)
+		return node
+	default:
+		return expr
+	}
+}
+
+func trackAssignStdinAliases(assign *ast.AssignStmt, scope *stdinAliasScope) {
+	if assign == nil || scope == nil {
+		return
+	}
+	for i, lhs := range assign.Lhs {
+		ident, ok := unwrapParens(lhs).(*ast.Ident)
+		if !ok || ident.Name == "" || ident.Name == "_" || i >= len(assign.Rhs) {
+			continue
+		}
+		if isStdinLinesCall(assign.Rhs[i]) {
+			scope.addStdinVar(ident.Name)
+		}
+		if isReadLineIdent(assign.Rhs[i]) {
+			scope.addReadLineVar(ident.Name)
+		}
+	}
+}
+
+func trackValueSpecStdinAliases(valueSpec *ast.ValueSpec, scope *stdinAliasScope) {
+	if valueSpec == nil || scope == nil {
+		return
+	}
+	for i, name := range valueSpec.Names {
+		if name == nil || name.Name == "" || name.Name == "_" || i >= len(valueSpec.Values) {
+			continue
+		}
+		if isStdinLinesCall(valueSpec.Values[i]) {
+			scope.addStdinVar(name.Name)
+		}
+		if isReadLineIdent(valueSpec.Values[i]) {
+			scope.addReadLineVar(name.Name)
+		}
+	}
+}
+
+func newStdinAliasScope(parent *stdinAliasScope) *stdinAliasScope {
+	return &stdinAliasScope{
+		parent:       parent,
+		stdinVars:    map[string]bool{},
+		readLineVars: map[string]bool{},
+	}
+}
+
+func (scope *stdinAliasScope) addStdinVar(name string) {
+	if scope == nil || name == "" || name == "_" {
+		return
+	}
+	scope.stdinVars[name] = true
+}
+
+func (scope *stdinAliasScope) hasStdinVar(name string) bool {
+	for current := scope; current != nil; current = current.parent {
+		if current.stdinVars[name] {
+			return true
+		}
+	}
+	return false
+}
+
+func (scope *stdinAliasScope) addReadLineVar(name string) {
+	if scope == nil || name == "" || name == "_" {
+		return
+	}
+	scope.readLineVars[name] = true
+}
+
+func (scope *stdinAliasScope) hasReadLineVar(name string) bool {
+	for current := scope; current != nil; current = current.parent {
+		if current.readLineVars[name] {
+			return true
+		}
+	}
+	return false
+}
+
+func isStdinLinesCall(expr ast.Expr) bool {
+	call, ok := unwrapParens(expr).(*ast.CallExpr)
+	if !ok || len(call.Args) != 0 {
+		return false
+	}
+	ident, ok := unwrapParens(call.Fun).(*ast.Ident)
+	return ok && ident.Name == "stdinLines"
+}
+
+func isReadLineIdent(expr ast.Expr) bool {
+	ident, ok := unwrapParens(expr).(*ast.Ident)
+	return ok && ident.Name == "readLine"
+}
+
 func ensureImports(_ *token.FileSet, file *ast.File, state *rewriteState) {
 	if state.needFmtImport || state.needFormatIntSlice {
 		addImport(file, "fmt")
@@ -4135,6 +4436,9 @@ func appendHelperDecls(file *ast.File, state *rewriteState) {
 	}
 	if state.needStdinLines && !hasFunc(file, "stdinLines") {
 		file.Decls = append(file.Decls, helperDecl(stdinLinesHelper))
+	}
+	if state.needPopLine && !hasFunc(file, "popLine") {
+		file.Decls = append(file.Decls, helperDecl(popLineHelper))
 	}
 	if state.needMustAtoi && !hasFunc(file, "mustAtoi") {
 		file.Decls = append(file.Decls, helperDecl(mustAtoiHelper))
@@ -4233,6 +4537,15 @@ func isReadLineCall(expr ast.Expr) bool {
 	}
 	ident, ok := unwrapParens(call.Fun).(*ast.Ident)
 	return ok && ident.Name == "readLine"
+}
+
+func isPopLineCall(expr ast.Expr) bool {
+	call, ok := unwrapParens(expr).(*ast.CallExpr)
+	if !ok || len(call.Args) != 1 {
+		return false
+	}
+	ident, ok := unwrapParens(call.Fun).(*ast.Ident)
+	return ok && ident.Name == "popLine"
 }
 
 func isSysExitCall(call *ast.CallExpr) bool {
@@ -4624,6 +4937,17 @@ func stdinLines() []string {
 			return lines
 		}
 	}
+}
+`
+
+const popLineHelper = `
+func popLine(lines *[]string) string {
+	if lines == nil || len(*lines) == 0 {
+		return ""
+	}
+	text := (*lines)[0]
+	*lines = (*lines)[1:]
+	return text
 }
 `
 
